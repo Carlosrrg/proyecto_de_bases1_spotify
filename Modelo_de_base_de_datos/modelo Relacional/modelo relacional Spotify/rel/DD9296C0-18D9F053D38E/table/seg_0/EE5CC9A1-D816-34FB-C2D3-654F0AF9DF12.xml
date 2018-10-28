@@ -1,0 +1,47 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EE5CC9A1-D816-34FB-C2D3-654F0AF9DF12" name="TBL_SISTEMAS_OPERATIVOS">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-28 16:56:15 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<ordsAlias>table_9</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CODIGO_SISTEMA_OPERATIVO" id="09E3CADA-70DA-5DBC-5BC0-9A42FBADB591">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-28 16:57:12 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOMBRE_SISTEMA_OPERATIVO" id="A08A10CA-ABF3-101A-649A-F5A060258F1B">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-28 16:57:12 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300</dataTypeSize>
+<ownDataTypeParameters>300,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D2A5BBE1-DCAA-CFE6-156D-22756150D82E" name="TBL_SISTEMAS_OPERATIVOS_PK">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-28 16:57:12 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="09E3CADA-70DA-5DBC-5BC0-9A42FBADB591"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

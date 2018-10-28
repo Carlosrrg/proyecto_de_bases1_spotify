@@ -1,0 +1,47 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="286D7D40-F17B-F93F-C05D-DF076E851B77" name="TBL_ESTADO_PALYLIST">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-28 19:27:12 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<ordsAlias>table_24</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CODIGO_ESTADO" id="CACD8D21-0FF1-A41D-E19B-B940CC690511">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-28 19:28:02 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOMBRE_ESTADO" id="AF7195F0-1C13-BDDE-A7FA-BAE30DC1392E">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-28 19:28:02 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="AC5981B1-69AE-ADE6-DB0D-437620917EF4" name="TBL_ESTADO_PALYLIST_PK">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-28 19:28:02 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CACD8D21-0FF1-A41D-E19B-B940CC690511"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

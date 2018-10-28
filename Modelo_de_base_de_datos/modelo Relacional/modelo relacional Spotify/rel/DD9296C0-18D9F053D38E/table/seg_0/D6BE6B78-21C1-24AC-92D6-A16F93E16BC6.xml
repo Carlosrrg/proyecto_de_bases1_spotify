@@ -1,0 +1,103 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D6BE6B78-21C1-24AC-92D6-A16F93E16BC6" name="TBL_EPISODIOS_PODCAST">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-28 20:18:19 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<ordsAlias>table_28</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CODIGO_EPISODIO_PODCAST" id="1CC2C23F-5D6F-C87E-AD7D-74FC9A198740">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-28 20:20:37 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CODIGO_PODCAST" id="57D0EA28-4BE1-FA3C-0266-45052D4E3666">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-28 20:21:38 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="75CDA4EE-A9CB-43AB-0D55-4EFBB21EA040" referredColumn="B68A1242-5765-A915-9BBD-9ACBA88450C5"/>
+</associations>
+</Column>
+<Column name="TITULO_EPISODIO" id="D1EB92E7-DF75-1C52-8B3E-BEF24FE4AC9B">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-28 20:20:37 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300</dataTypeSize>
+<ownDataTypeParameters>300,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DESCRIPCION_EPISODIO" id="2A03558A-992B-66AA-678E-341262FC50B8">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-28 20:20:37 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500</dataTypeSize>
+<ownDataTypeParameters>500,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_TRANSMITIO" id="5A7F7A51-D1D7-BC95-BB49-07594567A7B1">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-28 20:20:37 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DURACION" id="342FB25D-A4C7-760E-F6D1-88F402A3EE30">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-28 20:20:37 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A22079F2-7141-46D0-9BDA-0F154C23B6EF" name="TBL_EPISODIOS_PODCAST_PK">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-28 20:20:37 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1CC2C23F-5D6F-C87E-AD7D-74FC9A198740"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="96EDF249-8F55-7BCC-E60A-22BC83A637FE" name="TBL_EPISODIOS_PODCAST_TBL_PODCAST_FK">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-28 20:21:38 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="57D0EA28-4BE1-FA3C-0266-45052D4E3666"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
