@@ -1,0 +1,105 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4648FB38-BA05-AC25-08D2-82B0551BC929" name="TBL_TARJETA_REGALO">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-30 03:37:51 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<ordsAlias>table_40</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CODIGO_TARJETA_REGALO" id="609507E2-047A-2788-6E85-E70B775BFC25">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-30 03:38:24 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CODIGO_LUGAR" id="C24FB1DA-6A97-F4DD-BB61-884102BCD61A">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-30 03:43:55 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B68F75D6-B84F-4C48-4CC5-74C4E2AE009D" referredColumn="1FCA48E5-7A94-FC90-4744-1D39FFE3DCDC"/>
+</associations>
+</Column>
+<Column name="CODIGO_USUARIO" id="C4F1764C-DD09-7802-3238-85EFBD180EAC">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-30 03:45:28 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="55A0EFDA-F773-EB4D-1F04-9DD0BCA4C4B0" referredColumn="80F566C2-EF95-C2E5-6297-64DE710C0108"/>
+</associations>
+</Column>
+<Column name="FECHA_CAJEA" id="45A0EC2E-92BA-41A8-D970-3414DDAD2762">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-30 03:39:05 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CODIGO_A_CAJEAR" id="7FFE411D-9692-EE0F-822B-C657CC425D50">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-30 03:40:54 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0F7EC7E5-938D-44C6-0DE4-967AF528AF1F" name="TBL_TARJETA_REGALO_PK">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-30 03:39:05 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="609507E2-047A-2788-6E85-E70B775BFC25"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C2510C02-AEA9-7398-2726-FF5D04531A7F" name="TBL_TARJETA_REGALO_TBL_LUGARES_FK">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-30 03:43:55 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C24FB1DA-6A97-F4DD-BB61-884102BCD61A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7928A9F0-0F29-F9D8-40D9-D8583DE7D2CC" name="TBL_TARJETA_REGALO_TBL_USUARIOS_FK">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-30 03:45:28 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C4F1764C-DD09-7802-3238-85EFBD180EAC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

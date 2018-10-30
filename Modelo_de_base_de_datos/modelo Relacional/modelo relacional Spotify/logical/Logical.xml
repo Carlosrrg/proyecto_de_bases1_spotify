@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="FDC3C159-B43A-CDFE-D4B0-AAE05BF88602" mainViewID="A002E8D4-849A-1E88-2F93-F386905A2974">
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="A52068A2-1408-FFCE-294D-0BF59320D2CD" mainViewID="F41AB995-D7BE-8BAE-9663-C2DCB286C1D7">
 <createdBy>Carlos Ramos</createdBy>
-<createdTime>2018-10-28 16:10:20 UTC</createdTime>
+<createdTime>2018-10-30 00:17:57 UTC</createdTime>
 <ownerDesignName>modelo relacional Spotify</ownerDesignName>
 <shouldBeOpen>false</shouldBeOpen>
 </LogicalDesign>

@@ -1,0 +1,134 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="534415F6-809E-1C14-A884-72D6BE933012" name="TBL_PLAYLIST">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-30 00:18:34 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<importedID>E9DA5BEB-9DAC-913A-9B90-D21A75EC05F9</importedID>
+<ordsAlias>table_22</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CODIGO_PLAYLIST" id="0EA4458B-BA2B-595B-38B0-D78B4D72C16F">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-30 00:18:34 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<importedID>F211E9E9-B5F4-FBF7-DBF9-789B5759C70A</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CODIGO_USUARIO" id="25E3F84E-B53F-2259-065C-5E75F9C50722">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-30 00:18:34 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<importedID>47061C5B-0EEE-16C7-D529-D031BF803232</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7386F1FC-279B-3B36-BDE1-355870B896B1" referredColumn="80F566C2-EF95-C2E5-6297-64DE710C0108"/>
+</associations>
+</Column>
+<Column name="CODIGO_ESTADO" id="022DAD3D-BBD9-80F7-0D8F-CFDD668210FF">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-30 00:18:34 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<importedID>0C1E37F5-330A-55D2-BFE3-429AB55AB35E</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A1CD2CA7-E584-DAD1-0920-5F18193D9188" referredColumn="FFA166F9-E3B0-061A-3ADD-243DC1B352A6"/>
+</associations>
+</Column>
+<Column name="CODIGO_LUGAR_CREO" id="5C817C44-452D-01E8-74ED-0B4AF74A9449">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-30 00:18:34 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<importedID>BB27D0F3-E9AA-66FA-B143-6F28A17065FB</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="62628B15-1E31-176E-76BC-DE059862A5AC" referredColumn="1FCA48E5-7A94-FC90-4744-1D39FFE3DCDC"/>
+</associations>
+</Column>
+<Column name="NOMBRE_PLAYLIST" id="EB0A4DEC-30AD-AE95-6779-9A8DD8265F02">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-30 00:18:34 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<importedID>C4F72A67-2322-18BE-973A-B0D626B79939</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300</dataTypeSize>
+<ownDataTypeParameters>300,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_CREO" id="121DB1C7-8535-67B2-2652-DBE31AE4BFBD">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-30 00:18:34 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<importedID>54D709CC-50BC-95D9-11B4-3119F89DE295</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="48174A43-BC99-F429-66BD-00E8A69972AB" name="TBL_PALYLIST_PK">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-30 00:18:34 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<importedID>0236300A-08C3-E3E4-7B46-ECEDF5C8F455</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0EA4458B-BA2B-595B-38B0-D78B4D72C16F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7CD10A49-918B-D138-9C2D-52831CB5D632" name="TBL_PALYLIST_TBL_ESTADO_PALYLIST_FK">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-30 00:18:34 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="022DAD3D-BBD9-80F7-0D8F-CFDD668210FF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F0FD06E0-51D7-BE71-ED9F-C4F310A24305" name="TBL_PALYLIST_TBL_LUGARES_FK">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-30 00:18:34 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5C817C44-452D-01E8-74ED-0B4AF74A9449"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="334C62A9-8C36-51DB-831D-ED7914FB0ADC" name="TBL_PALYLIST_TBL_USUARIOS_FK">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-30 00:18:34 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="25E3F84E-B53F-2259-065C-5E75F9C50722"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

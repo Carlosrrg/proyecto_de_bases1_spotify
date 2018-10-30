@@ -1,0 +1,88 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AF6A631D-0265-DB09-8DA7-E082D602EED6" name="TBL_ALBUMES_X_PLAYLIST">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-30 00:18:34 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<importedID>DE779709-E2C5-868C-0C83-6B0CD9D18059</importedID>
+<ordsAlias>table_26</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CODIGO_ALBUM_MUSICAL" id="6153D461-442C-2117-1845-42F3475A57F3">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-30 00:18:34 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<importedID>D0660459-DE86-45FF-D7E6-F33C30A798EF</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3215FB77-0C5D-794D-7FE0-645FE3B845EC" referredColumn="282F01AB-61C8-6D92-8EF7-61FE22CD7D94"/>
+</associations>
+</Column>
+<Column name="CODIGO_PLAYLIST" id="3147B953-E37B-0F97-DF66-0BA0A74C4B05">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-30 00:18:34 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<importedID>B8F3812D-7D7C-5AAB-AC4F-CF253BC90463</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C95681FB-F20D-4325-0917-870702BC8A1F" referredColumn="0EA4458B-BA2B-595B-38B0-D78B4D72C16F"/>
+</associations>
+</Column>
+<Column name="FECHA_ANADIO" id="E51AFBB6-9E20-EB9B-CE7E-C75757E611A6">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-30 00:18:34 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<importedID>4B42FB5A-6C3E-5194-EFAC-6ABCC3667BC9</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="30E8D593-0DB1-7180-12D7-1BE61380261E" name="TBL_ALBUMES_X_PLAYLIST_PK">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-30 00:18:34 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<importedID>08F7CFE7-DC09-E777-A20A-170B9736EA71</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6153D461-442C-2117-1845-42F3475A57F3"/>
+<colUsage columnID="3147B953-E37B-0F97-DF66-0BA0A74C4B05"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0AB2B2C9-5B09-B8E1-3292-AC3DECA33BBA" name="TBL_ALBUMES_X_PLAYLIST_TBL_PLAYLIST_FK">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-30 00:18:34 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3147B953-E37B-0F97-DF66-0BA0A74C4B05"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="803968F0-4ADA-0CC8-66CF-17050B9298A1" name="TBL_ALBUMES_X_PLAYLIST_TBL_ALBUMES_MUSICALES_FK">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-30 00:18:34 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6153D461-442C-2117-1845-42F3475A57F3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,47 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2AAB51CC-EC4A-386C-1C14-D53284B3E03E" name="TBL_TIPO_TARJETA">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-30 04:05:27 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<ordsAlias>table_43</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CODIGO_TIPO_TARJETA" id="BE78D427-D5B3-CE12-7C10-1DC1D6F86B50">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-30 04:06:32 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOMBRE_TIPO_TARGETA" id="5B6D6FDD-48B4-A2FE-57B7-28D264D61879">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-30 04:06:32 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1B59E3C5-42F8-827E-98C5-0FC821047AF1" name="TBL_TIPO_TARJETA_PK">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-30 04:06:32 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BE78D427-D5B3-CE12-7C10-1DC1D6F86B50"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
