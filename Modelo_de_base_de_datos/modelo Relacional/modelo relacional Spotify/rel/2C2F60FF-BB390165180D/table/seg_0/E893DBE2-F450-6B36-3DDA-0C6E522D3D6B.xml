@@ -1,0 +1,83 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E893DBE2-F450-6B36-3DDA-0C6E522D3D6B" name="TBL_PUBLICIDAD">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 03:37:04 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<ordsAlias>table_48</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CODIGO_PUBLICIDAD" id="ABCB92E4-6338-0C4A-ABE2-271F91B13EDB">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 03:37:26 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CODIGO_EMPRESA_PUBLICIDAD" id="04AC9ACA-277A-7A80-D7EF-83781416359C">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 03:41:09 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="618D60CA-EFB8-941E-0C37-CE6EC461353F" referredColumn="534206DC-8CDF-A39C-0A8D-84E7D1E05884"/>
+</associations>
+</Column>
+<Column name="CODIGO_TIPO_VIZUALIZAR_P" id="AD8F5B57-C198-4074-020C-A959E62EDE71">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 03:59:10 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="965AA34C-8FF2-E0E3-BC92-76A178867C38" referredColumn="07B276D4-EAC5-318B-8C39-2EA1E7EBF89C"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="93019A47-5FAB-6A65-29E4-17B223CC36B8" name="TBL_PUBLICIDAD_PK">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 03:37:26 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="ABCB92E4-6338-0C4A-ABE2-271F91B13EDB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9166D792-6F62-13BA-E4D0-73FAD2AA90B5" name="TBL_PUBLICIDAD_TBL_EMPRESAS_PUBLICIDAD_FK">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 03:41:09 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="04AC9ACA-277A-7A80-D7EF-83781416359C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="15E1D49F-7493-E6EF-6378-E4885433E745" name="TBL_PUBLICIDAD_TBL_TIPO_VIZUALIZAR_PUBLICIDAD_FK">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 03:59:10 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AD8F5B57-C198-4074-020C-A959E62EDE71"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

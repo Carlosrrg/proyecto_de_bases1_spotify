@@ -1,0 +1,50 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2F03F3B2-C51F-160A-515D-441A4DE7EEEA" name="TBL_PLANES_DE_CUENTAS">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 01:32:06 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<importedID>4FAF5C31-BBD4-0475-4F3D-A110C7AF1E0D</importedID>
+<ordsAlias>table_5</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CODIGO_PLANES_CUENTA" id="87EA1DF6-5000-2843-0E0A-ECFA4C68900F">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 01:32:06 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<importedID>C6292CD1-5EBB-2D6B-9843-5870A46DB565</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOMBRE_PLAN" id="BAA60FCA-1216-9D15-4734-0C268823166E">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 01:32:06 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<importedID>DCA95BBA-4909-ABB9-DE66-3A28EA0739A0</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300</dataTypeSize>
+<ownDataTypeParameters>300,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E156D176-57D6-7B86-848C-5AAA94437519" name="TBL_PLANES_DE_CUENTAS_PK">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 01:32:06 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<importedID>9C3E73F9-BD29-B0DB-E589-9C86B1C7D973</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="87EA1DF6-5000-2843-0E0A-ECFA4C68900F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

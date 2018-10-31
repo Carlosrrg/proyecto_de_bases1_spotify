@@ -1,0 +1,141 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="65A43268-6CD0-F70D-370E-4B123A727897" name="TBL_EMPRESAS_PUBLICIDAD">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 03:37:49 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<ordsAlias>table_49</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CODIGO_EMPRESA_PUBLICIDAD" id="534206DC-8CDF-A39C-0A8D-84E7D1E05884">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 03:39:57 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CODIGO_TIPO_EMPRESA" id="ABE175A5-790C-291C-3891-2723798A2FD1">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 03:42:37 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="68259DD9-709C-E9CC-C539-8A8E0B4D21AA" referredColumn="FBD547E6-BFE5-0E6F-74B8-642D766403E0"/>
+</associations>
+</Column>
+<Column name="CODIGO_LUGAR_RECIDE" id="D615C68A-47DE-50E0-91FD-26CE73EB3C61">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 03:47:06 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8BF5C011-C95C-47BB-1520-8522AA21FAA6" referredColumn="C9DAD7CE-282F-EB23-7E56-E250087BA6CB"/>
+</associations>
+</Column>
+<Column name="NOMBRE_EMPRESA" id="AA803A6C-0E7E-36F5-25BD-1C3EAB91CCA0">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 03:39:57 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CORREO_ELECTRONICO" id="CB9F6418-AE30-BF3F-8CE3-308D7CCFCB66">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 03:39:57 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TELEFONO" id="83A8F388-05F2-EFBE-B656-8CFCE55C1891">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 03:39:57 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DESCRIPCION_EMPRESA" id="0D40FD6A-B437-92A5-9B28-C7AF94FB6D9E">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 03:44:48 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500</dataTypeSize>
+<ownDataTypeParameters>500,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PAGINA_WEB" id="34EDFAED-27AE-B795-5843-C2F0C8187531">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 03:46:34 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="06AB5A5B-05B9-AF6C-D232-16A795DF3CEB" name="TBL_EMPRESAS_PUBLICIDAD_PK">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 03:39:57 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="534206DC-8CDF-A39C-0A8D-84E7D1E05884"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B5FAF98B-6B96-3869-5920-2F444057DE9C" name="TBL_EMPRESAS_PUBLICIDAD_TBL_TIPO_EMPRESA_FK">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 03:42:37 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="ABE175A5-790C-291C-3891-2723798A2FD1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4550F8BC-ADAF-2B7B-B657-415373AF65E7" name="TBL_EMPRESAS_PUBLICIDAD_TBL_LUGARES_FK">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 03:47:06 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D615C68A-47DE-50E0-91FD-26CE73EB3C61"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

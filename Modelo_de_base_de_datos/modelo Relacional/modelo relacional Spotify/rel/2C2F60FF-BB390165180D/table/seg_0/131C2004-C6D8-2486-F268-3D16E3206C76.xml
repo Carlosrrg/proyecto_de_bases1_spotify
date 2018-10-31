@@ -1,0 +1,70 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="131C2004-C6D8-2486-F268-3D16E3206C76" name="TBL_RADIO">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 04:41:35 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<ordsAlias>table_53</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CODIGO_RADIO" id="3131623E-2AF3-5B1E-D0BF-08A3C5C19249">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 04:45:04 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOMBRE_RADIO" id="BA2888AC-178C-D251-78CA-A624C3FBF664">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 04:45:04 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_INICIO" id="4B8FC1C8-9220-24E4-2584-D10BCFA59030">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 04:45:04 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DESCRIPCION_RADIO" id="D84BD46A-5F93-F834-70C1-5B435715AD6C">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 04:45:04 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500</dataTypeSize>
+<ownDataTypeParameters>500,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="49933331-62FC-9DE8-34C5-09D5344A31BA" name="TBL_RADIO_PK">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 04:45:04 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3131623E-2AF3-5B1E-D0BF-08A3C5C19249"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,110 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8ACF4ECD-B78D-0342-49F1-309289155D8D" name="TBL_TARJETA_REGALO">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 01:32:06 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<importedID>4648FB38-BA05-AC25-08D2-82B0551BC929</importedID>
+<ordsAlias>table_40</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CODIGO_TARJETA_REGALO" id="B3588927-0432-B965-D4B2-049B4A185131">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 01:32:06 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<importedID>609507E2-047A-2788-6E85-E70B775BFC25</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CODIGO_LUGAR" id="F84EE34A-2203-5E87-D81A-4D985759FDBD">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 01:32:06 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<importedID>C24FB1DA-6A97-F4DD-BB61-884102BCD61A</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DAD01A58-EE5F-9F92-58AA-9B4DD1A30AF0" referredColumn="C9DAD7CE-282F-EB23-7E56-E250087BA6CB"/>
+</associations>
+</Column>
+<Column name="CODIGO_USUARIO" id="E0DB8453-C399-E44B-3319-1DCEE9F5BDA4">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 01:32:06 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<importedID>C4F1764C-DD09-7802-3238-85EFBD180EAC</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B3A09878-C344-CD4F-7354-2524ACF63625" referredColumn="9382092D-FB58-9677-3FC2-2CA3DEA4A511"/>
+</associations>
+</Column>
+<Column name="FECHA_CAJEA" id="CB3CE9BC-4191-3F7F-AA51-BFFA965B489A">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 01:32:06 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<importedID>45A0EC2E-92BA-41A8-D970-3414DDAD2762</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CODIGO_A_CAJEAR" id="A08F223F-E932-23A4-15B5-0DA1B31C6EAE">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 01:32:06 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<importedID>7FFE411D-9692-EE0F-822B-C657CC425D50</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BA4F9613-7888-8D99-20AB-B260945A4F7A" name="TBL_TARJETA_REGALO_PK">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 01:32:06 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<importedID>0F7EC7E5-938D-44C6-0DE4-967AF528AF1F</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B3588927-0432-B965-D4B2-049B4A185131"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4013FE44-59FA-9928-8C81-AB8868FDF055" name="TBL_TARJETA_REGALO_TBL_USUARIOS_FK">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 01:32:06 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E0DB8453-C399-E44B-3319-1DCEE9F5BDA4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="700EFEF1-0431-F566-0EED-C55A4DB7358B" name="TBL_TARJETA_REGALO_TBL_LUGARES_FK">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 01:32:07 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F84EE34A-2203-5E87-D81A-4D985759FDBD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

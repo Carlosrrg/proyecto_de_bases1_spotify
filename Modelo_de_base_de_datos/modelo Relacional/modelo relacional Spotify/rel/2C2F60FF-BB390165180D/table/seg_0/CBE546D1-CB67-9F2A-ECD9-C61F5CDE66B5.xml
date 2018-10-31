@@ -1,0 +1,198 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CBE546D1-CB67-9F2A-ECD9-C61F5CDE66B5" name="TBL_SHARES">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 01:32:06 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<importedID>26E417F7-1C42-5B34-BD8B-39B73D56CB79</importedID>
+<ordsAlias>table_37</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CODIGO_SHARE" id="AA06CF92-2653-C061-0F4F-C70130DB27E8">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 01:32:06 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<importedID>DFCB3BBB-E0ED-1BCD-2D19-6F30EC6B2AD3</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CODIGO_USUARIO" id="C95CA4B3-7F3D-E048-8AD7-2AE9431EE8AD">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 01:32:06 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<importedID>BDA27744-4037-4575-7264-FD18FBD3DFA8</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AF58FE3C-8F6F-9747-5A7A-68D39D3C11EF" referredColumn="9382092D-FB58-9677-3FC2-2CA3DEA4A511"/>
+</associations>
+</Column>
+<Column name="CODIGO_RED_SOCIAL" id="D633BB30-8876-68C8-3059-11A5DF697C2E">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 01:32:06 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<importedID>4E425D03-C52A-59F7-9A95-C9F92F42A6AD</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5038938E-60BF-CDE5-64EB-1DE2AB960849" referredColumn="70DD4608-B153-EE9A-6D4A-0D2FD517F230"/>
+</associations>
+</Column>
+<Column name="CODIGO_CANCION" id="66D40FD1-6F82-B632-2078-0F8C587E756D">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 01:32:06 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<importedID>BF48878D-4628-8FCB-C0AC-7440EC161C4C</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="512BA148-727B-C6C5-C4B1-B50C8F56A0DA" referredColumn="BFDBF48B-62B3-41D6-093E-33FBB1F2CD64"/>
+</associations>
+</Column>
+<Column name="CODIGO_PLAYLIST" id="6CBD4CCB-A4DC-1C80-E331-8792911A2359">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 01:32:06 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<importedID>FDF2EFF6-9422-58EB-AFF0-F7118E7EF312</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B0D439CB-5A22-74BA-CFB9-0F760C968470" referredColumn="A23AE5D6-3CDC-6BD0-71DF-61D445C6538B"/>
+</associations>
+</Column>
+<Column name="CODIGO_ALBUM_MUSICAL" id="F05072CB-7C67-B0C4-97BE-43C233187F18">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 01:32:06 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<importedID>9D596098-A518-1FB5-6F6D-15E18ECABE8F</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="331A5363-A349-DF33-7017-9B213A0B4372" referredColumn="16390AAC-B134-A9EA-C9EA-BD4FE344E26B"/>
+</associations>
+</Column>
+<Column name="CODIGO_GRUPOS_O_ARTISTAS" id="CC611913-D2E6-8A56-12C9-81A1C063AF77">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 01:32:06 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<importedID>FA564BAE-DDB5-1319-0767-E7E60063A02C</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="62917ED3-FE48-3800-EFEA-8547235C05A2" referredColumn="F6ED2AA3-7F32-19C2-9BAC-52E397CDA8EE"/>
+</associations>
+</Column>
+<Column name="FECHA_DIO_SHARE" id="857C32FC-5322-9F11-6AB9-4D2D6DD60E0F">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 01:32:06 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<importedID>0EAD3863-4D4D-515E-FFD1-810CAA49EAF6</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="18AE7F25-C225-028F-6F75-D2A41B7058E2" name="TBL_SHARES_PK">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 01:32:06 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<importedID>007BF9DC-34B7-173E-7EF1-EA1B9FB3681F</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AA06CF92-2653-C061-0F4F-C70130DB27E8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D4C70109-4788-3162-0EFD-60C510CDDB73" name="TBL_SHARES_TBL_CANCIONES_FK">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 01:32:06 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="66D40FD1-6F82-B632-2078-0F8C587E756D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="66EDA926-D267-0F17-978E-087C8FA89CAD" name="TBL_SHARES_TBL_PLAYLIST_FK">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 01:32:06 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6CBD4CCB-A4DC-1C80-E331-8792911A2359"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F80B8C8A-765D-6F66-9545-8E9C1226D644" name="TBL_SHARES_TBL_ALBUMES_MUSICALES_FK">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 01:32:06 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F05072CB-7C67-B0C4-97BE-43C233187F18"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CF4A23C4-B01A-572D-37DF-8C4F2DAD5D10" name="TBL_SHARES_TBL_USUARIOS_FK">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 01:32:06 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C95CA4B3-7F3D-E048-8AD7-2AE9431EE8AD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="900EB48B-EBBB-5A71-4A5A-6F19935BFF22" name="TBL_SHARES_TBL_REDES_SOCIALES_FK">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 01:32:06 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D633BB30-8876-68C8-3059-11A5DF697C2E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="079B14A9-434A-90E1-06BD-67CC94082290" name="TBL_SHARES_TBL_GRUPOS_O_ARTISTAS_FK">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 01:32:06 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CC611913-D2E6-8A56-12C9-81A1C063AF77"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

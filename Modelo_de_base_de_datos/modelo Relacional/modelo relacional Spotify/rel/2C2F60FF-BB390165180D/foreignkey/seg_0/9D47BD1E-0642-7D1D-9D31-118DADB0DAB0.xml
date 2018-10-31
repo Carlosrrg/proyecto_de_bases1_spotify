@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="9D47BD1E-0642-7D1D-9D31-118DADB0DAB0" containerWithKeyObject="06D9300C-E1A2-7CA9-4F13-5B7935EDD6FB" localFKIndex="E4690BAE-263E-D574-C372-1D4FE22F8D14" name="TBL_EPISODIOS_PODCAST_TBL_PODCAST_FK">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 01:32:06 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<importedID>97FF165B-A433-AEC6-ED8C-625ECBCDECF1</importedID>
+<referredTableLongName>TBL_PODCAST</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>6017E443-109E-B8B4-E5BF-08245FE2242A</referredTableID>
+<keyObject>B5BBD99D-807D-121D-894E-69A8F42A7179</keyObject>
+<referredKeyID>B5BBD99D-807D-121D-894E-69A8F42A7179</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>CODIGO_PODCAST</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

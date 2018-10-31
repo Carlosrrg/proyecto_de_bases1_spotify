@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4E6B9F26-F708-F814-2387-8D2A66A2C8F1" name="TBL_MARCA_TELEFONO_X_SO">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 01:32:06 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<importedID>2BFAC9F5-DBD8-12EA-71BD-BBADAE528C13</importedID>
+<ordsAlias>table_10</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CODIGO_MARCA_TELEFONO_M" id="D5507C76-B695-48EF-F7B7-A883C5304D61">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 01:32:06 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<importedID>55C82769-8A78-21F4-C168-1FCA4AFC5096</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="36C3CB93-FACE-27F4-C178-DABD6E0147A5" referredColumn="CAB5A329-C078-FB90-F119-1B6B1D66D3DC"/>
+</associations>
+</Column>
+<Column name="CODIGO_SISTEMA_OPERATIVO" id="A631AF84-22C0-B490-546B-126504A99FE7">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 01:32:06 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<importedID>34FAE0FF-C289-68F0-E9AB-F58175CEB9D7</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4975814E-84B7-987B-FA1E-D6A3DB5CE8E3" referredColumn="1289A744-4010-D460-44B1-82FA492C63B8"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="20BC563E-1EA1-ADC0-1375-632F0E1F3AAF" name="TBL_MARCA_TELEFONO_X_SO_PK">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 01:32:06 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<importedID>10D6F175-4E2A-5BCA-FE3D-1D641C3A8806</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A631AF84-22C0-B490-546B-126504A99FE7"/>
+<colUsage columnID="D5507C76-B695-48EF-F7B7-A883C5304D61"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F8A5E162-A62B-E4B6-1FC5-674AB44BF907" name="TBL_MARCA_TELEFONO_X_SO_TBL_MARCA_TELEFONO_M_FK">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 01:32:07 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D5507C76-B695-48EF-F7B7-A883C5304D61"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C89CE091-8CBC-6ECD-7F9D-F90B2A8817C5" name="TBL_MARCA_TELEFONO_X_SO_TBL_SISTEMAS_OPERATIVOS_FK">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 01:32:07 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A631AF84-22C0-B490-546B-126504A99FE7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

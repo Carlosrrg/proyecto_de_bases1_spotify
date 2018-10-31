@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<BusinessInfoDesign class="oracle.dbtools.crest.model.businessinfo.BusinessInfoDesign" name="Business Information" id="0E715546-624F-3323-A436-7225159B29A1">
+<BusinessInfoDesign class="oracle.dbtools.crest.model.businessinfo.BusinessInfoDesign" name="Business Information" id="A1BB4E79-306A-215C-62A1-7827747286F5">
 <createdBy>Carlos Ramos</createdBy>
-<createdTime>2018-10-30 00:17:57 UTC</createdTime>
+<createdTime>2018-10-31 01:31:36 UTC</createdTime>
 <ownerDesignName>modelo relacional Spotify</ownerDesignName>
 <shouldBeOpen>false</shouldBeOpen>
 </BusinessInfoDesign>

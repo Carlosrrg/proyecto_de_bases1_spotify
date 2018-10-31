@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="36D8C859-E299-FED0-625B-346F4ED12AE6" name="TBL_RADIO_X_USUARIO">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 04:51:56 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<ordsAlias>table_54</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CODIGO_USUARIO" id="019EED4D-5BAF-372A-DE8A-DBFFCEF04F1D">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 04:52:24 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1FCCE46B-6E77-5237-3DE2-B95EE9959129" referredColumn="9382092D-FB58-9677-3FC2-2CA3DEA4A511"/>
+</associations>
+</Column>
+<Column name="CODIGO_RADIO" id="4917473D-1375-03B4-CCC1-B3F4A77B3DA8">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 04:52:30 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3403509F-90EC-177B-9A72-A347BC77A444" referredColumn="3131623E-2AF3-5B1E-D0BF-08A3C5C19249"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="11F50AED-EDE6-FF3B-A6CB-BF00F67C85A7" name="TBL_RADIO_X_USUARIO_PK">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 04:52:44 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4917473D-1375-03B4-CCC1-B3F4A77B3DA8"/>
+<colUsage columnID="019EED4D-5BAF-372A-DE8A-DBFFCEF04F1D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="82222A38-EB5F-2236-9D08-2655CC822BE2" name="TBL_RADIO_X_USUARIO_TBL_USUARIOS_FK">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 04:52:24 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="019EED4D-5BAF-372A-DE8A-DBFFCEF04F1D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="854CBCB6-F5FE-7EC3-4BEA-639629BA01C0" name="TBL_RADIO_X_USUARIO_TBL_RADIO_FK">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-10-31 04:52:30 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4917473D-1375-03B4-CCC1-B3F4A77B3DA8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
