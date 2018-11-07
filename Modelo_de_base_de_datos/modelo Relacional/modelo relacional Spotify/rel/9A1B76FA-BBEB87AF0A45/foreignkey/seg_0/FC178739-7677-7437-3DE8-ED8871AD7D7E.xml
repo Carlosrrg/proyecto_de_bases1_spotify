@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="FC178739-7677-7437-3DE8-ED8871AD7D7E" containerWithKeyObject="86D6A5DC-46BF-8796-66E6-7D5283DBFA66" localFKIndex="B5BDC16F-6AC4-312C-70B4-3F671501B5D9" name="TBL_LUGARES_X_PROVEEDORES_FK">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-11-07 01:59:18 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<importedID>06D0BC98-365C-DA13-C25D-A2E9814B4E8C</importedID>
+<referredTableLongName>TBL_LUGARES</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>A38A1B0E-F8AB-3945-3BB5-528384902A8A</referredTableID>
+<keyObject>1AFFE3D0-ED79-BB42-F5B4-BD031C86F862</keyObject>
+<referredKeyID>1AFFE3D0-ED79-BB42-F5B4-BD031C86F862</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>CODIGO_LUGAR</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

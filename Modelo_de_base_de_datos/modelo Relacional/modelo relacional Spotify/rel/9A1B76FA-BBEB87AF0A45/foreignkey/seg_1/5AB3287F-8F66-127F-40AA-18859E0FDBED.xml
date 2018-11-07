@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_1" id="5AB3287F-8F66-127F-40AA-18859E0FDBED" containerWithKeyObject="D3E4CB81-4625-3D6D-500C-3D1B7FD84991" localFKIndex="B8136E29-FC1D-493C-A4A8-4C08471D695A" name="TBL_USUARI_TBL_PLANES_FK">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-11-07 01:59:18 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<importedID>81F26E65-CF11-D30A-9821-0CC11EDC358C</importedID>
+<referredTableLongName>TBL_PLANES_DE_CUENTAS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>4BED9BEC-315E-F31C-A576-3FFFA2638E6A</referredTableID>
+<keyObject>25BBE813-41AF-7C3D-344E-EFAD9C2246BF</keyObject>
+<referredKeyID>25BBE813-41AF-7C3D-344E-EFAD9C2246BF</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>CODIGO_PLANES_CUENTA</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

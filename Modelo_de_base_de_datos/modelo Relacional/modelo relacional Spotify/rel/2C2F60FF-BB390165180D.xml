@@ -1,8 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="Relational_1(2)" id="2C2F60FF-7E5F-5352-61DF-BB390165180D" mainViewID="3D7A8D37-46BC-F9A1-B5FE-EF82E9A68F0D">
-<createdBy>Carlos Ramos</createdBy>
-<createdTime>2018-10-31 01:32:04 UTC</createdTime>
-<ownerDesignName>modelo relacional Spotify</ownerDesignName>
-<shouldBeOpen>false</shouldBeOpen>
-<selectedRDBMSSite>32076570-2523-435C-2E92-BF29817DFF70</selectedRDBMSSite>
-</relationalModel>

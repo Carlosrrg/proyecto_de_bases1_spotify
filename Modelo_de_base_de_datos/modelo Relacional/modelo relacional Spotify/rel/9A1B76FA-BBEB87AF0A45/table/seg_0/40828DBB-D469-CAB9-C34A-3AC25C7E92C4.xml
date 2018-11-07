@@ -1,0 +1,88 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="40828DBB-D469-CAB9-C34A-3AC25C7E92C4" name="TBL_CANCIONES_X_PLAYLIST">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-11-07 01:59:18 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<importedID>E4AAE4DA-5CED-2AF2-132E-317C6A0D207B</importedID>
+<ordsAlias>table_25</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CODIGO_CANCION" id="F33FB2CF-64F9-B027-111F-B2879D1F9C1A">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-11-07 01:59:18 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<importedID>3E934FCC-F378-BDD2-EB72-D764397CA60D</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0AB26224-F347-AB3D-3482-031DD9E69160" referredColumn="6CAE6F05-F0E3-E6C1-D031-B2F086DCBCB4"/>
+</associations>
+</Column>
+<Column name="CODIGO_PLAYLIST" id="A0C261E5-F1DB-55E7-BEBB-B318042310DB">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-11-07 01:59:18 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<importedID>BFFFBE05-C5CA-9489-929C-F538F1D2C956</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5930F419-1682-922A-F8B0-1F46F32BF4F2" referredColumn="EE101D7F-670A-7033-E351-0FB51B7B6819"/>
+</associations>
+</Column>
+<Column name="FECHA_ANADIO" id="C3D089DC-7E60-FCBD-37BC-872308B7647F">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-11-07 01:59:18 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<importedID>CAAE86F1-6DDA-B916-6502-618CAC7B6551</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="04EA501F-0D3A-0724-6D7F-C6ABE6B3736B" name="TBL_CANCIONES_X_PLAYLIST_PK">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-11-07 01:59:18 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<importedID>5BB11A74-A57A-FC3D-BF43-451BF7CBCC0C</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F33FB2CF-64F9-B027-111F-B2879D1F9C1A"/>
+<colUsage columnID="A0C261E5-F1DB-55E7-BEBB-B318042310DB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8B3CF519-5E22-575C-4D1F-563ACAE95406" name="TBL_CANCIONES_X_PLAYLIST_FK">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-11-07 01:59:18 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F33FB2CF-64F9-B027-111F-B2879D1F9C1A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C1C603C0-A622-3F93-DE4C-7154F42B3C9C" name="TBL_CANCIONES_X_PLAYLIST_FKv2">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-11-07 01:59:18 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A0C261E5-F1DB-55E7-BEBB-B318042310DB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

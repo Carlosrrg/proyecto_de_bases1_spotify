@@ -1,0 +1,88 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="79F16387-22D6-8974-3B7F-6EEED58C3608" name="TBL_VINCULO_DATOS_RS">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-11-07 01:59:18 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<importedID>EE02B0CC-69A0-3D40-F22C-8945D6B55816</importedID>
+<ordsAlias>table_38</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CODIGO_VINCULO_DATOS_RS" id="38A87BAA-0D8F-80F9-1105-2F45632190BB">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-11-07 01:59:18 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<importedID>86292D04-1D9F-5EC5-A0E5-8DE0BE25B5A0</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CODIGO_RED_SOCIAL" id="CE501D89-EACB-97AD-8C27-81B1648ED002">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-11-07 01:59:18 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<importedID>0CA0E08C-DE8A-C428-F783-2E72DDBC9847</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CAEF9412-8DC5-C57D-03BD-8D6148BB7AC7" referredColumn="A27F8EEF-28A1-6F37-AD89-2DB74C2738FB"/>
+</associations>
+</Column>
+<Column name="CODIGO_USUARIO" id="F4DD27AD-F35A-5A96-8E79-117771806121">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-11-07 01:59:18 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<importedID>2848A886-07FB-7A37-574A-D889CFD5AFB0</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CD47631E-9DEF-727A-1F76-D87F6E941069" referredColumn="B4A951AB-5638-8E65-96C5-9A2978B2A745"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="899D04D1-6D80-0196-16D4-B894F012B6F4" name="TBL_VINCULO_DATOS_RS_PK">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-11-07 01:59:18 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<importedID>88E26E66-D6DD-177C-09DA-D12E6F02A687</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="38A87BAA-0D8F-80F9-1105-2F45632190BB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C25FB96F-31CA-5C16-3828-62D2513D325C" name="TBL_VINCULO_TBL_REDES_FK">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-11-07 01:59:18 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CE501D89-EACB-97AD-8C27-81B1648ED002"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F37EA4E8-6AFE-5815-B5D2-AFE31AD50B72" name="TBL_VINCULO_TBL_USU_FK">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-11-07 01:59:18 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F4DD27AD-F35A-5A96-8E79-117771806121"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

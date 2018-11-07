@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="127D0401-2D52-2695-D8CE-86E2045C0B92" containerWithKeyObject="1F9E5DDC-DBB9-3645-7566-15ABE7CCF91D" localFKIndex="11FE4D8F-BDA9-9DE0-D018-19AFF878415C" name="TBL_GRUPOS_X_GENERO_FKv2">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-11-07 01:59:18 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<importedID>05A248A9-5668-2513-CB40-C04416F108D2</importedID>
+<referredTableLongName>TBL_GRUPOS_O_ARTISTAS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>7F4E734E-DB26-66C9-C8EF-337F961160F3</referredTableID>
+<keyObject>4005331C-8DE6-8739-C232-4FC4D5EFDF15</keyObject>
+<referredKeyID>4005331C-8DE6-8739-C232-4FC4D5EFDF15</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>CODIGO_GRUPOS_O_ARTISTAS</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

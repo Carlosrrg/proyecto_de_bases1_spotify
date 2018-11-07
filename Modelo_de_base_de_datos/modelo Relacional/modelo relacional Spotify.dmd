@@ -1,15 +1,24 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="modelo relacional Spotify" id="1D015BB1-2519-C5AE-454D-0DE73E5C773E" version="3.5">
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="modelo relacional Spotify" id="4BE9BF4E-89C9-C299-A2C1-44CA2EB8ACE9" version="3.5">
 <createdBy>Carlos Ramos</createdBy>
-<createdTime>2018-10-31 01:31:36 UTC</createdTime>
+<createdTime>2018-11-07 01:58:49 UTC</createdTime>
 <ownerDesignName>modelo relacional Spotify</ownerDesignName>
 <capitalNames>false</capitalNames>
-<designId>1D015BB1-2519-C5AE-454D-0DE73E5C773E</designId>
+<designId>4BE9BF4E-89C9-C299-A2C1-44CA2EB8ACE9</designId>
 <usedDesignStorageDescriptors>
 <designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="4F771463-9223-E8E9-64CD-573895AB5D0F">
 <designStoragePath>C:\Users\Carlos Ramos\Desktop\repositorio de github\proyecto_de_bases1_spotify\Modelo_de_base_de_datos\modelo Relacional\modelo relacional Spotify</designStoragePath>
 </designDescr>
 <designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="A18C75EE-BE1C-CF9E-6695-1FE125204C06">
+<designStoragePath>C:\Users\Carlos Ramos\Desktop\repositorio de github\proyecto_de_bases1_spotify\Modelo_de_base_de_datos\modelo Relacional\modelo relacional Spotify</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="1D015BB1-2519-C5AE-454D-0DE73E5C773E">
+<designStoragePath>C:\Users\Carlos Ramos\Desktop\repositorio de github\proyecto_de_bases1_spotify\Modelo_de_base_de_datos\modelo Relacional\modelo relacional Spotify</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="8F7DEF9B-FE09-1047-5C00-ED58D6478111">
+<designStoragePath>C:\Users\Carlos Ramos\Desktop\repositorio de github\proyecto_de_bases1_spotify\Modelo_de_base_de_datos\modelo Relacional\modelo relacional Spotify</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="9778786A-95E7-CAE1-2D99-65B94A29C4AB">
 <designStoragePath>C:\Users\Carlos Ramos\Desktop\repositorio de github\proyecto_de_bases1_spotify\Modelo_de_base_de_datos\modelo Relacional\modelo relacional Spotify</designStoragePath>
 </designDescr>
 </usedDesignStorageDescriptors>

@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="D9C77E0E-0685-3A83-B3C7-6EA364589AD5" containerWithKeyObject="A19126BF-D106-7237-8841-BB54BEE8A73E" localFKIndex="5BA81BCF-E693-70FF-9CD0-D69AE53B6757" name="TBL_PAGO_TBL_DATOS_FK">
+<createdBy>Carlos Ramos</createdBy>
+<createdTime>2018-11-07 01:59:18 UTC</createdTime>
+<ownerDesignName>modelo relacional Spotify</ownerDesignName>
+<importedID>8AF87931-FA58-AFF5-8A4F-E5432CB7FDEC</importedID>
+<referredTableLongName>TBL_DATOS_PAGO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>843AC8A3-0DF7-183D-9FE2-7CDC5384DFED</referredTableID>
+<keyObject>72DE25DE-65BF-4A8E-94E7-081A9281B65F</keyObject>
+<referredKeyID>72DE25DE-65BF-4A8E-94E7-081A9281B65F</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>CODIGO_DATOS_PAGO</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
