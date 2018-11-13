@@ -34,3 +34,10 @@ GRANT create any procedure TO DB_SPOTIFY;
 GRANT create sequence TO DB_SPOTIFY;
 GRANT create synonym TO DB_SPOTIFY;
 GRANT create materialized view TO DB_SPOTIFY;
+
+
+
+
+--DESBLOQUEAR EL USUARIO HR
+ALTER USER HR ACCOUNT UNLOCK
+IDENTIFIED BY HR;
