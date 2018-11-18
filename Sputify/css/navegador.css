@@ -1,0 +1,253 @@
+aside{
+
+	background-image: linear-gradient(#191918,black);
+	width: 225px;
+	height: 540px;
+	border: none;
+	opacity: 0.9;
+	display: block;
+	position: fixed;
+	left: 0;
+	top: 0;
+}
+
+
+#imgbuscar{
+	border-radius: 15px;
+	width: 32px;
+	height: 30px;
+}
+
+
+
+#buttonBuscar{
+	opacity: 0.5;
+	float: left;
+	background-color: transparent;
+	border: none;
+	width: 200px;
+	font: 25px;
+	text-align: left;
+}	
+
+#buttonBuscar:hover{
+opacity: 1;
+
+}
+
+#imginicio2{
+	border-radius: 15px;
+	width: 32px;
+	height: 30px;
+	background color: white;
+}
+
+
+
+#buttonIniciorespaldo{
+	opacity: 0.5;
+	float: left;
+	background-color: transparent;
+	border: none;
+	width: 200px;
+	font: 25px;
+	text-align: left;
+}	
+
+#buttonIniciorespaldo:hover{
+opacity: 1;
+
+}
+
+
+
+#imginicio{
+	border-radius: 20px;
+	width: 40px;
+	height: 40px;
+
+
+}
+
+
+#buttonInicio{
+	float: left;
+	background-color: transparent;
+	border: none;
+	width: 200px;
+	font: 25px;
+
+}
+
+#bibliotecaimg{
+	border-radius: 15px;
+	width: 32px;
+	height: 30px;
+	background color: white;
+}
+
+
+
+#Btnbiblioteca{
+	opacity: 0.5;
+	float: left;
+	background-color: transparent;
+	border: none;
+	width: 200px;
+	font: 25px;
+	text-align: left;
+}	
+
+#Btnbiblioteca:hover{
+opacity: 1;
+
+}
+
+#BtnEscuchadosRecientemente{
+	opacity: 0.5;
+	float: left;
+	background-color: transparent;
+	border: none;
+	width: 200px;
+	font: 20px;
+	text-align: left;
+}	
+
+#BtnEscuchadosRecientemente:hover{
+opacity: 1;
+}
+#Btntop50{
+	opacity: 0.5;
+	float: left;
+	background-color: transparent;
+	border: none;
+	width: 200px;
+	font: 20px;
+	text-align: left;
+}	
+
+#Btntop50:hover{
+	opacity: 1;
+}
+
+
+#reproductor{
+	
+	background-color: #282828;
+	clear: both;
+	height: 87px;
+	top: 540px;
+	position: fixed;
+	width: 100%;
+
+}
+
+#principal{
+
+
+}
+#subprincipal{
+	background-image: linear-gradient(#7F2D16,black);
+	min-height: 453px;
+	padding-left: 225px;
+	padding-bottom: 87px;
+}
+
+#botones{
+
+ 
+}
+
+#anterior,#reproducir,#siguiente{
+		  background-color: transparent;
+		  border: none;
+}
+
+#imagenreproductor{
+
+	  height:25px;
+	  width: 25px;
+
+}
+
+#imagenplay{
+
+	  height:25px;
+	  width: 25px;
+
+}
+
+#controlesreproductor{
+
+	 		margin: 0 auto;
+	 		width: 140px;
+		
+
+
+}
+
+
+
+
+#barra{
+
+	 border-radius: 25px;	
+	 margin: 20px auto;
+	 width: 13%;	
+	 background-color: #404040;
+	 width: 500px;
+	 height: 5px;
+}
+
+#progreso{
+	border-radius: 25px;	
+	background-color: #B3B3B3;
+	width: 0px;
+ 	height: 5px;
+ 	
+}
+
+#buscar{
+	display: none;
+
+}
+#biblioteca{
+	display: none;
+
+}
+#EscuchadosRecientemente{
+	display: none;
+
+}
+#top50{
+	display: none;
+
+}
+
+
+
+
+
+
+
+h1{
+	
+	font-size: x-large;
+	color: #ffffff;
+
+}
+
+h2{
+	color: #ffffff;
+	font-size: medium;
+}
+h3{
+	color: #ffffff;
+	font-size: small;
+}
+
+body{
+ margin: 0;
+}
+
+
