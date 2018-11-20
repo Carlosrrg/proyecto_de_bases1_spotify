@@ -2,7 +2,7 @@ aside{
 
 	background-image: linear-gradient(#191918,black);
 	width: 225px;
-	height: 540px;
+	height: 600px;
 	border: none;
 	opacity: 0.9;
 	display: block;
@@ -136,8 +136,8 @@ opacity: 1;
 	background-color: #282828;
 	clear: both;
 	height: 87px;
-	top: 540px;
-	position: fixed;
+	bottom: 0px;
+	position: fixed ;
 	width: 100%;
 
 }
@@ -148,9 +148,10 @@ opacity: 1;
 }
 #subprincipal{
 	background-image: linear-gradient(#7F2D16,black);
-	min-height: 453px;
+	min-height: 485px;
+
 	padding-left: 225px;
-	padding-bottom: 87px;
+	padding-bottom: 90px;
 }
 
 #botones{
