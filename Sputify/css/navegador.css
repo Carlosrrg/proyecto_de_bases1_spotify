@@ -1,8 +1,8 @@
 aside{
 
 	background-image: linear-gradient(#191918,black);
-	width: 20%;
-	height: 87%;
+	width: 225px;
+	height: 600px;
 	border: none;
 	opacity: 0.9;
 	display: block;
@@ -135,7 +135,7 @@ opacity: 1;
 	
 	background-color: #282828;
 	clear: both;
-	height: 13%;
+	height: 87px;
 	bottom: 0px;
 	position: fixed ;
 	width: 100%;
@@ -143,16 +143,15 @@ opacity: 1;
 }
 
 #principal{
-	height: 87%;
+
 
 }
 #subprincipal{
-	background-image: linear-gradient(#7F2D16,white);
-	min-height: 100%;
+	background-image: linear-gradient(#7F2D16,black);
+	min-height: 485px;
 
-	
-
-	
+	padding-left: 225px;
+	padding-bottom: 90px;
 }
 
 #botones{
@@ -209,32 +208,19 @@ opacity: 1;
  	
 }
 
-#inicio{
-	padding-left: 20%;
-	padding-bottom: 7%;
-}
-
 #buscar{
-	padding-left: 20%;
-	padding-bottom: 7%;
 	display: none;
 
 }
 #biblioteca{
-	padding-left: 20%;
-	padding-bottom: 7%;
 	display: none;
 
 }
 #EscuchadosRecientemente{
-	padding-left: 20%;
-	padding-bottom: 7%;
 	display: none;
 
 }
 #top50{
-	padding-left: 20%;
-	padding-bottom: 7%;
 	display: none;
 
 }
@@ -263,10 +249,6 @@ h3{
 
 body{
  margin: 0;
- height: 100%;
-}
-html{
-	height: 100%;
 }
 
 
