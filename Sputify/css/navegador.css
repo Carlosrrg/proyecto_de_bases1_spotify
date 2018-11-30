@@ -6,6 +6,7 @@ aside{
 	border: none;
 	opacity: 0.9;
 	display: block;
+	width: 20%;
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -22,10 +23,11 @@ aside{
 
 #buttonBuscar{
 	opacity: 0.5;
-	float: left;
+	float: none;
 	background-color: transparent;
 	border: none;
-	width: 200px;
+	display: block;
+	width: 100%;
 	font: 25px;
 	text-align: left;
 }	
@@ -46,10 +48,11 @@ opacity: 1;
 
 #buttonIniciorespaldo{
 	opacity: 0.5;
-	float: left;
+	float: none;
 	background-color: transparent;
 	border: none;
-	width: 200px;
+	display: block;
+	width: 100%;
 	font: 25px;
 	text-align: left;
 }	
@@ -71,10 +74,11 @@ opacity: 1;
 
 
 #buttonInicio{
-	float: left;
+	float: none;
 	background-color: transparent;
 	border: none;
-	width: 200px;
+	display: block;
+	width: 100%;
 	font: 25px;
 
 }
@@ -90,10 +94,11 @@ opacity: 1;
 
 #Btnbiblioteca{
 	opacity: 0.5;
-	float: left;
+	float: none;
 	background-color: transparent;
 	border: none;
-	width: 200px;
+	display: block;
+	width: 100%;
 	font: 25px;
 	text-align: left;
 }	
@@ -105,10 +110,11 @@ opacity: 1;
 
 #BtnEscuchadosRecientemente{
 	opacity: 0.5;
-	float: left;
+	float: none;
 	background-color: transparent;
 	border: none;
-	width: 200px;
+	display: block;
+	width: 100%;
 	font: 20px;
 	text-align: left;
 }	
@@ -118,10 +124,11 @@ opacity: 1;
 }
 #Btntop50{
 	opacity: 0.5;
-	float: left;
+	float: none;
 	background-color: transparent;
 	border: none;
-	width: 200px;
+	display: block;
+	width: 100%;
 	font: 20px;
 	text-align: left;
 }	
