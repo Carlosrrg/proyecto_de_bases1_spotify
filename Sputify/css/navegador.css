@@ -1,12 +1,12 @@
 aside{
 
 	background-image: linear-gradient(#191918,black);
-	width: 20%;
+	width: 17%;
 	height: 88%;
 	border: none;
 	opacity: 0.9;
 	display: block;
-	width: 20%;
+	
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -30,6 +30,7 @@ aside{
 	width: 100%;
 	font: 25px;
 	text-align: left;
+	outline: none;
 }	
 
 #buttonBuscar:hover{
@@ -55,6 +56,7 @@ opacity: 1;
 	width: 100%;
 	font: 25px;
 	text-align: left;
+	outline: none;
 }	
 
 #buttonIniciorespaldo:hover{
@@ -80,6 +82,7 @@ opacity: 1;
 	display: block;
 	width: 100%;
 	font: 25px;
+	outline: none;
 
 }
 
@@ -101,6 +104,7 @@ opacity: 1;
 	width: 100%;
 	font: 25px;
 	text-align: left;
+	outline: none;
 }	
 
 #Btnbiblioteca:hover{
@@ -117,6 +121,7 @@ opacity: 1;
 	width: 100%;
 	font: 20px;
 	text-align: left;
+	outline: none;
 }	
 
 #BtnEscuchadosRecientemente:hover{
@@ -131,6 +136,7 @@ opacity: 1;
 	width: 100%;
 	font: 20px;
 	text-align: left;
+	outline: none;
 }	
 
 #Btntop50:hover{
@@ -142,7 +148,7 @@ opacity: 1;
 	
 	background-color: #282828;
 	clear: both;
-	height: 13%;
+	height: 14%;
 	bottom: 0px;
 	position: fixed ;
 	width: 100%;
@@ -154,7 +160,8 @@ opacity: 1;
 
 }
 #subprincipal{
-	background-image: linear-gradient(#7F2D16,white);
+
+	background-image: linear-gradient(#2D2E51, #0D0E18);
 	min-height: 100%;
 
 	
@@ -163,26 +170,27 @@ opacity: 1;
 }
 
 #botones{
-
+	width: 220px;
  
 }
 
 #anterior,#reproducir,#siguiente{
 		  background-color: transparent;
 		  border: none;
+		  outline: none;
 }
 
 #imagenreproductor{
 
-	  height:25px;
-	  width: 25px;
+	  height:40px;
+	  width: 40px;
 
 }
 
 #imagenplay{
 
-	  height:25px;
-	  width: 25px;
+	  height:40px;
+	  width: 40px;
 
 }
 
@@ -198,13 +206,15 @@ opacity: 1;
 
 
 
+
+
 #barra{
 
 	 border-radius: 25px;	
 	 margin: 20px auto;
-	 width: 13%;	
+	 width: 500px;	
 	 background-color: #404040;
-	 width: 500px;
+	 
 	 height: 5px;
 }
 
@@ -216,31 +226,73 @@ opacity: 1;
  	
 }
 
+#volumen{
+
+	 border-radius: 25px;	
+	 margin: 20px auto;
+	 width: 100px;	
+	 background-color: #404040;
+	 height: 5px;
+	position: absolute;
+	right: 25px;
+	top: 25px;
+}
+
+#controlarVolumen{
+	border-radius: 25px;	
+	background-color: #B3B3B3;
+	width: 50px;
+ 	height: 5px;
+ 	
+}
+
+
 #inicio{
-	padding-left: 20%;
+	padding-left: 17%;
 	padding-bottom: 7%;
 }
 
 #buscar{
-	padding-left: 20%;
+	padding-left: 17%;
 	padding-bottom: 7%;
 	display: none;
 
 }
+#divbuscador{
+	background-color: #282828;
+	width: 100%;
+	height: 75px;
+
+
+
+
+}
+#inputBuscador{
+ 	background-color: transparent;
+ 	
+ 	width: 100%;
+	height: 75px;
+	border:none;
+	color: white;
+	font-size: 300%;
+	font-family: 'Black Han Sans';
+	outline: none;
+
+}
 #biblioteca{
-	padding-left: 20%;
+	padding-left: 17%;
 	padding-bottom: 7%;
 	display: none;
 
 }
 #EscuchadosRecientemente{
-	padding-left: 20%;
+	padding-left: 17%;
 	padding-bottom: 7%;
 	display: none;
 
 }
 #top50{
-	padding-left: 20%;
+	padding-left: 17%;
 	padding-bottom: 7%;
 	display: none;
 
