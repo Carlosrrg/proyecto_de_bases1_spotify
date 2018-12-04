@@ -37,16 +37,40 @@
 							 	<input type="text"  id="inputBuscador">
 							</form>
 
+							<div id="listaBuscar">
+								<button type="button" id="btnDivListaBuscarPrincipales">Resultados principales</button>
+								<button type="button" id="btnDivListaBuscarArtistas">Artistas</button>
+								<button type="button" id="btnDivListaBuscarCanciones">Canciones</button>
+								<button type="button" id="btnDivListaBuscarPlaylist">Playlist</button>
+								<button type="button" id="btnDivListaBuscarPodcast">Podcast</button>
+							</div>
+
 						</div>
 					</div>
 					<div id="inicio">
-						inicio	
+							<div id="listaInicio" >
+								<button type="button" id="">Seleccionados</button> 
+								<button type="button" id="">Podcast</button>
+								<button type="button" id="">Lista de exitos</button>
+								<button type="button" id="">Generos</button>
+							</div>
 					</div>
 					<div id="biblioteca">
-						biblioteca
+							<div id="listaBiblioteca" >
+								<button type="button" id="">Playlist</button>
+								<button type="button" id="">Especialmente para ti</button>
+								<button type="button" id="">Canciones favoritas</button>
+								<button type="button" id="">Albumes</button>
+								<button type="button" id="">Artistas</button>
+							</div>
 					</div>
 					<div id="EscuchadosRecientemente">
-						escuchados recientemente
+						<div id="listaEscuchadoRecientemente" >
+								<button type="button" id="">General</button>
+								<button type="button" id="">Artistas relacionados</button>
+								<button type="button" id="">Informacion</button>
+								
+							</div>
 					</div>
 					<div id="top50">
 						top 50 global
@@ -77,8 +101,8 @@
 				</div>
 			
 			</div>
-
-			<div id="volumen">
+			<img src="../img/sonidomedio.png" id="imagenSonido">
+			<div id="volumen" >
 				
 				<div id="controlarVolumen">
 					

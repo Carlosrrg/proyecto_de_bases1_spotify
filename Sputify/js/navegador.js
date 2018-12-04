@@ -87,6 +87,17 @@ function volumen(vol) {
 		miaudio.volume=nuevoVolumen;
 		divControlarVolumen.style.width=ratonY+"px";
 
+		if (nuevoVolumen==0.0) {
+			document.getElementById('imagenSonido').src = "../img/sonidobajo.png";
+
+		}
+		else if(nuevoVolumen>0.0 && nuevoVolumen<0.9){
+			document.getElementById('imagenSonido').src = "../img/sonidomedio.png";
+
+		}else{
+			document.getElementById('imagenSonido').src = "../img/sonidoalto.png";
+		}
+
 		
 	}
 

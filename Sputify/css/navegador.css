@@ -298,6 +298,109 @@ opacity: 1;
 
 }
 
+#imagenSonido{
+
+	position: absolute;
+	right: 125px;
+	top: 33px;
+}
+
+#listaBuscar{
+	padding-left: 5%;
+	padding-top: 30px;
+	
+
+
+
+}
+#btnDivListaBuscarPrincipales{
+
+
+	padding-left: 50px;
+	padding-right: 50px;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	color: white;
+	opacity: 0.5;
+	font-family: 'Alfa Slab One';
+	font-size: 20px;
+}
+#btnDivListaBuscarArtistas{
+
+
+	padding-left: 50px;
+	padding-right: 50px;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	color: white;
+	opacity: 0.5;
+	font-family: 'Alfa Slab One';
+	font-size: 20px;
+}
+#btnDivListaBuscarCanciones{
+
+
+	padding-left: 50px;
+	padding-right: 50px;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	color: white;
+	opacity: 0.5;
+	font-family: 'Alfa Slab One';
+	font-size: 20px;
+}
+#btnDivListaBuscarPlaylist{
+
+
+	padding-left: 50px;
+	padding-right: 50px;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	color: white;
+	opacity: 0.5;
+	font-family: 'Alfa Slab One';
+	font-size: 20px;
+}
+#btnDivListaBuscarPodcast{
+
+
+	padding-left: 50px;
+	padding-right: 50px;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	color: white;
+	opacity: 0.5;
+	font-family: 'Alfa Slab One';
+	font-size: 20px;
+}
+
+
+#btnDivListaBuscarPrincipales:hover{
+
+        opacity:1;
+}
+#btnDivListaBuscarArtistas:hover{
+
+        opacity:1;
+}
+#btnDivListaBuscarCanciones:hover{
+
+        opacity:1;
+}
+#btnDivListaBuscarPlaylist:hover{
+
+        opacity:1;
+}
+#btnDivListaBuscarPodcast:hover{
+
+        opacity:1;
+}
+
 
 
 
