@@ -401,6 +401,35 @@ opacity: 1;
         opacity:1;
 }
 
+#imagenBusqueda{
+	float: left;
+
+}
+#imagenBusqueda img{
+	padding: 4px;
+	border-radius: 20px;
+
+}
+
+#reproductorImagen{
+
+	height: 100px;
+	width: 100px;
+	background-color: transparent;
+	position: fixed;
+	top: 41%;
+	left: 28%;
+	opacity: 0.0;
+
+
+}
+#reproductorImagen:hover{
+
+ opacity: 1.0;
+
+
+}
+
 
 
 

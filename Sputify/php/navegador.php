@@ -45,6 +45,20 @@
 								<button type="button" id="btnDivListaBuscarPodcast">Podcast</button>
 							</div>
 
+							<div id="divContenidoBuscador">
+								
+								<figure id="imagenBusqueda">
+
+									<img src="../img/nightcore.jpg"  >
+									
+									<img src="../img/darplayimagen.jpg" id="reproductorImagen">
+
+
+								</figure>
+
+
+							</div>
+
 						</div>
 					</div>
 					<div id="inicio">
