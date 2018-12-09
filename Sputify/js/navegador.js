@@ -1,4 +1,6 @@
-var miaudio,reproducir,barra,progreso,inicio,Iniciorespaldo,buscar,biblioteca,EscuchadosRecientemente,top50,divinicio,divbuscar,divbiblioteca,divEscuchadosRecientemente,divtop50,divsubprincipal,divVolumen,divControlarVolumen;
+var miaudio,reproducir,barra,progreso,inicio,Iniciorespaldo,buscar,biblioteca,
+EscuchadosRecientemente,top50,divinicio,divbuscar,divbiblioteca,divEscuchadosRecientemente,
+divtop50,divsubprincipal,divVolumen,divControlarVolumen;
 
 bucle2=setInterval(termino,30);
 

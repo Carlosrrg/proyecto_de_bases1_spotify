@@ -158,12 +158,15 @@ opacity: 1;
 #principal{
 	height: 87%;
 
+
 }
 #subprincipal{
-
+    
 	background-image: linear-gradient(#2D2E51, #0D0E18);
+	background-repeat: no-repeat;
+    background-attachment: fixed;
 	min-height: 100%;
-
+	display: flex;
 	
 
 	
@@ -248,6 +251,7 @@ opacity: 1;
 
 
 #inicio{
+	width: 100%;
 	padding-left: 17%;
 	padding-bottom: 7%;
 }
@@ -256,6 +260,7 @@ opacity: 1;
 	padding-left: 17%;
 	padding-bottom: 7%;
 	display: none;
+	width: 100%;
 
 }
 #divbuscador{
@@ -280,18 +285,21 @@ opacity: 1;
 
 }
 #biblioteca{
+	width: 100%;
 	padding-left: 17%;
 	padding-bottom: 7%;
 	display: none;
 
 }
 #EscuchadosRecientemente{
+	width: 100%;
 	padding-left: 17%;
 	padding-bottom: 7%;
 	display: none;
 
 }
 #top50{
+	width: 100%;
 	padding-left: 17%;
 	padding-bottom: 7%;
 	display: none;
@@ -305,9 +313,10 @@ opacity: 1;
 	top: 33px;
 }
 
-#listaBuscar{
-	padding-left: 5%;
+#listaBuscar , #listaInicio, #listaBiblioteca, #listaEscuchadoRecientemente{
+	padding-left: 3%;
 	padding-top: 30px;
+	margin-bottom: 20px;
 	
 
 
@@ -316,21 +325,21 @@ opacity: 1;
 #btnDivListaBuscarPrincipales{
 
 
-	padding-left: 50px;
-	padding-right: 50px;
+	margin-left: 4%;
+	margin-right: 4%;
 	background-color: transparent;
 	border: none;
 	outline: none;
 	color: white;
-	opacity: 0.5;
+	opacity: 1;
 	font-family: 'Alfa Slab One';
 	font-size: 20px;
 }
 #btnDivListaBuscarArtistas{
 
 
-	padding-left: 50px;
-	padding-right: 50px;
+	margin-left: 5%;
+	margin-right: 5%;
 	background-color: transparent;
 	border: none;
 	outline: none;
@@ -342,8 +351,8 @@ opacity: 1;
 #btnDivListaBuscarCanciones{
 
 
-	padding-left: 50px;
-	padding-right: 50px;
+	margin-left: 5%;
+	margin-right: 5%;
 	background-color: transparent;
 	border: none;
 	outline: none;
@@ -355,8 +364,8 @@ opacity: 1;
 #btnDivListaBuscarPlaylist{
 
 
-	padding-left: 50px;
-	padding-right: 50px;
+	margin-left: 5%;
+	margin-right: 5%;
 	background-color: transparent;
 	border: none;
 	outline: none;
@@ -365,11 +374,11 @@ opacity: 1;
 	font-family: 'Alfa Slab One';
 	font-size: 20px;
 }
-#btnDivListaBuscarPodcast{
+#btnDivListaBuscarAlbumes{
 
 
-	padding-left: 50px;
-	padding-right: 50px;
+	margin-left: 5%;
+	margin-right: 5%;
 	background-color: transparent;
 	border: none;
 	outline: none;
@@ -378,6 +387,54 @@ opacity: 1;
 	font-family: 'Alfa Slab One';
 	font-size: 20px;
 }
+#listaEscuchadoRecientemente button{
+	margin-left: 8%;
+	margin-right: 8%;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	color: white;
+	opacity: 0.5;
+	font-family: 'Alfa Slab One';
+	font-size: 20px;
+}
+
+#listaBiblioteca button{
+	margin-left: 4%;
+	margin-right: 4%;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	color: white;
+	opacity: 0.5;
+	font-family: 'Alfa Slab One';
+	font-size: 20px;
+}
+#listaBiblioteca button:hover{
+	opacity:1;
+}
+
+#listaInicio button{
+
+
+	margin-left: 7%;
+	margin-right: 7%;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	color: white;
+	opacity: 0.5;
+	font-family: 'Alfa Slab One';
+	font-size: 20px;
+}
+#listaInicio button:hover{
+	opacity:1;
+}
+#listaEscuchadoRecientemente button:hover{
+	opacity:1;
+	
+}
+
 
 
 #btnDivListaBuscarPrincipales:hover{
@@ -396,29 +453,32 @@ opacity: 1;
 
         opacity:1;
 }
-#btnDivListaBuscarPodcast:hover{
+#btnDivListaBuscarAlbumes:hover{
 
         opacity:1;
 }
 
 #imagenBusqueda{
-	float: left;
+  
+  	float: left;
+	background-image: url(../img/nightcore.jpg);
+	border-radius: 25px;
+	margin-left: 5%;
+	width: 300px;
+	height: 300px;
+	margin-top: 22px;
+
+
+
 
 }
-#imagenBusqueda img{
-	padding: 4px;
-	border-radius: 20px;
 
-}
 
 #reproductorImagen{
 
-	height: 100px;
-	width: 100px;
-	background-color: transparent;
-	position: fixed;
-	top: 41%;
-	left: 28%;
+	width: 300px;
+	height: 300px;
+	
 	opacity: 0.0;
 
 
@@ -429,6 +489,78 @@ opacity: 1;
 
 
 }
+.play{
+
+
+	clear: both;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	
+}
+
+#imgPlayArrow{
+height: 25px;
+width: 25px;
+
+
+
+}
+.efectosCanciones{
+
+
+	padding-right: 10px;
+	height: 70px;
+}
+.efectosCanciones:hover{
+	
+	background: rgba(0, 0, 13, 0.5);
+	border-radius: 5px;
+	transition: all 1s ease;
+
+}
+
+.efectosArtistas{
+
+	float: left;
+	border-radius: 200px 200px 200px 200px;
+	margin-left: 2%;
+    margin-right: 2%;
+	width: 15%;
+	height: 5%;
+	
+}
+
+#ArtistaImagen{
+
+	width: 100%;
+	height: 100%;
+	border-radius: 200px 200px 200px 200px;
+	opacity: 0.0;
+
+
+}
+#ArtistaImagen:hover{
+
+ opacity: 1.0;
+
+
+}
+.efectosAlbumes{
+
+	float: left;
+	
+	margin-left: 2%;
+    margin-right: 2%;
+	width: 15%;
+	height: 5%;
+	
+}
+
+
+
+
+
 
 
 
