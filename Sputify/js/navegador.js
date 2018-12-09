@@ -136,6 +136,8 @@ function inicio1(){
 	divbiblioteca.style.display = 'none';
 	divbuscar.style.display = 'none';
 	divsubprincipal.style.background='linear-gradient(#2D2E51, #0D0E18)';
+	divsubprincipal.style.backgroundRepeat='no-repeat';
+	divsubprincipal.style.backgroundAttachment = "fixed";
 
 
 
@@ -148,6 +150,8 @@ function buscar1(){
 	divbiblioteca.style.display = 'none';
 	divbuscar.style.display = 'block';
 	divsubprincipal.style.background='linear-gradient(#1A2B57, #090E1D)';
+	divsubprincipal.style.backgroundRepeat='no-repeat';
+	divsubprincipal.style.backgroundAttachment = "fixed";
 
 
 
@@ -160,6 +164,8 @@ function biblioteca1(){
 		divbiblioteca.style.display = 'block';
 		divbuscar.style.display = 'none';
 		divsubprincipal.style.background='linear-gradient(#1A2B57, #090E1D)';
+		divsubprincipal.style.backgroundRepeat='no-repeat';
+	divsubprincipal.style.backgroundAttachment = "fixed";
 
 
 
@@ -173,6 +179,8 @@ function EscuchadosRecientemente1(){
 			divbiblioteca.style.display = 'none';
 			divbuscar.style.display = 'none';
 			divsubprincipal.style.background='linear-gradient(#384C5F, #10151B)';
+			divsubprincipal.style.backgroundRepeat='no-repeat';
+	divsubprincipal.style.backgroundAttachment = "fixed";
 
 
 
@@ -184,6 +192,8 @@ function top501(){
 		divbiblioteca.style.display = 'none';
 		divbuscar.style.display = 'none';
 		divsubprincipal.style.background='linear-gradient(#1B4C69, #07161E)';
+		divsubprincipal.style.backgroundRepeat='no-repeat';
+	divsubprincipal.style.backgroundAttachment = "fixed";
 
 
 

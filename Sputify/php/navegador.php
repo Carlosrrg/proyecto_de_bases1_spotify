@@ -34,7 +34,7 @@
 					<div  id="buscar">
 						<div id="divbuscador">
 							<form>
-							 	<input type="text"  id="inputBuscador">
+							 	<input type="text"  id="inputBuscador" autofocus autocomplete="off"> 
 							</form>
 
 							<div id="listaBuscar">
