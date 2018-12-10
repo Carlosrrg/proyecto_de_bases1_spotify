@@ -4,7 +4,7 @@
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <title ng-bind="(&#39;loginTitle&#39; | localize) + &#39; - Spotify&#39;" class="ng-binding">
+    <title>
       Iniciar sesión - Spotify
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -49,38 +49,46 @@
                           </div>
                       </div>
                   </div>
-                  <form name="" method="" novalidate="" class="ng-valid-sp-disallow-chars ng-dirty ng-valid-parse ng-valid ng-valid-required">     
-                      <div class="row" ng-class="{&#39;has-error&#39;: (accounts.username.$dirty &amp;&amp; accounts.username.$invalid)}">
+
+
+                  <div>     
+                      <div class="row" ng-class="">
                           <div class="col-xs-12">
-                              <label for="login-username" class="control-label sr-only ng-binding">
+                              <label for="inputEmail" class="control-label sr-only ng-binding">
                                 Dirección de correo o nombre de usuario
                               </label>
-                              <input ng-model="form.username" type="text" class="form-control input-with-feedback ng-valid-sp-disallow-chars ng-not-empty ng-dirty ng-valid-parse ng-valid ng-valid-required ng-touched" name="username" id="login-username" placeholder="Dirección de correo o nombre de usuario" required="" sp-disallow-chars=":%&amp;&#39;`´&quot;" sp-disallow-chars-model="usernameDisallowedChars" autocapitalize="off" autocomplete="off" autocorrect="off" autofocus="autofocus" ng-trim="false">
+                              <input ng-model="" type="text" class="form-control" name="Email" id="inputEmail" placeholder="Dirección de correo o nombre de usuario" required="" sp-disallow-chars="" sp-disallow-chars-model="usernameDisallowedChars" autocapitalize="off" autocomplete="off" autocorrect="off" autofocus="autofocus" >
                           </div>
                       </div>
-                      <div class="row" ng-class="{&#39;has-error&#39;: (accounts.password.$dirty &amp;&amp; accounts.password.$invalid)}">
+                      <div class="row" ng-class="">
                           <div class="col-xs-12">
-                              <label for="login-password" class="control-label sr-only ng-binding">
+                              <label for="inputPassword" class="control-label sr-only ng-binding">
                                 Contraseña
                               </label>
-                              <input ng-model="form.password" type="password" class="form-control input-with-feedback ng-not-empty ng-dirty ng-valid-parse ng-valid ng-valid-required ng-touched" name="password" id="login-password" placeholder="Contraseña" required="" autocomplete="off" ng-trim="false">
+                              <input ng-model="" type="password" class="form-control" name="Password" id="inputPassword" placeholder="Contraseña" required="" autocomplete="off" ng-trim="false">
                           </div>
                       </div>
                       <div class="row row-submit">
                           <div class="col-xs-12 col-sm-6">
                               <div class="checkbox">
                                 <label class="ng-binding">
-                                  <input ng-model="form.remember" type="checkbox" name="remember" id="login-remember" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                                  <input ng-model="" type="checkbox" name="remember" id="login-remember" class="ng-pristine ng-untouched ng-valid ng-not-empty">
                                   Recuérdame
                                   <span class="control-indicator"></span>
                                 </label>
                               </div>
                           </div>
                           <div class="col-xs-12 col-sm-6">
-                              <button class="btn btn-block btn-green ng-binding" id="login-button" ng-click="">Iniciar sesión</button>
+                              <button id="btn_login" type="submit" class="btn btn-block btn-green ng-binding">  
+                                Iniciar sesión
+                              </button>
                           </div>
                       </div>
-                  </form>
+                  </div>
+                  <div id="prueba"></div>
+
+
+
                   <div class="row">
                       <div class="col-xs-12 text-center">
                           <p>
@@ -137,5 +145,9 @@
               </div><!-- .content -->
           </div><!-- .container -->
       </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/controlador_login.js"></script>
   </body>
 </html>
