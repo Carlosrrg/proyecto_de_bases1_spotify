@@ -327,6 +327,20 @@ Insert into TBL_USUARIO_X_PODCAST (CODIGO_USUARIO, CODIGO_PODCAST)
 values (5, 1);
 
 
+
+
+INSERT INTO tbl_grupos_o_artistas (codigo_grupos_o_artistas,CODIGO_LUGAR_FORMO_NACE,CODIGO_LUGAR_RESIDE,NOMBRE_GRUPO_O_ARTISTA,BIOGRAFIA,IMAGEN) VALUES (1,1,2,'Ricardo Arjona','biografia','../img/RicardoArjona.jpg');
+INSERT INTO tbl_grupos_o_artistas (codigo_grupos_o_artistas,CODIGO_LUGAR_FORMO_NACE,CODIGO_LUGAR_RESIDE,NOMBRE_GRUPO_O_ARTISTA,BIOGRAFIA,IMAGEN) VALUES (2,4,2,'Freddie Mercury','biografia','../img/FreddieMercury.jpg');
+INSERT INTO tbl_grupos_o_artistas (codigo_grupos_o_artistas,CODIGO_LUGAR_FORMO_NACE,CODIGO_LUGAR_RESIDE,NOMBRE_GRUPO_O_ARTISTA,BIOGRAFIA,IMAGEN) VALUES (3,6,6,'Slipknot','biografia','../img/Slipknot.jpg');
+INSERT INTO tbl_grupos_o_artistas (codigo_grupos_o_artistas,CODIGO_LUGAR_FORMO_NACE,CODIGO_LUGAR_RESIDE,NOMBRE_GRUPO_O_ARTISTA,BIOGRAFIA,IMAGEN) VALUES (4,8,7,'Katy Perry','biografia','../img/KatyPerry.jpg');
+INSERT INTO tbl_grupos_o_artistas (codigo_grupos_o_artistas,CODIGO_LUGAR_FORMO_NACE,CODIGO_LUGAR_RESIDE,NOMBRE_GRUPO_O_ARTISTA,BIOGRAFIA,IMAGEN) VALUES (5,7,7,'Madonna','biografia','../img/Madonna.jpg');
+INSERT INTO tbl_grupos_o_artistas (codigo_grupos_o_artistas,CODIGO_LUGAR_FORMO_NACE,CODIGO_LUGAR_RESIDE,NOMBRE_GRUPO_O_ARTISTA,BIOGRAFIA,IMAGEN) VALUES (6,9,4,'Michael Jackson','biografia','../img/MichaelJackson.jpg');
+INSERT INTO tbl_grupos_o_artistas (codigo_grupos_o_artistas,CODIGO_LUGAR_FORMO_NACE,CODIGO_LUGAR_RESIDE,NOMBRE_GRUPO_O_ARTISTA,BIOGRAFIA,IMAGEN) VALUES (7,1,9,'Linkin Park','biografia','../img/LinkinPark.jpg');
+INSERT INTO tbl_grupos_o_artistas (codigo_grupos_o_artistas,CODIGO_LUGAR_FORMO_NACE,CODIGO_LUGAR_RESIDE,NOMBRE_GRUPO_O_ARTISTA,BIOGRAFIA,IMAGEN) VALUES (8,8,3,'Daddy Yankee','biografia','../img/DaddyYankee.jpg');
+INSERT INTO tbl_grupos_o_artistas (codigo_grupos_o_artistas,CODIGO_LUGAR_FORMO_NACE,CODIGO_LUGAR_RESIDE,NOMBRE_GRUPO_O_ARTISTA,BIOGRAFIA,IMAGEN) VALUES (9,7,3,'Fall Out Boys','biografia','../img/FallOutBoys.jpg');
+INSERT INTO tbl_grupos_o_artistas (codigo_grupos_o_artistas,CODIGO_LUGAR_FORMO_NACE,CODIGO_LUGAR_RESIDE,NOMBRE_GRUPO_O_ARTISTA,BIOGRAFIA,IMAGEN) VALUES (10,8,2,'Nicky Minaj','biografia','../img/NickyMinaj.jpg');
+
+
 COMMIT;
 
 
