@@ -327,7 +327,7 @@ Insert into TBL_USUARIO_X_PODCAST (CODIGO_USUARIO, CODIGO_PODCAST)
 values (5, 1);
 
 
-
+------------CLaudio INserts :) ----------
 
 INSERT INTO tbl_grupos_o_artistas (codigo_grupos_o_artistas,CODIGO_LUGAR_FORMO_NACE,CODIGO_LUGAR_RESIDE,NOMBRE_GRUPO_O_ARTISTA,BIOGRAFIA,IMAGEN) VALUES (1,1,2,'Ricardo Arjona','biografia','../img/RicardoArjona.jpg');
 INSERT INTO tbl_grupos_o_artistas (codigo_grupos_o_artistas,CODIGO_LUGAR_FORMO_NACE,CODIGO_LUGAR_RESIDE,NOMBRE_GRUPO_O_ARTISTA,BIOGRAFIA,IMAGEN) VALUES (2,4,2,'Freddie Mercury','biografia','../img/FreddieMercury.jpg');
@@ -340,6 +340,36 @@ INSERT INTO tbl_grupos_o_artistas (codigo_grupos_o_artistas,CODIGO_LUGAR_FORMO_N
 INSERT INTO tbl_grupos_o_artistas (codigo_grupos_o_artistas,CODIGO_LUGAR_FORMO_NACE,CODIGO_LUGAR_RESIDE,NOMBRE_GRUPO_O_ARTISTA,BIOGRAFIA,IMAGEN) VALUES (9,7,3,'Fall Out Boys','biografia','../img/FallOutBoys.jpg');
 INSERT INTO tbl_grupos_o_artistas (codigo_grupos_o_artistas,CODIGO_LUGAR_FORMO_NACE,CODIGO_LUGAR_RESIDE,NOMBRE_GRUPO_O_ARTISTA,BIOGRAFIA,IMAGEN) VALUES (10,8,2,'Nicky Minaj','biografia','../img/NickyMinaj.jpg');
 
+
+INSERT INTO tbl_albumes_musicales(codigo_album_musical,CODIGO_GRUPOS_O_ARTISTAS,NOMBRE_ALBUM_MUSICAL,DURACION_ALBUM) VALUES (1,1,'Déjame decir que te amo',5000);
+INSERT INTO tbl_albumes_musicales(codigo_album_musical,CODIGO_GRUPOS_O_ARTISTAS,NOMBRE_ALBUM_MUSICAL,DURACION_ALBUM) VALUES (2,1,'Adentro',5000);
+
+INSERT INTO tbl_albumes_musicales(codigo_album_musical,CODIGO_GRUPOS_O_ARTISTAS,NOMBRE_ALBUM_MUSICAL,DURACION_ALBUM) VALUES (3,2,'News of the World',5000);
+INSERT INTO tbl_albumes_musicales(codigo_album_musical,CODIGO_GRUPOS_O_ARTISTAS,NOMBRE_ALBUM_MUSICAL,DURACION_ALBUM) VALUES (4,2,'Made in Heaven',5000);
+
+INSERT INTO tbl_albumes_musicales(codigo_album_musical,CODIGO_GRUPOS_O_ARTISTAS,NOMBRE_ALBUM_MUSICAL,DURACION_ALBUM) VALUES (5,3,'Iowa',5000);
+INSERT INTO tbl_albumes_musicales(codigo_album_musical,CODIGO_GRUPOS_O_ARTISTAS,NOMBRE_ALBUM_MUSICAL,DURACION_ALBUM) VALUES (6,3,'Vol. 3: (The Subliminal Verses)',5000);
+
+INSERT INTO tbl_albumes_musicales(codigo_album_musical,CODIGO_GRUPOS_O_ARTISTAS,NOMBRE_ALBUM_MUSICAL,DURACION_ALBUM) VALUES (7,4,'One of the Boys',5000);
+INSERT INTO tbl_albumes_musicales(codigo_album_musical,CODIGO_GRUPOS_O_ARTISTAS,NOMBRE_ALBUM_MUSICAL,DURACION_ALBUM) VALUES (8,4,'Teenage Dream',5000);
+
+INSERT INTO tbl_albumes_musicales(codigo_album_musical,CODIGO_GRUPOS_O_ARTISTAS,NOMBRE_ALBUM_MUSICAL,DURACION_ALBUM) VALUES (9,5,'Bedtime Stories',5000);
+INSERT INTO tbl_albumes_musicales(codigo_album_musical,CODIGO_GRUPOS_O_ARTISTAS,NOMBRE_ALBUM_MUSICAL,DURACION_ALBUM) VALUES (10,5,'American Life',5000);
+
+INSERT INTO tbl_albumes_musicales(codigo_album_musical,CODIGO_GRUPOS_O_ARTISTAS,NOMBRE_ALBUM_MUSICAL,DURACION_ALBUM) VALUES (11,6,'Thriller',5000);
+INSERT INTO tbl_albumes_musicales(codigo_album_musical,CODIGO_GRUPOS_O_ARTISTAS,NOMBRE_ALBUM_MUSICAL,DURACION_ALBUM) VALUES (12,6,'Blood on the Dance Floor: HIStory in the Mix',5000);
+
+INSERT INTO tbl_albumes_musicales(codigo_album_musical,CODIGO_GRUPOS_O_ARTISTAS,NOMBRE_ALBUM_MUSICAL,DURACION_ALBUM) VALUES (13,7,'Hybrid Theory',5000);
+INSERT INTO tbl_albumes_musicales(codigo_album_musical,CODIGO_GRUPOS_O_ARTISTAS,NOMBRE_ALBUM_MUSICAL,DURACION_ALBUM) VALUES (14,7,'Meteora',5000);
+
+INSERT INTO tbl_albumes_musicales(codigo_album_musical,CODIGO_GRUPOS_O_ARTISTAS,NOMBRE_ALBUM_MUSICAL,DURACION_ALBUM) VALUES (15,8,'Barrio fino',5000);
+INSERT INTO tbl_albumes_musicales(codigo_album_musical,CODIGO_GRUPOS_O_ARTISTAS,NOMBRE_ALBUM_MUSICAL,DURACION_ALBUM) VALUES (16,8,'Mundial',5000);
+
+INSERT INTO tbl_albumes_musicales(codigo_album_musical,CODIGO_GRUPOS_O_ARTISTAS,NOMBRE_ALBUM_MUSICAL,DURACION_ALBUM) VALUES (17,9,'From Under the Cork Tree',5000);
+INSERT INTO tbl_albumes_musicales(codigo_album_musical,CODIGO_GRUPOS_O_ARTISTAS,NOMBRE_ALBUM_MUSICAL,DURACION_ALBUM) VALUES (18,9,'Infinity on High',5000);
+
+INSERT INTO tbl_albumes_musicales(codigo_album_musical,CODIGO_GRUPOS_O_ARTISTAS,NOMBRE_ALBUM_MUSICAL,DURACION_ALBUM) VALUES (19,10,'Pink Friday',5000);
+INSERT INTO tbl_albumes_musicales(codigo_album_musical,CODIGO_GRUPOS_O_ARTISTAS,NOMBRE_ALBUM_MUSICAL,DURACION_ALBUM) VALUES (20,10,'The Pinkprint',5000);
 
 COMMIT;
 
