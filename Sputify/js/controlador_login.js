@@ -5,11 +5,18 @@ $(document).ready(function(){
 		//alert(parametros);
 		$.ajax({
 				url:"ajax_procesar_php/acciones_login.php",
-				method: "POST",
-				data: parametros,
-				//dataType: "json",
+				method:"POST",
+				data:parametros,
 				success:function(respuesta){
 					$("#prueba").html(respuesta);
+					if(!respuesta){
+						alert("Lo sentimos, correo o contrasena incorrectos...");
+						window.location="iniciar_seccion.html";
+					}
+					else{
+						//alert("el codigo_usuario es= " + respuesta);
+						window.location="vista_general_cuenta.php";
+					}
 				}
 		});
 	});	

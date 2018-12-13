@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml" class="">
+<html lang="es" xmlns:og="http://ogp.me/ns#" xmlns:fb="" class="">
   <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
@@ -105,7 +105,7 @@
                                     </use></svg>
                                   </div>
                                 </a>
-                                <a href="#" class="user-link hidden-md hidden-lg" data-tracking="{&quot;category&quot;: &quot;menu&quot;, &quot;action&quot;: &quot;account&quot;}">        
+                                <a href="#" class="user-link hidden-md hidden-lg">        
                                   <div class="user-icon-container img-circle navbar-user-img">
                                     <svg class="user-icon">
                                       <use xlink:href="#user-icon">
@@ -114,10 +114,10 @@
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-right">
                                     <li>
-                                        <a href="vista_general_cuenta.html" data-tracking="{&quot;category&quot;: &quot;menu&quot;, &quot;action&quot;: &quot;account&quot;}">Cuenta</a>
+                                        <a href="vista_general_cuenta.php">Cuenta</a>
                                     </li>
                                     <li>
-                                        <a href="index.html" data-tracking="{&quot;category&quot;: &quot;menu&quot;, &quot;action&quot;: &quot;log-out&quot;}">Cerrar Sesión</a>
+                                        <a href="php/session_cerrar.php">Cerrar Sesión</a>
                                     </li>
                                 </ul>
                             </li>
@@ -130,7 +130,7 @@
                               </svg>
                             </div>    
                         </a>
-                        <a class="navbar-brand" href="index.html" data-tracking="{&quot;category&quot;: &quot;menu&quot;, &quot;action&quot;: &quot;spotify-logo&quot;}">
+                        <a class="navbar-brand" href="index.html">
                             <span class="navbar-logo">Spotify</span>
                         </a>
                     </div>
@@ -147,7 +147,7 @@
                               </a>
                             </li>    
                             <li>
-                              <a href="#" id="nav-link-download" class="js-get-spotify js-gtm-event" data-ga-category="menu" data-ga-action="download" data-gtm-event-name="download_spotify_button_clicked" data-tracking="{&quot;category&quot;: &quot;download&quot;, &quot;action&quot;: &quot;download start&quot;, &quot;label&quot;: &quot;download-navbar&quot;}">Descargar
+                              <a href="#" id="nav-link-download" class="js-get-spotify js-gtm-event" data-ga-category="menu" data-ga-action="download">Descargar
                               </a>
                             </li>
                             <li role="separator" class="divider"></li>
@@ -157,12 +157,12 @@
                               </a>
                             </li>
                             <li class="alternate sidepanel-item-small hidden-md hidden-lg ">
-                              <a href="vista_general_cuenta.html" id="nav-link-account" data-ga-category="menu" data-ga-action="account">
+                              <a href="vista_general_cuenta.php" id="nav-link-account" data-ga-category="menu" data-ga-action="account">
                                 Cuenta
                               </a>
                             </li>
                             <li class="alternate sidepanel-item-small hidden-md hidden-lg ">
-                              <a href="index.html" id="nav-link-log-out" data-ga-category="menu" data-ga-action="log-out">
+                              <a href="php/session_cerrar.php" id="nav-link-log-out" data-ga-category="menu" data-ga-action="log-out">
                                 Cerrar Sesión
                               </a>
                             </li>
@@ -176,20 +176,20 @@
                                   </div>
                                   <span class="user-text">Perfil</span>
                                   <svg class="svg-chevron-down">
-                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#chevron-down"></use>
+                                    <use xmlns:xlink="" xlink:href="#chevron-down"></use>
                                   </svg>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-right">
                                     <li class="alternate sidepanel-item-small visible-md-block ">
-                                      <a href="#" id="nav-link-upgrade" data-ga-category="menu" data-ga-action="upgrade">
+                                      <a href="#" id="nav-link-upgrade" data-ga-category="menu">
                                         Mejora tu cuenta
                                       </a>
                                     </li>
                                     <li>
-                                      <a href="vista_general_cuenta.html" data-tracking="{&quot;category&quot;: &quot;menu&quot;, &quot;action&quot;: &quot;account&quot;}">Cuenta</a>
+                                      <a href="vista_general_cuenta.php">Cuenta</a>
                                     </li>
                                     <li>
-                                      <a href="index.html" class="logout-link" data-tracking="{&quot;category&quot;: &quot;menu&quot;, &quot;action&quot;: &quot;log-out&quot;}">Cerrar Sesión</a>
+                                      <a href="php/session_cerrar.php" class="logout-link">Cerrar Sesión</a>
                                     </li>
                                 </ul>
                             </li>
@@ -278,7 +278,7 @@
                                 </button>
                                 <ul class="dropdown-menu" role="menu"> 
                                     <li id="submenu-item-account-overview">
-                                      <a href="vista_general_cuenta.html">
+                                      <a href="vista_general_cuenta.php">
                                         <svg>
                                           <use xlink:href="#icon-home"></use>
                                         </svg> Vista general de la cuenta
@@ -359,7 +359,7 @@
                                     </div>
                                     <ul class="nav-inverse nav-tabs nav-stacked"> 
                                         <li id="submenu-item-account-overview">
-                                          <a href="vista_general_cuenta.html">
+                                          <a href="vista_general_cuenta.php">
                                             <svg>
                                               <use xlink:href="#icon-home"></use>
                                             </svg> Vista general de la cuenta
@@ -645,7 +645,7 @@
                                                         <a id="profile_cancel" name="profile[cancel]" class="btn btn-sm btn-cancel" href="#">Cancelar
                                                         </a>
                                                       </div>
-                                                      <input type="hidden" id="profile__token" name="profile[_token]" class="form-control" value="eyJ0aW1lIjoxNTQzNTQzNjY2LCJoYXNoIjoiYjE3NmY4OGE0NDJkNmM0ZjdhMDdlMGFlZmY4YzJkMWE3YWNjNDgyNjJlOWIxNWYwODM5ZjIxZTYyYjQwNDhlNyJ9">
+                                                      <input type="hidden" id="profile__token" name="profile[_token]" class="form-control" value="">
                                                 </form>
                                             </div>
                                         </div>

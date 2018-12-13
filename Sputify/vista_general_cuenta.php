@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml" class="">
+<html lang="es" xmlns:og="" xmlns:fb="" class="">
   <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
@@ -45,7 +45,9 @@
   </head>
 
   <body class="m-hn l-es page-account-overview is-loggedin  reboot  overview-promotion">
-    
+    <?php
+        session_start();
+    ?>
     <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
        <symbol id="spotify-logo" viewBox="0 0 827.79999 248.275">
         <g transform="matrix(1.25 0 0 -1.25 0 248.28)">
@@ -110,7 +112,7 @@
                               </svg>
                             </div>
                         </a>
-                        <a href="#" class="user-link hidden-md hidden-lg" data-tracking="{&quot;category&quot;: &quot;menu&quot;, &quot;action&quot;: &quot;account&quot;}">   
+                        <a href="#" class="user-link hidden-md hidden-lg" >   
                           <div class="user-icon-container img-circle navbar-user-img">
                             <svg class="user-icon">
                               <use xlink:href="#user-icon">
@@ -118,14 +120,21 @@
                             </svg>
                           </div>
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-right">
-                          <li>
-                            <a href="vista_general_cuenta.html" data-tracking="{&quot;category&quot;: &quot;menu&quot;, &quot;action&quot;: &quot;account&quot;}">Cuenta</a>
-                          </li>
-                          <li>
-                            <a href="index.html" data-tracking="{&quot;category&quot;: &quot;menu&quot;, &quot;action&quot;: &quot;log-out&quot;}">Cerrar Sesión</a>
-                          </li>
-                        </ul>
+                        <?php
+                          if(!isset($_SESSION['codigo_usuario'])){
+                                                 
+                          }
+                          else{
+                            echo '<ul class="dropdown-menu dropdown-menu-right">';
+                              echo '<li>';
+                                echo '<a href="vista_general_cuenta.php">Cuenta</a>';
+                              echo '</li>';
+                              echo '<li>';
+                                echo '<a href="php/session_cerrar.php">Cerrar Sesión</a>';
+                              echo '</li>';
+                            echo '</ul>';
+                          }
+                        ?>
                       </li>
                     </ul>
                     <a href="#" class="user-link hidden"> 
@@ -136,7 +145,7 @@
                           </svg>
                         </div>
                     </a>
-                    <a class="navbar-brand" href="index.html" data-tracking="{&quot;category&quot;: &quot;menu&quot;, &quot;action&quot;: &quot;spotify-logo&quot;}">
+                    <a class="navbar-brand" href="index.html" >
                       <span class="navbar-logo">Spotify</span>
                     </a>
                 </div>
@@ -154,7 +163,7 @@
                           </a>
                         </li>
                         <li>
-                          <a href="#" id="nav-link-download" class="js-get-spotify js-gtm-event" data-ga-category="menu" data-ga-action="download" data-gtm-event-name="download_spotify_button_clicked" data-tracking="{&quot;category&quot;: &quot;download&quot;, &quot;action&quot;: &quot;download start&quot;, &quot;label&quot;: &quot;download-navbar&quot;}" style="animation-delay: 34ms;">Descargar
+                          <a href="#" id="nav-link-download" class="js-get-spotify js-gtm-event" data-ga-category="menu" data-ga-action="download"  style="animation-delay: 34ms;">Descargar
                           </a>
                         </li>
                         <li role="separator" class="divider" style="animation-delay: 51ms;">
@@ -164,16 +173,23 @@
                             Mejora tu cuenta
                           </a>
                         </li>
-                        <li class="alternate sidepanel-item-small hidden-md hidden-lg ">
-                          <a href="vista_general_cuenta.html" id="nav-link-account" data-ga-category="menu" data-ga-action="account" style="animation-delay: 85ms;">
-                            Cuenta
-                          </a>
-                        </li>
-                        <li class="alternate sidepanel-item-small hidden-md hidden-lg ">
-                          <a href="index.html" id="nav-link-log-out" data-ga-category="menu" data-ga-action="log-out" style="animation-delay: 102ms;">
-                            Cerrar Sesión
-                          </a>
-                        </li>
+                        <?php
+                          if(!isset($_SESSION['codigo_usuario'])){
+                                                   
+                          }
+                          else{
+                            echo '<li class="alternate sidepanel-item-small hidden-md hidden-lg ">';
+                              echo '<a href="vista_general_cuenta.php" id="nav-link-account" data-ga-category="menu" data-ga-action="account" style="animation-delay: 85ms;">';
+                                echo 'Cuenta';
+                              echo '</a>';
+                            echo '</li>';
+                            echo '<li class="alternate sidepanel-item-small hidden-md hidden-lg ">';
+                              echo '<a href="php/session_cerrar.php" id="nav-link-log-out" data-ga-category="menu" data-ga-action="log-out" style="animation-delay: 102ms;">';
+                                echo 'Cerrar Sesión';
+                              echo'</a>';
+                            echo '</li>';
+                          }
+                        ?>
                         <li class="dropdown alternate hidden-sidepanel">
                             <a href="#" class="user-link dropdown-toggle" data-toggle="dropdown" style="animation-delay: 119ms;">    
                               <div class="user-icon-container img-circle navbar-user-img">
@@ -184,7 +200,7 @@
                               </div>
                               <span class="user-text">Perfil</span>
                               <svg class="svg-chevron-down">
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#chevron-down"></use>
+                                <use xmlns:xlink="" xlink:href="#chevron-down"></use>
                               </svg>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-right">
@@ -193,12 +209,19 @@
                                     Mejora tu cuenta
                                   </a>
                                 </li>
-                                <li>
-                                  <a href="vista_general_cuenta.html" data-tracking="{&quot;category&quot;: &quot;menu&quot;, &quot;action&quot;: &quot;account&quot;}" style="animation-delay: 153ms;">Cuenta</a>
-                                </li>
-                                <li>
-                                  <a href="index.html" class="logout-link" data-tracking="{&quot;category&quot;: &quot;menu&quot;, &quot;action&quot;: &quot;log-out&quot;}" style="animation-delay: 170ms;">Cerrar Sesión</a>
-                                </li>
+                                <?php
+                                  if(!isset($_SESSION['codigo_usuario'])){
+                                                   
+                                  }
+                                  else{
+                                    echo'<li>';
+                                      echo '<a href="vista_general_cuenta.php" style="animation-delay: 153ms;">Cuenta</a>';
+                                    echo '</li>';
+                                    echo '<li>';
+                                      echo '<a href="php/session_cerrar.php" class="logout-link" style="animation-delay: 170ms;">Cerrar Sesión</a>';
+                                    echo '</li>';
+                                  }
+                                ?>
                             </ul>
                         </li>
                     </ul>
@@ -303,7 +326,7 @@
                                   </a>
                                 </li> 
                                 <li id="submenu-item-edit-profile">
-                                  <a href="editar_perfil.html">
+                                  <a href="editar_perfil.php">
                                     <svg>
                                       <use xlink:href="#icon-edit"></use>
                                     </svg> Editar perfil
@@ -392,7 +415,7 @@
                                         Después, solo 5.99&nbsp;USD al mes. Puedes cancelar en cualquier momento.                    
                                     </p>
 
-                                    <a href="#" class="btn  holiday-btn btn-lg hidden-xs " data-ga-category="Account Pages" data-ga-action="Jumbotron CTA clicked" data-ga-label="promotion" data-event-name="CampaignCallToActionClick" data-event-version="2" data-event-params="[&quot;HN&quot;,&quot;holiday-2018&quot;,&quot;\/purchase\/offer\/holiday-2018-3m-for-cheap&quot;,&quot;3m-for-cheap&quot;,&quot;jumbotron&quot;,0,&quot;prodCatId&quot;]">
+                                    <a href="#" class="btn  holiday-btn btn-lg hidden-xs " data-ga-category="Account Pages" data-ga-action="Jumbotron CTA clicked" data-ga-label="promotion" data-event-name="CampaignCallToActionClick" data-event-version="2">
                                         Obtener Premium
                                     </a>                           
                                     <p class="terms">
@@ -431,7 +454,7 @@
                                         </a>
                                       </li> 
                                       <li id="submenu-item-edit-profile">
-                                        <a href="editar_perfil.html">
+                                        <a href="editar_perfil.php">
                                           <svg>
                                             <use xlink:href="#icon-edit"></use>
                                           </svg> Editar perfil
@@ -499,7 +522,55 @@
                                                   
                                       <div class="row">
                                           <div class="col-md-6">
-                                            <div class="well card profile" id=""><h3 class="text-primary">Perfil</h3><form role="form"><div class="form-group"><label class="control-label">Nombre de usuario</label><p class="form-control-static" id="card-profile-username">cramos93</p></div><div class="form-group"><label class="control-label">Email</label><p class="form-control-static" id="card-profile-email">croberto06@yahoo.com</p></div><div class="form-group"><label class="control-label">Fecha de nacimiento</label><p class="form-control-static" id="card-profile-dob">6/5/93</p></div><div class="form-group"><label class="control-label">País</label><p class="form-control-static" id="card-profile-country">HN</p></div></form><a href="#" class="btn btn-black btn-sm btn-block center-block" id="btn-edit-profile">Editar perfil</a></div>    
+                                            <div class="well card profile" id="">
+                                              <h3 class="text-primary">Perfil</h3>
+                                              <?php
+                                                include_once("class/conexion_copy.php");
+                                                if(!isset($_SESSION['codigo_usuario'])){
+                                                  echo "No has iniciado session, Inicia session para ver tu perfil<br><br>";
+                                                }
+                                                else{ 
+                                                  $codigo_usuario = $_SESSION['codigo_usuario'];
+                                                  $conexion = new Conexion();
+                                                  $conexion->establecerConexion();
+
+                                                  $resultado_usuario = $conexion->ejecutarInstruccion("SELECT  A.CODIGO_USUARIO,
+                                                                                                                A.USUARIO_PLATAFORMA,
+                                                                                                                A.CORREO_ELECTRONICO,
+                                                                                                                TO_CHAR(A.FECHA_NACIMIENTO,'DD/MM/YY') AS FECHA_NACIMIENTO, 
+                                                                                                                B.NOMBRE_LUGAR
+                                                                                                        FROM TBL_USUARIOS A
+                                                                                                        LEFT JOIN TBL_LUGARES B
+                                                                                                        ON (A.CODIGO_LUGAR_VIVE = B.CODIGO_LUGAR)
+                                                                                                        WHERE CODIGO_USUARIO = '$codigo_usuario'");
+                                                  oci_execute($resultado_usuario);
+
+
+                                                  while ($fila = $conexion->obtenerFila($resultado_usuario)) {
+                                                    echo '<div>';
+                                                      echo '<div class="form-group">';
+                                                        echo '<label class="control-label">Nombre de usuario</label>';
+                                                        echo '<p class="form-control-static" id="card-profile-username">'. $fila["USUARIO_PLATAFORMA"] .'</p>';
+                                                      echo '</div>';
+                                                      echo '<div class="form-group">';
+                                                        echo '<label class="control-label">Email</label>';
+                                                        echo '<p class="form-control-static" id="card-profile-email">'. $fila["CORREO_ELECTRONICO"] .'</p>';
+                                                      echo '</div>';
+                                                      echo '<div class="form-group">';
+                                                        echo '<label class="control-label">Fecha de nacimiento</label>';
+                                                        echo '<p class="form-control-static" id="card-profile-dob">'. $fila["FECHA_NACIMIENTO"] .'</p>';
+                                                      echo '</div>';
+                                                      echo '<div class="form-group">';
+                                                        echo '<label class="control-label">Lugar de residencia</label>';
+                                                        echo '<p class="form-control-static" id="card-profile-country">'. $fila["NOMBRE_LUGAR"] .'</p>';
+                                                      echo '</div>';
+                                                    echo '</div>';
+                                                  }
+                                                }
+                                                
+                                              ?>
+                                                <a href="editar_perfil.php" class="btn btn-black btn-sm btn-block center-block" id="btn-edit-profile">Editar perfil</a>
+                                            </div>    
                                           </div>
                                           <div class="col-md-6">
                                               <div class="well card subscription " id="">
@@ -521,9 +592,16 @@
                                               <p>Cierra sesión dondequiera que tengas Spotify abierto, lo que incluye la web, el celular, tu computadora de escritorio o cualquier otro dispositivo.</p>
                                             </div>
                                             <div class="col-md-6">
-                                              <a href="#" class="btn btn-black btn-sm btn-block center-block js-gtm-event" data-ga-category="Account Pages" data-ga-action="sign out everywhere" data-ga-label="sign-out-everywhere-account" data-gtm-event-name="signout_everywhere_button_clicked">
-                                                  Cierra sesión en todas partes
-                                              </a>
+                                              <?php
+                                                if(!isset($_SESSION['codigo_usuario'])){
+                                                 
+                                                }
+                                                else{
+                                                  echo '<a href="php/session_cerrar.php" class="btn btn-black btn-sm btn-block center-block js-gtm-event" data-ga-category="Account Pages">';
+                                                        echo 'Cierra sesión en todas partes';
+                                                  echo '</a>';
+                                                } 
+                                              ?>
                                             </div>
                                           </div>
                                       </div>
@@ -718,7 +796,6 @@
 
     <div id="ttdUniversalPixelTag1dfda5e8d7794c54abf4a4ce7c009256" style="display:none">
       <script type="text/javascript" id="" src="extra/up_loader.1.1.0.js.download"></script>
-      <script type="text/javascript" id="">(function(a){"function"===typeof TTDUniversalPixelApi&&(a=new TTDUniversalPixelApi,a.init("7avchlk",["abcf6bj"],"https://insight.adsrvr.org/track/up","ttdUniversalPixelTag1dfda5e8d7794c54abf4a4ce7c009256"))})(this);</script>
     </div>
         
     <script src="extra/spweb-site.min.5eb81491449aac955163.js.download"></script>
@@ -744,3 +821,6 @@
 
   </body>
 </html>
+<?php
+  $conexion->cerrarConexion();
+?>

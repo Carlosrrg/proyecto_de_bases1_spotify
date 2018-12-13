@@ -12,15 +12,15 @@
 				  echo $m['message'], "n";    
 				  exit; 
 			} else {    
-				  echo "Conexión con éxito a Oracle!". '<br>'; 
-				  echo "Conexion hecha a la base de datos de SPOTIFY<br>";
+				  //echo "Conexión con éxito a Oracle!". '<br>'; 
+				  //echo "Conexion hecha a la base de datos de SPOTIFY<br>";
 			} 
 		}
 
 		//cerrar conexion de la BD
 		public function cerrarConexion(){
 			oci_close($this->conexion);
-			echo "<br>Conexion cerrada";
+			//echo "<br>Conexion cerrada";
 		}
 
 		//recibir consulta de SQL
@@ -31,6 +31,16 @@
 		//retornar resultado de arreglo
 		public function obtenerFila($resultado){
 			return oci_fetch_array($resultado, OCI_BOTH);
+		}
+
+		//retorna cantidad de registros de la busqueda
+		public function cantidadRegistros($resultado){
+			return oci_num_rows($resultado);
+		}
+
+		//libera recursos
+		public function liberarResultado($resultado){
+			oci_free_statement($resultado);
 		}
  	}
 ?>
