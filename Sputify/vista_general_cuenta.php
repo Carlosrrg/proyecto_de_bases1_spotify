@@ -46,7 +46,9 @@
 
   <body class="m-hn l-es page-account-overview is-loggedin  reboot  overview-promotion">
     <?php
+        include_once("class/conexion_copy.php");
         session_start();
+        $conexion = new Conexion();
     ?>
     <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
        <symbol id="spotify-logo" viewBox="0 0 827.79999 248.275">
@@ -333,49 +335,49 @@
                                   </a>
                                 </li> 
                                 <li id="submenu-item-change-password">
-                                  <a href="cambiar_contrasena.html">
+                                  <a href="cambiar_contrasena.php">
                                     <svg>
                                       <use xlink:href="#icon-locked"></use>
                                     </svg> Cambiar contraseña
                                   </a>
                                 </li> 
                                 <li id="submenu-item-privacy-settings">
-                                  <a href="configuracion_privacidad.html"> 
+                                  <a href="configuracion_privacidad.php"> 
                                     <svg>
                                       <use xlink:href="#icon-locked"></use>
                                     </svg> Configuración de privacidad
                                   </a>
                                 </li>
                                 <li id="submenu-item-offline-devices">
-                                  <a href="dispositivo_offline.html">
+                                  <a href="dispositivo_offline.php">
                                     <svg>
                                       <use xlink:href="#icon-offline"></use>
                                     </svg> Dispositivos offline
                                   </a>
                                 </li>  
                                 <li id="submenu-item-subscription">
-                                  <a href="suscripcion.html">
+                                  <a href="suscripcion.php">
                                     <svg>
                                       <use xlink:href="#icon-payment"></use>
                                     </svg> Suscripción
                                   </a>
                                 </li>
                                 <li id="submenu-item-receipts">
-                                  <a href="recibos.html">
+                                  <a href="recibos.php">
                                     <svg>
                                       <use xlink:href="#icon-payment-history"></use>
                                     </svg> Recibos
                                   </a>
                                 </li>  
                                 <li id="submenu-item-apps">
-                                  <a href="apps.html">
+                                  <a href="apps.php">
                                     <svg>
                                       <use xlink:href="#icon-apps"></use>
                                     </svg> Apps
                                   </a>
                                 </li> 
                                 <li id="submenu-item-redeem">
-                                  <a href="canjear.html">
+                                  <a href="canjear.php">
                                     <svg>
                                       <use xlink:href="#icon-redeem"></use>
                                     </svg> Canjear
@@ -461,49 +463,49 @@
                                         </a>
                                       </li> 
                                       <li id="submenu-item-change-password">
-                                        <a href="cambiar_contrasena.html">
+                                        <a href="cambiar_contrasena.php">
                                           <svg>
                                             <use xlink:href="#icon-locked"></use>
                                           </svg> Cambiar contraseña
                                         </a>
                                       </li>  
                                       <li id="submenu-item-privacy-settings">
-                                        <a href="configuracion_privacidad.html">
+                                        <a href="configuracion_privacidad.php">
                                           <svg>
                                             <use xlink:href="#icon-locked"></use>
                                           </svg> Configuración de privacidad
                                         </a>
                                       </li> 
                                       <li id="submenu-item-offline-devices">
-                                        <a href="dispositivo_offline.html">
+                                        <a href="dispositivo_offline.php">
                                           <svg>
                                             <use xlink:href="#icon-offline"></use>
                                           </svg> Dispositivos offline
                                         </a>
                                       </li> 
                                       <li id="submenu-item-subscription">
-                                        <a href="suscripcion.html">
+                                        <a href="suscripcion.php">
                                           <svg>
                                             <use xlink:href="#icon-payment"></use>
                                           </svg> Suscripción
                                         </a>
                                       </li> 
                                       <li id="submenu-item-receipts">
-                                        <a href="recibos.html">
+                                        <a href="recibos.php">
                                           <svg>
                                             <use xlink:href="#icon-payment-history"></use>
                                           </svg> Recibos
                                         </a>
                                       </li> 
                                       <li id="submenu-item-apps">
-                                        <a href="apps.html">
+                                        <a href="apps.php">
                                           <svg>
                                             <use xlink:href="#icon-apps"></use>
                                           </svg> Apps
                                         </a>
                                       </li> 
                                       <li id="submenu-item-redeem">
-                                        <a href="canjear.html">
+                                        <a href="canjear.php">
                                           <svg>
                                             <use xlink:href="#icon-redeem"></use>
                                           </svg> Canjear
@@ -525,13 +527,11 @@
                                             <div class="well card profile" id="">
                                               <h3 class="text-primary">Perfil</h3>
                                               <?php
-                                                include_once("class/conexion_copy.php");
                                                 if(!isset($_SESSION['codigo_usuario'])){
-                                                  echo "No has iniciado session, Inicia session para ver tu perfil<br><br>";
+                                                  echo 'No has iniciado session, <a href="iniciar_seccion.html">Inicia session</a> para ver tu perfil<br><br>';
                                                 }
                                                 else{ 
                                                   $codigo_usuario = $_SESSION['codigo_usuario'];
-                                                  $conexion = new Conexion();
                                                   $conexion->establecerConexion();
 
                                                   $resultado_usuario = $conexion->ejecutarInstruccion("SELECT  A.CODIGO_USUARIO,
@@ -822,5 +822,10 @@
   </body>
 </html>
 <?php
-  $conexion->cerrarConexion();
+  if(!isset($_SESSION['codigo_usuario'])){
+                                                                         
+  }
+  else{
+    $conexion->cerrarConexion();
+  } 
 ?>

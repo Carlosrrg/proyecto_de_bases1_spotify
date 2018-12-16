@@ -34,6 +34,7 @@
       <link rel="canonical" href="#">
       <link rel="stylesheet" href="css/spotify-d9a2deabab.css">
       <link rel="stylesheet" href="css/account-e132f5a492.css">
+      <link rel="stylesheet" href="css/mensaje_error.css">
  
       <script src="extra/tracking.download.0a5d990a048e858d07ff.js.download"></script>
            
@@ -41,9 +42,21 @@
       <script async="" src="extra/modules-9cac31d617713ef2768f017542280bf6.js.download"></script>
       <style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style>
 
+      <script>
+        function quitar(){
+          document.getElementById("negro").style.display="none";
+          document.getElementById("dialogo").style.display="none";
+        }
+      </script>
+
   </head>
 
   <body class=" m-hn l-es page-account-profile is-loggedin  reboot ">
+        <?php
+            include_once("class/conexion_copy.php");
+            session_start();
+            $conexion = new Conexion();
+        ?> 
                                           
         <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
               <symbol id="spotify-logo" viewBox="0 0 827.79999 248.275">
@@ -112,14 +125,21 @@
                                     </use></svg>
                                   </div>
                                 </a>
-                                <ul class="dropdown-menu dropdown-menu-right">
-                                    <li>
-                                        <a href="vista_general_cuenta.html" data-tracking="{&quot;category&quot;: &quot;menu&quot;, &quot;action&quot;: &quot;account&quot;}">Cuenta</a>
-                                    </li>
-                                    <li>
-                                        <a href="index.html" data-tracking="{&quot;category&quot;: &quot;menu&quot;, &quot;action&quot;: &quot;log-out&quot;}">Cerrar Sesión</a>
-                                    </li>
-                                </ul>
+                                <?php
+                                  if(!isset($_SESSION['codigo_usuario'])){
+                                                         
+                                  }
+                                  else{
+                                    echo '<ul class="dropdown-menu dropdown-menu-right">';
+                                      echo '<li>';
+                                        echo '<a href="vista_general_cuenta.php">Cuenta</a>';
+                                      echo '</li>';
+                                      echo '<li>';
+                                        echo '<a href="php/session_cerrar.php">Cerrar Sesión</a>';
+                                      echo '</li>';
+                                    echo '</ul>';
+                                  }
+                                ?>
                             </li>
                         </ul>
                         <a href="#" class="user-link hidden">      
@@ -156,16 +176,23 @@
                                 Mejora tu cuenta
                               </a>
                             </li>
-                            <li class="alternate sidepanel-item-small hidden-md hidden-lg ">
-                              <a href="vista_general_cuenta.html" id="nav-link-account" data-ga-category="menu" data-ga-action="account">
-                                Cuenta
-                              </a>
-                            </li>
-                            <li class="alternate sidepanel-item-small hidden-md hidden-lg ">
-                              <a href="index.html" id="nav-link-log-out" data-ga-category="menu" data-ga-action="log-out">
-                                Cerrar Sesión
-                              </a>
-                            </li>
+                            <?php
+                              if(!isset($_SESSION['codigo_usuario'])){
+                                                       
+                              }
+                              else{
+                                echo '<li class="alternate sidepanel-item-small hidden-md hidden-lg ">';
+                                  echo '<a href="vista_general_cuenta.php" id="nav-link-account" data-ga-category="menu" data-ga-action="account" style="animation-delay: 85ms;">';
+                                    echo 'Cuenta';
+                                  echo '</a>';
+                                echo '</li>';
+                                echo '<li class="alternate sidepanel-item-small hidden-md hidden-lg ">';
+                                  echo '<a href="php/session_cerrar.php" id="nav-link-log-out" data-ga-category="menu" data-ga-action="log-out" style="animation-delay: 102ms;">';
+                                    echo 'Cerrar Sesión';
+                                  echo'</a>';
+                                echo '</li>';
+                              }
+                            ?>
                             <li class="dropdown alternate hidden-sidepanel">
                                 <a href="#" class="user-link dropdown-toggle" data-toggle="dropdown">    
                                   <div class="user-icon-container img-circle navbar-user-img">
@@ -185,12 +212,19 @@
                                         Mejora tu cuenta
                                       </a>
                                     </li>
-                                    <li>
-                                      <a href="vista_general_cuenta.html" data-tracking="{&quot;category&quot;: &quot;menu&quot;, &quot;action&quot;: &quot;account&quot;}">Cuenta</a>
-                                    </li>
-                                    <li>
-                                      <a href="index.html" class="logout-link" data-tracking="{&quot;category&quot;: &quot;menu&quot;, &quot;action&quot;: &quot;log-out&quot;}">Cerrar Sesión</a>
-                                    </li>
+                                    <?php
+                                      if(!isset($_SESSION['codigo_usuario'])){
+                                                       
+                                      }
+                                      else{
+                                        echo'<li>';
+                                          echo '<a href="vista_general_cuenta.php">Cuenta</a>';
+                                        echo '</li>';
+                                        echo '<li>';
+                                          echo '<a href="php/session_cerrar.php">Cerrar Sesión</a>';
+                                        echo '</li>';
+                                      }
+                                    ?>
                                 </ul>
                             </li>
                         </ul>
@@ -278,14 +312,14 @@
                                 </button>
                                 <ul class="dropdown-menu" role="menu"> 
                                     <li id="submenu-item-account-overview">
-                                      <a href="vista_general_cuenta.html">
+                                      <a href="vista_general_cuenta.php">
                                         <svg>
                                           <use xlink:href="#icon-home"></use>
                                         </svg> Vista general de la cuenta
                                       </a>
                                     </li> 
                                     <li id="submenu-item-edit-profile">
-                                      <a href="editar_perfil.html">
+                                      <a href="editar_perfil.php">
                                         <svg>
                                           <use xlink:href="#icon-edit"></use>
                                         </svg> Editar perfil
@@ -299,42 +333,42 @@
                                       </a>
                                     </li> 
                                     <li id="submenu-item-privacy-settings">
-                                      <a href="configuracion_privacidad.html"> 
+                                      <a href="configuracion_privacidad.php"> 
                                         <svg>
                                           <use xlink:href="#icon-locked"></use>
                                         </svg> Configuración de privacidad
                                       </a>
                                     </li>
                                     <li id="submenu-item-offline-devices">
-                                      <a href="dispositivo_offline.html">
-                                        <svg>
-                                          <use xlink:href="#icon-offline"></use>
-                                        </svg> Dispositivos offline
-                                      </a>
-                                    </li>  
+                                          <a href="dispositivo_offline.php">
+                                            <svg>
+                                              <use xlink:href="#icon-offline"></use>
+                                            </svg> Dispositivos offline
+                                          </a>
+                                        </li> 
                                     <li id="submenu-item-subscription">
-                                      <a href="suscripcion.html">
+                                      <a href="suscripcion.php">
                                         <svg>
                                           <use xlink:href="#icon-payment"></use>
                                         </svg> Suscripción
                                       </a>
                                     </li>
                                     <li id="submenu-item-receipts">
-                                      <a href="recibos.html">
+                                      <a href="recibos.php">
                                         <svg>
                                           <use xlink:href="#icon-payment-history"></use>
                                         </svg> Recibos
                                       </a>
                                     </li>  
                                     <li id="submenu-item-apps">
-                                      <a href="apps.html">
+                                      <a href="apps.php">
                                         <svg>
                                           <use xlink:href="#icon-apps"></use>
                                         </svg> Apps
                                       </a>
                                     </li> 
                                     <li id="submenu-item-redeem">
-                                      <a href="canjear.html">
+                                      <a href="canjear.php">
                                         <svg>
                                           <use xlink:href="#icon-redeem"></use>
                                         </svg> Canjear
@@ -359,14 +393,14 @@
                                     </div>
                                     <ul class="nav-inverse nav-tabs nav-stacked"> 
                                         <li id="submenu-item-account-overview">
-                                          <a href="vista_general_cuenta.html">
+                                          <a href="vista_general_cuenta.php">
                                             <svg>
                                               <use xlink:href="#icon-home"></use>
                                             </svg> Vista general de la cuenta
                                           </a>
                                         </li> 
                                         <li id="submenu-item-edit-profile">
-                                          <a href="editar_perfil.html">
+                                          <a href="editar_perfil.php">
                                             <svg>
                                               <use xlink:href="#icon-edit"></use>
                                             </svg> Editar perfil
@@ -380,42 +414,42 @@
                                           </a>
                                         </li> 
                                         <li id="submenu-item-privacy-settings">
-                                          <a href="configuracion_privacidad.html"> 
+                                          <a href="configuracion_privacidad.php"> 
                                             <svg>
                                               <use xlink:href="#icon-locked"></use>
                                             </svg> Configuración de privacidad
                                           </a>
                                         </li>
                                         <li id="submenu-item-offline-devices">
-                                          <a href="dispositivo_offline.html">
+                                          <a href="dispositivo_offline.php">
                                             <svg>
                                               <use xlink:href="#icon-offline"></use>
                                             </svg> Dispositivos offline
                                           </a>
                                         </li>  
                                         <li id="submenu-item-subscription">
-                                          <a href="suscripcion.html">
+                                          <a href="suscripcion.php">
                                             <svg>
                                               <use xlink:href="#icon-payment"></use>
                                             </svg> Suscripción
                                           </a>
                                         </li>
                                         <li id="submenu-item-receipts">
-                                          <a href="recibos.html">
+                                          <a href="recibos.php">
                                             <svg>
                                               <use xlink:href="#icon-payment-history"></use>
                                             </svg> Recibos
                                           </a>
                                         </li>  
                                         <li id="submenu-item-apps">
-                                          <a href="apps.html">
+                                          <a href="apps.php">
                                             <svg>
                                               <use xlink:href="#icon-apps"></use>
                                             </svg> Apps
                                           </a>
                                         </li> 
                                         <li id="submenu-item-redeem">
-                                          <a href="canjear.html">
+                                          <a href="canjear.php">
                                             <svg>
                                               <use xlink:href="#icon-redeem"></use>
                                             </svg> Canjear
@@ -433,44 +467,45 @@
 
                                         <div id="change-password" class="article-account">
                                           <div class="well">
-                                              <form name="change_password" method="post" class="form-account form-change-password" id="form-change-password" novalidate="novalidate">
-                                                  <div id="change_password" class="form-change-password">
-                                                      <div class="row">
-                                                        <div class="col-md-12">
-                                                          <div class="form-group">
-                                                            <label class="control-label control-label required" for="change_password_validatePassword">Contraseña actual</label>
-                                                            <input type="password" id="change_password_validatePassword" name="change_password[validatePassword]" required="required" data-rule-required="data-rule-required" data-msg-required="Este campo es obligatorio" class="form-control">
-                                                          </div>
-                                                        </div>
-                                                      </div>    
-                                                      <div class="row">
-                                                        <div class="col-md-12">
-                                                          <div class="form-group">
-                                                            <label class="control-label control-label required" for="change_password_new_password">Nueva contraseña</label>
-                                                            <input type="password" id="change_password_new_password" name="change_password[new_password]" required="required" data-rule-required="data-rule-required" data-msg-required="Este campo es obligatorio" class="form-control" aria-autocomplete="list">
-                                                          </div>
-                                                        </div>
-                                                      </div>   
-                                                      <div class="row">
-                                                        <div class="col-md-12">
-                                                          <div class="form-group">
-                                                            <label class="control-label control-label required" for="change_password_check_password">Repetir nueva contraseña</label>
-                                                            <input type="password" id="change_password_check_password" name="change_password[check_password]" required="required" data-passwordconfirm="1" data-rule-required="data-rule-required" data-msg-required="Este campo es obligatorio" data-rule-equalto="#change_password_new_password" data-msg-equalto="Comprueba tu contraseña." data-requirepassword="data-requirepassword" class="form-control">
-                                                            <div id="password-ok" class="control-label-validation hidden">
-                                                                  correcta
-                                                            </div>
-                                                            <div id="password-wrong" class="control-label-validation hidden">
-                                                                  Comprueba tu contraseña.
-                                                            </div>
-                                                          </div>
-                                                        </div>
-                                                      </div>    
-                                                      <div class="row-buttons-bordered">
-                                                        <button type="submit" id="change_password_submit" name="change_password[submit]" class="btn btn-green btn-sm js-gtm-event" data-ga-category="Account Pages" data-ga-action="set new password" data-ga-label="set-new-password-account" data-gtm-event-name="set_new_password_button_clicked">Establecer nueva contraseña</button>
-                                                        <a href="#" class="btn btn-sm btn-cancel">Cancelar</a>
-                                                      </div>    
-                                                      <input type="hidden" id="change_password__token" name="change_password[_token]" class="form-control" value="">
-                                                  </div>
+                                              <form method="POST" action="ajax_procesar_php/acciones_cambiar_contrasena.php" class="form-account form-change-password" id="form-change-password">
+                                                <?php
+                                                if(!isset($_SESSION['codigo_usuario'])){
+                                                    echo 'No has iniciado session, <a href="iniciar_seccion.html">Inicia session</a> para cambiar tu contraseña<br><br>';
+                                                }
+                                                else{
+                                                  echo'<div id="change_password" class="form-change-password">';
+                                                      echo'<div class="row">';
+                                                        echo'<div class="col-md-12">';
+                                                          echo'<div class="form-group">';
+                                                            echo'<label class="control-label control-label required" for="change_password_validatePassword">Contraseña actual</label>';
+                                                            echo'<input type="password" id="change_password_validatePassword" name="txt-contrasena-actual" required="required" class="form-control">';
+                                                          echo'</div>';
+                                                        echo'</div>';
+                                                      echo'</div>';  
+                                                      echo'<div class="row">';
+                                                        echo'<div class="col-md-12">';
+                                                          echo'<div class="form-group">';
+                                                            echo'<label class="control-label control-label required" for="change_password_new_password">Nueva contraseña</label>';
+                                                            echo'<input type="password" id="change_password_new_password" name="txt-contrasena-nueva1" required="required" class="form-control">';
+                                                          echo'</div>';
+                                                        echo'</div>';
+                                                      echo'</div>';  
+                                                      echo'<div class="row">';
+                                                        echo'<div class="col-md-12">';
+                                                          echo'<div class="form-group">';
+                                                            echo'<label class="control-label control-label required" for="change_password_check_password">Repetir nueva contraseña</label>';
+                                                            echo'<input type="password" id="change_password_check_password" name="txt-contrasena-nueva2" required="required" class="form-control">';
+                                                          echo'</div>';
+                                                        echo'</div>';
+                                                      echo'</div>';    
+                                                      echo'<div class="row-buttons-bordered">';
+                                                        echo'<button type="submit" id="btn-nueva-contrasena" name="btn-nueva-contrasena" class="btn btn-green btn-sm js-gtm-event">Establecer nueva contraseña</button>';
+                                                        echo'<a href="vista_general_cuenta.php" class="btn btn-sm btn-cancel">Cancelar</a>';
+                                                      echo'</div>';    
+                                                  echo'</div>';
+                                                }
+
+                                                ?>
                                               </form>
                                           </div>
                                         </div>
@@ -663,5 +698,32 @@
         <script src="extra/adsct" type="text/javascript"></script>
         <script src="extra/adsct(1)" type="text/javascript"></script>
 
+
+
+        <?php
+            if (isset($_GET["id"]) && !empty($_GET["id"])) {
+              if ($_GET["id"]=="correcto") {
+                echo '<div onclick="quitar()" id="negro"></div>';
+                echo '<div id="dialogo">';
+                  echo '<p>Contrasena actualizada exitosamente...</p>';
+                echo '</div>';
+              }
+              elseif($_GET["id"]=="incorrecto"){
+                echo '<div onclick="quitar()" id="negro"></div>';
+                echo '<div id="dialogo">';
+                  echo '<p>Contrasena incorrecta o no escrita, por favor ingrese una valida</p>';
+                echo '</div>';
+              }
+            }
+        ?>
+
   </body>
 </html>
+<?php
+  if(!isset($_SESSION['codigo_usuario'])){
+                                                                         
+  }
+  else{
+    $conexion->cerrarConexion();
+  } 
+?>

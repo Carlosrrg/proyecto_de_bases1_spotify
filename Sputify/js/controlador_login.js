@@ -9,7 +9,7 @@ $(document).ready(function(){
 				data:parametros,
 				success:function(respuesta){
 					$("#prueba").html(respuesta);
-					if(!respuesta){
+					if(respuesta == 0){
 						alert("Lo sentimos, correo o contrasena incorrectos...");
 						window.location="iniciar_seccion.html";
 					}

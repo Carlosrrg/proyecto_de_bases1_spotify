@@ -33,7 +33,7 @@
 			return oci_fetch_array($resultado, OCI_BOTH);
 		}
 
-		//retorna cantidad de registros de la busqueda
+		//retorna cantidad de registros afectados en la consulta
 		public function cantidadRegistros($resultado){
 			return oci_num_rows($resultado);
 		}
