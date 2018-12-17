@@ -278,28 +278,28 @@
                                 </button>
                                 <ul class="dropdown-menu" role="menu"> 
                                     <li id="submenu-item-account-overview">
-                                      <a href="vista_general_cuenta.html">
+                                      <a href="vista_general_cuenta.php">
                                         <svg>
                                           <use xlink:href="#icon-home"></use>
                                         </svg> Vista general de la cuenta
                                       </a>
                                     </li> 
                                     <li id="submenu-item-edit-profile">
-                                      <a href="editar_perfil.html">
+                                      <a href="editar_perfil.php">
                                         <svg>
                                           <use xlink:href="#icon-edit"></use>
                                         </svg> Editar perfil
                                       </a>
                                     </li> 
                                     <li id="submenu-item-change-password">
-                                      <a href="cambiar_contrasena.html">
+                                      <a href="cambiar_contrasena.php">
                                         <svg>
                                           <use xlink:href="#icon-locked"></use>
                                         </svg> Cambiar contraseña
                                       </a>
                                     </li> 
                                     <li id="submenu-item-privacy-settings">
-                                      <a href="configuracion_privacidad.html"> 
+                                      <a href="configuracion_privacidad.php"> 
                                         <svg>
                                           <use xlink:href="#icon-locked"></use>
                                         </svg> Configuración de privacidad
@@ -313,28 +313,28 @@
                                       </a>
                                     </li>  
                                     <li id="submenu-item-subscription">
-                                      <a href="suscripcion.html">
+                                      <a href="suscripcion.php">
                                         <svg>
                                           <use xlink:href="#icon-payment"></use>
                                         </svg> Suscripción
                                       </a>
                                     </li>
                                     <li id="submenu-item-receipts">
-                                      <a href="recibos.html">
+                                      <a href="recibos.php">
                                         <svg>
                                           <use xlink:href="#icon-payment-history"></use>
                                         </svg> Recibos
                                       </a>
                                     </li>  
                                     <li id="submenu-item-apps">
-                                      <a href="apps.html">
+                                      <a href="apps.php">
                                         <svg>
                                           <use xlink:href="#icon-apps"></use>
                                         </svg> Apps
                                       </a>
                                     </li> 
                                     <li id="submenu-item-redeem">
-                                      <a href="canjear.html">
+                                      <a href="canjear.php">
                                         <svg>
                                           <use xlink:href="#icon-redeem"></use>
                                         </svg> Canjear
@@ -359,28 +359,28 @@
                                     </div>
                                     <ul class="nav-inverse nav-tabs nav-stacked"> 
                                         <li id="submenu-item-account-overview">
-                                          <a href="vista_general_cuenta.html">
+                                          <a href="vista_general_cuenta.php">
                                             <svg>
                                               <use xlink:href="#icon-home"></use>
                                             </svg> Vista general de la cuenta
                                           </a>
                                         </li> 
                                         <li id="submenu-item-edit-profile">
-                                          <a href="editar_perfil.html">
+                                          <a href="editar_perfil.php">
                                             <svg>
                                               <use xlink:href="#icon-edit"></use>
                                             </svg> Editar perfil
                                           </a>
                                         </li> 
                                         <li id="submenu-item-change-password">
-                                          <a href="cambiar_contrasena.html">
+                                          <a href="cambiar_contrasena.php">
                                             <svg>
                                               <use xlink:href="#icon-locked"></use>
                                             </svg> Cambiar contraseña
                                           </a>
                                         </li> 
                                         <li id="submenu-item-privacy-settings">
-                                          <a href="configuracion_privacidad.html"> 
+                                          <a href="configuracion_privacidad.php"> 
                                             <svg>
                                               <use xlink:href="#icon-locked"></use>
                                             </svg> Configuración de privacidad
@@ -394,28 +394,28 @@
                                           </a>
                                         </li>  
                                         <li id="submenu-item-subscription">
-                                          <a href="suscripcion.html">
+                                          <a href="suscripcion.php">
                                             <svg>
                                               <use xlink:href="#icon-payment"></use>
                                             </svg> Suscripción
                                           </a>
                                         </li>
                                         <li id="submenu-item-receipts">
-                                          <a href="recibos.html">
+                                          <a href="recibos.php">
                                             <svg>
                                               <use xlink:href="#icon-payment-history"></use>
                                             </svg> Recibos
                                           </a>
                                         </li>  
                                         <li id="submenu-item-apps">
-                                          <a href="apps.html">
+                                          <a href="apps.php">
                                             <svg>
                                               <use xlink:href="#icon-apps"></use>
                                             </svg> Apps
                                           </a>
                                         </li> 
                                         <li id="submenu-item-redeem">
-                                          <a href="canjear.html">
+                                          <a href="canjear.php">
                                             <svg>
                                               <use xlink:href="#icon-redeem"></use>
                                             </svg> Canjear

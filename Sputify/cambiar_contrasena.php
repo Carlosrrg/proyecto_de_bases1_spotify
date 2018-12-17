@@ -56,6 +56,7 @@
             include_once("class/conexion_copy.php");
             session_start();
             $conexion = new Conexion();
+            $conexion->establecerConexion();//solo para establecer conexion y que no de el warning
         ?> 
                                           
         <svg xmlns="http://www.w3.org/2000/svg" style="display:none">

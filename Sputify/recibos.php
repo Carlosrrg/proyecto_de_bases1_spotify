@@ -31,9 +31,13 @@
       <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/logo2.png">
       <link rel="apple-touch-icon-precomposed" href="img/logo3.png">
     
+
       <link rel="canonical" href="#">
       <link rel="stylesheet" href="css/spotify-d9a2deabab.css">
       <link rel="stylesheet" href="css/account-e132f5a492.css">
+      <link rel="stylesheet" href="css/recibos.css">
+
+
  
       <script src="extra/tracking.download.0a5d990a048e858d07ff.js.download"></script>
            
@@ -44,6 +48,12 @@
   </head>
 
   <body class=" m-hn l-es page-account-profile is-loggedin  reboot ">
+        <?php
+            include_once("class/conexion_copy.php");
+            session_start();
+            $conexion = new Conexion();
+            $conexion->establecerConexion();//solo para establecer conexion y que no de el warning
+        ?>    
                                           
         <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
               <symbol id="spotify-logo" viewBox="0 0 827.79999 248.275">
@@ -112,14 +122,21 @@
                                     </use></svg>
                                   </div>
                                 </a>
-                                <ul class="dropdown-menu dropdown-menu-right">
-                                    <li>
-                                        <a href="vista_general_cuenta.html" data-tracking="{&quot;category&quot;: &quot;menu&quot;, &quot;action&quot;: &quot;account&quot;}">Cuenta</a>
-                                    </li>
-                                    <li>
-                                        <a href="index.html" data-tracking="{&quot;category&quot;: &quot;menu&quot;, &quot;action&quot;: &quot;log-out&quot;}">Cerrar Sesión</a>
-                                    </li>
-                                </ul>
+                                <?php
+                                  if(!isset($_SESSION['codigo_usuario'])){
+                                                         
+                                  }
+                                  else{
+                                    echo '<ul class="dropdown-menu dropdown-menu-right">';
+                                      echo '<li>';
+                                        echo '<a href="vista_general_cuenta.php">Cuenta</a>';
+                                      echo '</li>';
+                                      echo '<li>';
+                                        echo '<a href="php/session_cerrar.php">Cerrar Sesión</a>';
+                                      echo '</li>';
+                                    echo '</ul>';
+                                  }
+                                ?>
                             </li>
                         </ul>
                         <a href="#" class="user-link hidden">      
@@ -156,16 +173,23 @@
                                 Mejora tu cuenta
                               </a>
                             </li>
-                            <li class="alternate sidepanel-item-small hidden-md hidden-lg ">
-                              <a href="vista_general_cuenta.html" id="nav-link-account" data-ga-category="menu" data-ga-action="account">
-                                Cuenta
-                              </a>
-                            </li>
-                            <li class="alternate sidepanel-item-small hidden-md hidden-lg ">
-                              <a href="index.html" id="nav-link-log-out" data-ga-category="menu" data-ga-action="log-out">
-                                Cerrar Sesión
-                              </a>
-                            </li>
+                            <?php
+                              if(!isset($_SESSION['codigo_usuario'])){
+                                                       
+                              }
+                              else{
+                                echo '<li class="alternate sidepanel-item-small hidden-md hidden-lg ">';
+                                  echo '<a href="vista_general_cuenta.php" id="nav-link-account" data-ga-category="menu" data-ga-action="account" style="animation-delay: 85ms;">';
+                                    echo 'Cuenta';
+                                  echo '</a>';
+                                echo '</li>';
+                                echo '<li class="alternate sidepanel-item-small hidden-md hidden-lg ">';
+                                  echo '<a href="php/session_cerrar.php" id="nav-link-log-out" data-ga-category="menu" data-ga-action="log-out" style="animation-delay: 102ms;">';
+                                    echo 'Cerrar Sesión';
+                                  echo'</a>';
+                                echo '</li>';
+                              }
+                            ?>
                             <li class="dropdown alternate hidden-sidepanel">
                                 <a href="#" class="user-link dropdown-toggle" data-toggle="dropdown">    
                                   <div class="user-icon-container img-circle navbar-user-img">
@@ -185,12 +209,19 @@
                                         Mejora tu cuenta
                                       </a>
                                     </li>
-                                    <li>
-                                      <a href="vista_general_cuenta.html" data-tracking="{&quot;category&quot;: &quot;menu&quot;, &quot;action&quot;: &quot;account&quot;}">Cuenta</a>
-                                    </li>
-                                    <li>
-                                      <a href="index.html" class="logout-link" data-tracking="{&quot;category&quot;: &quot;menu&quot;, &quot;action&quot;: &quot;log-out&quot;}">Cerrar Sesión</a>
-                                    </li>
+                                    <?php
+                                      if(!isset($_SESSION['codigo_usuario'])){
+                                                       
+                                      }
+                                      else{
+                                        echo'<li>';
+                                          echo '<a href="vista_general_cuenta.php">Cuenta</a>';
+                                        echo '</li>';
+                                        echo '<li>';
+                                          echo '<a href="php/session_cerrar.php">Cerrar Sesión</a>';
+                                        echo '</li>';
+                                      }
+                                    ?>
                                 </ul>
                             </li>
                         </ul>
@@ -278,42 +309,42 @@
                                 </button>
                                 <ul class="dropdown-menu" role="menu"> 
                                     <li id="submenu-item-account-overview">
-                                      <a href="vista_general_cuenta.html">
+                                      <a href="vista_general_cuenta.php">
                                         <svg>
                                           <use xlink:href="#icon-home"></use>
                                         </svg> Vista general de la cuenta
                                       </a>
                                     </li> 
                                     <li id="submenu-item-edit-profile">
-                                      <a href="editar_perfil.html">
+                                      <a href="editar_perfil.php">
                                         <svg>
                                           <use xlink:href="#icon-edit"></use>
                                         </svg> Editar perfil
                                       </a>
                                     </li> 
                                     <li id="submenu-item-change-password">
-                                      <a href="cambiar_contrasena.html">
+                                      <a href="cambiar_contrasena.php">
                                         <svg>
                                           <use xlink:href="#icon-locked"></use>
                                         </svg> Cambiar contraseña
                                       </a>
                                     </li> 
                                     <li id="submenu-item-privacy-settings">
-                                      <a href="configuracion_privacidad.html"> 
+                                      <a href="configuracion_privacidad.php"> 
                                         <svg>
                                           <use xlink:href="#icon-locked"></use>
                                         </svg> Configuración de privacidad
                                       </a>
                                     </li>
                                     <li id="submenu-item-offline-devices">
-                                      <a href="dispositivo_offline.html">
+                                      <a href="dispositivo_offline.php">
                                         <svg>
                                           <use xlink:href="#icon-offline"></use>
                                         </svg> Dispositivos offline
                                       </a>
                                     </li>  
                                     <li id="submenu-item-subscription">
-                                      <a href="suscripcion.html">
+                                      <a href="suscripcion.php">
                                         <svg>
                                           <use xlink:href="#icon-payment"></use>
                                         </svg> Suscripción
@@ -327,14 +358,14 @@
                                       </a>
                                     </li>  
                                     <li id="submenu-item-apps">
-                                      <a href="apps.html">
+                                      <a href="apps.php">
                                         <svg>
                                           <use xlink:href="#icon-apps"></use>
                                         </svg> Apps
                                       </a>
                                     </li> 
                                     <li id="submenu-item-redeem">
-                                      <a href="canjear.html">
+                                      <a href="canjear.php">
                                         <svg>
                                           <use xlink:href="#icon-redeem"></use>
                                         </svg> Canjear
@@ -359,42 +390,42 @@
                                     </div>
                                     <ul class="nav-inverse nav-tabs nav-stacked"> 
                                         <li id="submenu-item-account-overview">
-                                          <a href="vista_general_cuenta.html">
+                                          <a href="vista_general_cuenta.php">
                                             <svg>
                                               <use xlink:href="#icon-home"></use>
                                             </svg> Vista general de la cuenta
                                           </a>
                                         </li> 
                                         <li id="submenu-item-edit-profile">
-                                          <a href="editar_perfil.html">
+                                          <a href="editar_perfil.php">
                                             <svg>
                                               <use xlink:href="#icon-edit"></use>
                                             </svg> Editar perfil
                                           </a>
                                         </li> 
                                         <li id="submenu-item-change-password">
-                                          <a href="cambiar_contrasena.html">
+                                          <a href="cambiar_contrasena.php">
                                             <svg>
                                               <use xlink:href="#icon-locked"></use>
                                             </svg> Cambiar contraseña
                                           </a>
                                         </li> 
                                         <li id="submenu-item-privacy-settings">
-                                          <a href="configuracion_privacidad.html"> 
+                                          <a href="configuracion_privacidad.php"> 
                                             <svg>
                                               <use xlink:href="#icon-locked"></use>
                                             </svg> Configuración de privacidad
                                           </a>
                                         </li>
                                         <li id="submenu-item-offline-devices">
-                                          <a href="dispositivo_offline.html">
+                                          <a href="dispositivo_offline.php">
                                             <svg>
                                               <use xlink:href="#icon-offline"></use>
                                             </svg> Dispositivos offline
                                           </a>
                                         </li>  
                                         <li id="submenu-item-subscription">
-                                          <a href="suscripcion.html">
+                                          <a href="suscripcion.php">
                                             <svg>
                                               <use xlink:href="#icon-payment"></use>
                                             </svg> Suscripción
@@ -408,14 +439,14 @@
                                           </a>
                                         </li>  
                                         <li id="submenu-item-apps">
-                                          <a href="apps.html">
+                                          <a href="apps.php">
                                             <svg>
                                               <use xlink:href="#icon-apps"></use>
                                             </svg> Apps
                                           </a>
                                         </li> 
                                         <li id="submenu-item-redeem">
-                                          <a href="canjear.html">
+                                          <a href="canjear.php">
                                             <svg>
                                               <use xlink:href="#icon-redeem"></use>
                                             </svg> Canjear
@@ -430,9 +461,106 @@
                                         <div class="page-header">
                                             <h1>Recibos</h1>
                                         </div>
-                                        <p class="alert alert-info">
-                                            No se encontraron recibos
-                                        </p>
+                                        <?php
+                                          if(!isset($_SESSION['codigo_usuario'])){
+                                              echo 'No has iniciado session, <a href="iniciar_seccion.html">Inicia session</a> para ver tus recibos de pago<br><br>';
+                                          }
+                                          else{
+                                              $codigo_usuario = $_SESSION['codigo_usuario'];
+                                              $conexion->establecerConexion();
+                                              $cont = 1;
+                                              $verificar = 0;
+                                              $verificar2 = 0;
+
+                                              $resultado_recibos = $conexion->ejecutarInstruccion(" SELECT B.CODIGO_USUARIO,
+                                                                                                            B.FECHA_EMITIO_RECIBO, 
+                                                                                                            C.NOMBRE_LUGAR, 
+                                                                                                            E.NOMBRE_METODO_PAGO, 
+                                                                                                            B.MONTO_PAGAR
+                                                                                                    FROM TBL_USUARIOS A
+                                                                                                    INNER JOIN TBL_RECIBOS_PAGO B
+                                                                                                    ON (A.CODIGO_USUARIO = B.CODIGO_USUARIO)
+                                                                                                    INNER JOIN TBL_LUGARES C
+                                                                                                    ON (B.CODIGO_LUGAR_EMITE = C.CODIGO_LUGAR)
+                                                                                                    INNER JOIN TBL_DATOS_PAGO D
+                                                                                                    ON (B.CODIGO_DATOS_PAGO = D.CODIGO_DATOS_PAGO)
+                                                                                                    LEFT JOIN TBL_METODO_PAGO E
+                                                                                                    ON (D.CODIGO_METODO_PAGO = E.CODIGO_METODO_PAGO)
+                                                                                                    WHERE B.CODIGO_USUARIO = '$codigo_usuario'");
+                                              oci_execute($resultado_recibos);
+                                                  echo'<table>';
+                                                    echo'<thead>';
+                                                        echo'<tr>';
+                                                          echo'<th>N. recibo</th>';
+                                                          echo'<th>Lugar de emision</th>';
+                                                          echo'<th>Fecha de emision</th>';
+                                                          echo'<th>Metodo de pago</th>';
+                                                          echo'<th>Monto cancelado</th>';
+                                                        echo'</tr>';
+                                                    echo'</thead>';
+                                                    while ($fila = $conexion->obtenerFila($resultado_recibos)) {
+                                                      if ($codigo_usuario == $fila["CODIGO_USUARIO"]) {
+                                                        $verificar = 1;
+                                                        echo'<tr>';
+                                                            echo'<th>';
+                                                                  echo $cont++;
+                                                            echo'</th>';
+                                                            echo'<th>'.$fila["NOMBRE_LUGAR"].'</th>';
+                                                            echo'<th>'.$fila["FECHA_EMITIO_RECIBO"].'</th>';
+                                                            echo'<th>'.$fila["NOMBRE_METODO_PAGO"].'</th>';
+                                                            echo'<th>'.$fila["MONTO_PAGAR"].'</th>';
+                                                        echo'</tr>';
+                                                      }
+                                                    }       
+                                                  echo'</table>';
+                                              if ($verificar == 0) {
+                                                  echo' <p class="alert alert-info">
+                                                          No se encontraron recibos
+                                                        </p>';
+                                              }
+                                              echo '<hr></hr>';
+                                              $resultado_recibos = $conexion->ejecutarInstruccion(" SELECT  B.CODIGO_USUARIO, 
+                                                                                                            C.NOMBRE_LUGAR, 
+                                                                                                            B.FECHA_CAJEA, 
+                                                                                                            B.CODIGO_A_CAJEAR
+                                                                                                    FROM TBL_USUARIOS A
+                                                                                                    INNER JOIN TBL_TARJETA_REGALO B
+                                                                                                    ON (A.CODIGO_USUARIO = B.CODIGO_USUARIO)
+                                                                                                    INNER JOIN TBL_LUGARES C
+                                                                                                    ON (B.CODIGO_LUGAR = C.CODIGO_LUGAR)
+                                                                                                    WHERE B.CODIGO_USUARIO = '$codigo_usuario'");
+                                              oci_execute($resultado_recibos);
+                                                  echo'<table>';
+                                                    echo'<thead>';
+                                                        echo'<tr>';
+                                                          echo'<th>N. Tarjeta de regalo</th>';
+                                                          echo'<th>Lugar donde de canjeo</th>';
+                                                          echo'<th>Fecha de canjeo</th>';
+                                                          echo'<th>Codigo de canjeo</th>';
+                                                        echo'</tr>';
+                                                    echo'</thead>';
+                                                    while ($fila = $conexion->obtenerFila($resultado_recibos)) {
+                                                      if ($codigo_usuario == $fila["CODIGO_USUARIO"]) {
+                                                        $verificar2 = 1;
+                                                        echo'<tr>';
+                                                            echo'<th>';
+                                                                  echo $cont++;
+                                                            echo'</th>';
+                                                            echo'<th>'.$fila["NOMBRE_LUGAR"].'</th>';
+                                                            echo'<th>'.$fila["FECHA_CAJEA"].'</th>';
+                                                            echo'<th>'.$fila["CODIGO_A_CAJEAR"].'</th>';
+                                                        echo'</tr>';
+                                                      }
+                                                    }       
+                                                  echo'</table>';
+                                              if ($verificar2 == 0) {
+                                                  echo' <p class="alert alert-info">
+                                                          No se encontraron Tarjetas de regalo
+                                                        </p>';
+                                              }
+
+                                          }
+                                        ?>
                                     </div>
                                     <div class="content-bottom">
                                     </div>
@@ -624,3 +752,11 @@
 
   </body>
 </html>
+<?php
+  if(!isset($_SESSION['codigo_usuario'])){
+                                                                         
+  }
+  else{
+    $conexion->cerrarConexion();
+  } 
+?>

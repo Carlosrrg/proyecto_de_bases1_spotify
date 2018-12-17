@@ -34,6 +34,7 @@
       <link rel="canonical" href="#">
       <link rel="stylesheet" href="css/spotify-d9a2deabab.css">
       <link rel="stylesheet" href="css/redeem-embed.6b0cedac184c2f27772b.css">
+      <link rel="stylesheet" href="css/mensaje_error.css">
  
       <script src="extra/tracking.download.0a5d990a048e858d07ff.js.download"></script>
            
@@ -41,9 +42,23 @@
       <script async="" src="extra/modules-9cac31d617713ef2768f017542280bf6.js.download"></script>
       <style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style>
 
+      <script>
+        function quitar(){
+          document.getElementById("negro").style.display="none";
+          document.getElementById("dialogo").style.display="none";
+        }
+      </script>
+
   </head>
 
   <body class=" m-hn l-es page-account-profile is-loggedin  reboot ">
+
+        <?php
+            include_once("class/conexion_copy.php");
+            session_start();
+            $conexion = new Conexion();
+            $conexion->establecerConexion();//solo para establecer conexion y que no de el warning
+        ?>   
                                           
         <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
               <symbol id="spotify-logo" viewBox="0 0 827.79999 248.275">
@@ -111,14 +126,21 @@
                                     </use></svg>
                                   </div>
                                 </a>
-                                <ul class="dropdown-menu dropdown-menu-right">
-                                    <li>
-                                        <a href="vista_general_cuenta.html" data-tracking="{&quot;category&quot;: &quot;menu&quot;, &quot;action&quot;: &quot;account&quot;}">Cuenta</a>
-                                    </li>
-                                    <li>
-                                        <a href="index.html" data-tracking="{&quot;category&quot;: &quot;menu&quot;, &quot;action&quot;: &quot;log-out&quot;}">Cerrar Sesión</a>
-                                    </li>
-                                </ul>
+                                <?php
+                                  if(!isset($_SESSION['codigo_usuario'])){
+                                                         
+                                  }
+                                  else{
+                                    echo '<ul class="dropdown-menu dropdown-menu-right">';
+                                      echo '<li>';
+                                        echo '<a href="vista_general_cuenta.php">Cuenta</a>';
+                                      echo '</li>';
+                                      echo '<li>';
+                                        echo '<a href="php/session_cerrar.php">Cerrar Sesión</a>';
+                                      echo '</li>';
+                                    echo '</ul>';
+                                  }
+                                ?>
                             </li>
                         </ul>
                         <a href="#" class="user-link hidden">      
@@ -141,16 +163,23 @@
                                 Mejora tu cuenta
                               </a>
                             </li>
-                            <li class="alternate sidepanel-item-small hidden-md hidden-lg ">
-                              <a href="vista_general_cuenta.html" id="nav-link-account" data-ga-category="menu" data-ga-action="account">
-                                Cuenta
-                              </a>
-                            </li>
-                            <li class="alternate sidepanel-item-small hidden-md hidden-lg ">
-                              <a href="index.html" id="nav-link-log-out" data-ga-category="menu" data-ga-action="log-out">
-                                Cerrar Sesión
-                              </a>
-                            </li>
+                            <?php
+                              if(!isset($_SESSION['codigo_usuario'])){
+                                                       
+                              }
+                              else{
+                                echo '<li class="alternate sidepanel-item-small hidden-md hidden-lg ">';
+                                  echo '<a href="vista_general_cuenta.php" id="nav-link-account" data-ga-category="menu" data-ga-action="account" style="animation-delay: 85ms;">';
+                                    echo 'Cuenta';
+                                  echo '</a>';
+                                echo '</li>';
+                                echo '<li class="alternate sidepanel-item-small hidden-md hidden-lg ">';
+                                  echo '<a href="php/session_cerrar.php" id="nav-link-log-out" data-ga-category="menu" data-ga-action="log-out" style="animation-delay: 102ms;">';
+                                    echo 'Cerrar Sesión';
+                                  echo'</a>';
+                                echo '</li>';
+                              }
+                            ?>
                             <li class="dropdown alternate hidden-sidepanel">
                                 <a href="#" class="user-link dropdown-toggle" data-toggle="dropdown">    
                                   <div class="user-icon-container img-circle navbar-user-img">
@@ -170,12 +199,19 @@
                                         Mejora tu cuenta
                                       </a>
                                     </li>
-                                    <li>
-                                      <a href="vista_general_cuenta.html" data-tracking="{&quot;category&quot;: &quot;menu&quot;, &quot;action&quot;: &quot;account&quot;}">Cuenta</a>
-                                    </li>
-                                    <li>
-                                      <a href="index.html" class="logout-link" data-tracking="{&quot;category&quot;: &quot;menu&quot;, &quot;action&quot;: &quot;log-out&quot;}">Cerrar Sesión</a>
-                                    </li>
+                                    <?php
+                                      if(!isset($_SESSION['codigo_usuario'])){
+                                                       
+                                      }
+                                      else{
+                                        echo'<li>';
+                                          echo '<a href="vista_general_cuenta.php">Cuenta</a>';
+                                        echo '</li>';
+                                        echo '<li>';
+                                          echo '<a href="php/session_cerrar.php">Cerrar Sesión</a>';
+                                        echo '</li>';
+                                      }
+                                    ?>
                                 </ul>
                             </li>
                         </ul>
@@ -213,30 +249,40 @@
                                     <ul class="form-message-list"></ul>
                                 </div>
                                 <div data-redeem-form-container="">
-                              
-                                    <form name="redeem_code" method="post" action="" novalidate="novalidate" autocomplete="off" data-payment-form="">
-                                        <h2>Canjea tu código</h2>
-                                        <p>Ingresa el PIN que aparece al dorso de tu tarjeta de regalo o el código premium que figura en el recibo de la tienda.</p>
-                                        <div class="form-group">
-                                            <label for="redeem_code_token" class="required">Ingresa tu código premium</label>
-                                            <input type="text" id="redeem_code_token" name="redeem_code[token]" required="required" class="form-control" maxlength="20">
-                                        </div>
-                                        <input type="hidden" id="redeem_code_origin-url" name="redeem_code[origin-url]" value="">
-                                        <input type="hidden" id="redeem_code_offer-key" name="redeem_code[offer-key]"><input type="hidden" id="redeem_code_offer-uuid" name="redeem_code[offer-uuid]">
-                                        <input type="hidden" id="redeem_code_context" name="redeem_code[context]" value="redeem">
-                                        <input type="hidden" id="redeem_code_country" name="redeem_code[country]" value="HN">
-                                        <input type="hidden" id="redeem_code_region-locked" name="redeem_code[region-locked]">
-                                        <input type="hidden" id="redeem_code_offer-provider-name" name="redeem_code[offer-provider-name]">
-                                        <input type="hidden" id="redeem_code_return-url" name="redeem_code[return-url]" value="">
-                                        <div>
-                                          <div class="submit-button">
-                                            <button type="submit" id="redeem_code" name="redeem_code" class="btn btn-green">
-                                                Ingresar código
-                                            </button>
-                                          </div>
-                                        </div>
-                                        <input type="hidden" id="redeem_code__token" name="redeem_code[_token]" value="">
-                                    </form>
+                                  <?php
+                                    if(!isset($_SESSION['codigo_usuario'])){
+                                        echo '<br><br><br>No has iniciado session, <a href="iniciar_seccion.html">Inicia session</a> para canjear el codigo de tu tarjeta de regalo de spotify premium.<br><br>';
+                                    }
+                                    else{
+                                        $codigo_usuario = $_SESSION['codigo_usuario'];
+                                        $conexion->establecerConexion();
+
+                                        
+                                        echo'<form name="redeem_code" method="post" action="ajax_procesar_php/acciones_tarjeta_regalo.php" novalidate="novalidate" autocomplete="off" data-payment-form="">';
+                                            echo'<h2>Canjea tu código</h2>';
+                                            echo'<p>Ingresa el PIN que aparece al dorso de tu tarjeta de regalo o el código premium que figura en el recibo de la tienda.</p>';
+                                            echo'<div class="form-group">';
+                                                echo'<label for="redeem_code_token" class="required">Ingresa tu código premium</label>';
+                                                echo'<input type="text" id="redeem_code_token" name="redeem_code[token]" required="required" class="form-control" maxlength="20">';
+                                            echo'</div>';
+                                            echo'<input type="hidden" id="redeem_code_origin-url" name="redeem_code[origin-url]" value="">';
+                                            echo'<input type="hidden" id="redeem_code_offer-key" name="redeem_code[offer-key]"><input type="hidden" id="redeem_code_offer-uuid" name="redeem_code[offer-uuid]">';
+                                            echo'<input type="hidden" id="redeem_code_context" name="redeem_code[context]" value="redeem">';
+                                            echo'<input type="hidden" id="redeem_code_country" name="redeem_code[country]" value="HN">';
+                                            echo'<input type="hidden" id="redeem_code_region-locked" name="redeem_code[region-locked]">';
+                                            echo'<input type="hidden" id="redeem_code_offer-provider-name" name="redeem_code[offer-provider-name]">';
+                                            echo'<input type="hidden" id="redeem_code_return-url" name="redeem_code[return-url]" value="">';
+                                            echo'<div>';
+                                              echo'<div class="submit-button">';
+                                                echo'<button type="submit" id="redeem_code" name="redeem_code" class="btn btn-green">
+                                                    Ingresar código';
+                                                echo'</button>';
+                                              echo'</div>';
+                                            echo'</div>';
+                                            echo'<input type="hidden" id="redeem_code__token" name="redeem_code[_token]" value="">';
+                                        echo'</form>';
+                                    }
+                                  ?>
                                 </div>
                                 <script src="extra/redeem-embed.c0b7c10524217d728f71.js.download"></script>
                               </div>
@@ -268,5 +314,24 @@
         <script src="extra/adsct" type="text/javascript"></script>
         <script src="extra/adsct(1)" type="text/javascript"></script>
 
+        <?php
+            if (isset($_GET["id"]) && !empty($_GET["id"])) {
+              if ($_GET["id"]=="correcto") {
+                echo '<div onclick="quitar()" id="negro"></div>';
+                echo '<div id="dialogo">';
+                  echo '<p>Eliminada exitosamente...</p>';
+                echo '</div>';
+              }
+            }
+        ?>
+
   </body>
 </html>
+<?php
+  if(!isset($_SESSION['codigo_usuario'])){
+                                                                         
+  }
+  else{
+    $conexion->cerrarConexion();
+  } 
+?>

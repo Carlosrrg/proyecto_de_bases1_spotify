@@ -34,6 +34,7 @@
       <link rel="canonical" href="#">
       <link rel="stylesheet" href="css/spotify-d9a2deabab.css">
       <link rel="stylesheet" href="css/account-e132f5a492.css">
+      <link rel="stylesheet" href="css/mensaje_error.css">
  
       <script src="extra/tracking.download.0a5d990a048e858d07ff.js.download"></script>
            
@@ -41,9 +42,24 @@
       <script async="" src="extra/modules-9cac31d617713ef2768f017542280bf6.js.download"></script>
       <style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style>
 
+
+      <script>
+        function quitar(){
+          document.getElementById("negro").style.display="none";
+          document.getElementById("dialogo").style.display="none";
+        }
+      </script>
+
   </head>
 
   <body class=" m-hn l-es page-account-profile is-loggedin  reboot ">
+
+        <?php
+            include_once("class/conexion_copy.php");
+            session_start();
+            $conexion = new Conexion();
+            $conexion->establecerConexion();//solo para establecer conexion y que no de el warning
+        ?>    
                                           
         <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
               <symbol id="spotify-logo" viewBox="0 0 827.79999 248.275">
@@ -112,14 +128,21 @@
                                     </use></svg>
                                   </div>
                                 </a>
-                                <ul class="dropdown-menu dropdown-menu-right">
-                                    <li>
-                                        <a href="vista_general_cuenta.html" data-tracking="{&quot;category&quot;: &quot;menu&quot;, &quot;action&quot;: &quot;account&quot;}">Cuenta</a>
-                                    </li>
-                                    <li>
-                                        <a href="index.html" data-tracking="{&quot;category&quot;: &quot;menu&quot;, &quot;action&quot;: &quot;log-out&quot;}">Cerrar Sesión</a>
-                                    </li>
-                                </ul>
+                                <?php
+                                  if(!isset($_SESSION['codigo_usuario'])){
+                                                         
+                                  }
+                                  else{
+                                    echo '<ul class="dropdown-menu dropdown-menu-right">';
+                                      echo '<li>';
+                                        echo '<a href="vista_general_cuenta.php">Cuenta</a>';
+                                      echo '</li>';
+                                      echo '<li>';
+                                        echo '<a href="php/session_cerrar.php">Cerrar Sesión</a>';
+                                      echo '</li>';
+                                    echo '</ul>';
+                                  }
+                                ?>
                             </li>
                         </ul>
                         <a href="#" class="user-link hidden">      
@@ -156,16 +179,23 @@
                                 Mejora tu cuenta
                               </a>
                             </li>
-                            <li class="alternate sidepanel-item-small hidden-md hidden-lg ">
-                              <a href="vista_general_cuenta.html" id="nav-link-account" data-ga-category="menu" data-ga-action="account">
-                                Cuenta
-                              </a>
-                            </li>
-                            <li class="alternate sidepanel-item-small hidden-md hidden-lg ">
-                              <a href="index.html" id="nav-link-log-out" data-ga-category="menu" data-ga-action="log-out">
-                                Cerrar Sesión
-                              </a>
-                            </li>
+                            <?php
+                              if(!isset($_SESSION['codigo_usuario'])){
+                                                       
+                              }
+                              else{
+                                echo '<li class="alternate sidepanel-item-small hidden-md hidden-lg ">';
+                                  echo '<a href="vista_general_cuenta.php" id="nav-link-account" data-ga-category="menu" data-ga-action="account" style="animation-delay: 85ms;">';
+                                    echo 'Cuenta';
+                                  echo '</a>';
+                                echo '</li>';
+                                echo '<li class="alternate sidepanel-item-small hidden-md hidden-lg ">';
+                                  echo '<a href="php/session_cerrar.php" id="nav-link-log-out" data-ga-category="menu" data-ga-action="log-out" style="animation-delay: 102ms;">';
+                                    echo 'Cerrar Sesión';
+                                  echo'</a>';
+                                echo '</li>';
+                              }
+                            ?>
                             <li class="dropdown alternate hidden-sidepanel">
                                 <a href="#" class="user-link dropdown-toggle" data-toggle="dropdown">    
                                   <div class="user-icon-container img-circle navbar-user-img">
@@ -185,12 +215,19 @@
                                         Mejora tu cuenta
                                       </a>
                                     </li>
-                                    <li>
-                                      <a href="vista_general_cuenta.html" data-tracking="{&quot;category&quot;: &quot;menu&quot;, &quot;action&quot;: &quot;account&quot;}">Cuenta</a>
-                                    </li>
-                                    <li>
-                                      <a href="index.html" class="logout-link" data-tracking="{&quot;category&quot;: &quot;menu&quot;, &quot;action&quot;: &quot;log-out&quot;}">Cerrar Sesión</a>
-                                    </li>
+                                    <?php
+                                      if(!isset($_SESSION['codigo_usuario'])){
+                                                       
+                                      }
+                                      else{
+                                        echo'<li>';
+                                          echo '<a href="vista_general_cuenta.php">Cuenta</a>';
+                                        echo '</li>';
+                                        echo '<li>';
+                                          echo '<a href="php/session_cerrar.php">Cerrar Sesión</a>';
+                                        echo '</li>';
+                                      }
+                                    ?>
                                 </ul>
                             </li>
                         </ul>
@@ -278,49 +315,49 @@
                                 </button>
                                 <ul class="dropdown-menu" role="menu"> 
                                     <li id="submenu-item-account-overview">
-                                      <a href="vista_general_cuenta.html">
+                                      <a href="vista_general_cuenta.php">
                                         <svg>
                                           <use xlink:href="#icon-home"></use>
                                         </svg> Vista general de la cuenta
                                       </a>
                                     </li> 
                                     <li id="submenu-item-edit-profile">
-                                      <a href="editar_perfil.html">
+                                      <a href="editar_perfil.php">
                                         <svg>
                                           <use xlink:href="#icon-edit"></use>
                                         </svg> Editar perfil
                                       </a>
                                     </li> 
                                     <li id="submenu-item-change-password">
-                                      <a href="cambiar_contrasena.html">
+                                      <a href="cambiar_contrasena.php">
                                         <svg>
                                           <use xlink:href="#icon-locked"></use>
                                         </svg> Cambiar contraseña
                                       </a>
                                     </li> 
                                     <li id="submenu-item-privacy-settings">
-                                      <a href="configuracion_privacidad.html"> 
+                                      <a href="configuracion_privacidad.php"> 
                                         <svg>
                                           <use xlink:href="#icon-locked"></use>
                                         </svg> Configuración de privacidad
                                       </a>
                                     </li>
                                     <li id="submenu-item-offline-devices">
-                                      <a href="dispositivo_offline.html">
+                                      <a href="dispositivo_offline.php">
                                         <svg>
                                           <use xlink:href="#icon-offline"></use>
                                         </svg> Dispositivos offline
                                       </a>
                                     </li>  
                                     <li id="submenu-item-subscription">
-                                      <a href="suscripcion.html">
+                                      <a href="suscripcion.php">
                                         <svg>
                                           <use xlink:href="#icon-payment"></use>
                                         </svg> Suscripción
                                       </a>
                                     </li>
                                     <li id="submenu-item-receipts">
-                                      <a href="recibos.html">
+                                      <a href="recibos.php">
                                         <svg>
                                           <use xlink:href="#icon-payment-history"></use>
                                         </svg> Recibos
@@ -334,7 +371,7 @@
                                       </a>
                                     </li> 
                                     <li id="submenu-item-redeem">
-                                      <a href="canjear.html">
+                                      <a href="canjear.php">
                                         <svg>
                                           <use xlink:href="#icon-redeem"></use>
                                         </svg> Canjear
@@ -359,49 +396,49 @@
                                     </div>
                                     <ul class="nav-inverse nav-tabs nav-stacked"> 
                                         <li id="submenu-item-account-overview">
-                                          <a href="vista_general_cuenta.html">
+                                          <a href="vista_general_cuenta.php">
                                             <svg>
                                               <use xlink:href="#icon-home"></use>
                                             </svg> Vista general de la cuenta
                                           </a>
                                         </li> 
                                         <li id="submenu-item-edit-profile">
-                                          <a href="editar_perfil.html">
+                                          <a href="editar_perfil.php">
                                             <svg>
                                               <use xlink:href="#icon-edit"></use>
                                             </svg> Editar perfil
                                           </a>
                                         </li> 
                                         <li id="submenu-item-change-password">
-                                          <a href="cambiar_contrasena.html">
+                                          <a href="cambiar_contrasena.php">
                                             <svg>
                                               <use xlink:href="#icon-locked"></use>
                                             </svg> Cambiar contraseña
                                           </a>
                                         </li> 
                                         <li id="submenu-item-privacy-settings">
-                                          <a href="configuracion_privacidad.html"> 
+                                          <a href="configuracion_privacidad.php"> 
                                             <svg>
                                               <use xlink:href="#icon-locked"></use>
                                             </svg> Configuración de privacidad
                                           </a>
                                         </li>
                                         <li id="submenu-item-offline-devices">
-                                          <a href="dispositivo_offline.html">
+                                          <a href="dispositivo_offline.php">
                                             <svg>
                                               <use xlink:href="#icon-offline"></use>
                                             </svg> Dispositivos offline
                                           </a>
                                         </li>  
                                         <li id="submenu-item-subscription">
-                                          <a href="suscripcion.html">
+                                          <a href="suscripcion.php">
                                             <svg>
                                               <use xlink:href="#icon-payment"></use>
                                             </svg> Suscripción
                                           </a>
                                         </li>
                                         <li id="submenu-item-receipts">
-                                          <a href="recibos.html">
+                                          <a href="recibos.php">
                                             <svg>
                                               <use xlink:href="#icon-payment-history"></use>
                                             </svg> Recibos
@@ -415,7 +452,7 @@
                                           </a>
                                         </li> 
                                         <li id="submenu-item-redeem">
-                                          <a href="canjear.html">
+                                          <a href="canjear.php">
                                             <svg>
                                               <use xlink:href="#icon-redeem"></use>
                                             </svg> Canjear
@@ -431,106 +468,143 @@
                                         <div class="page-header">
                                             <h1>Aplicaciones con acceso a tu información de Spotify</h1>
                                         </div>
-                                        <p class="instruction">
-                                            Autorizaste el acceso de estas aplicaciones a tu cuenta de Spotify.
-                                            Para revocar la autorización, haz clic en "Eliminar acceso".
-                                        </p>
+                                        <?php
+                                          if(!isset($_SESSION['codigo_usuario'])){}
+                                          else{
+                                            echo '<p class="instruction">
+                                                    Autorizaste el acceso de estas aplicaciones a tu cuenta de Spotify.
+                                                    Para revocar la autorización, haz clic en "Eliminar acceso".
+                                                  </p>';
+                                          }  
+                                        ?>
                                         <section class="well">
                                             <div class="table-responsive">
-                                                <table class="table table-striped table-revoke-apps">
-                                                    <tbody>
-                                                        <tr class="playlist">
-                                                            <td class="apps-icon">
-                                                                <img class="img-nonresponsive" alt="Application image" src="img/app1.png" style="width: 64px; height: 64px;">
-                                                            </td>
-                                                            <td>
-                                                              <strong>Discord</strong>
-                                                              <br>
-                                                              See and play what other people are listening to on Discord. Spotify premium members can even listen along with their friends!
-                                                            </td>
-                                                            <td class="apps-revoke">
-                                                              <form action="" method="POST">
-                                                                <input name="sp_csrf" type="hidden" value="">
-                                                                <button type="submit" class="btn btn-link btn-sm">
-                                                                  Eliminar acceso
-                                                                </button>
-                                                              </form>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class="playlist">
-                                                            <td class="apps-icon">
-                                                                <img class="img-nonresponsive" alt="Application image" src="img/app1.png" style="width: 64px; height: 64px;">
-                                                            </td>
-                                                            <td>
-                                                              <strong>Spotify Advertising Cookie</strong>
-                                                              <br>
-                                                              Enables Spotify ads tailored to your interests and preferences. See 'Privacy settings' to manage your data.
-                                                            </td>
-                                                            <td class="apps-revoke">
-                                                              <form action="#" method="POST">
-                                                                <input name="sp_csrf" type="hidden" value="">
-                                                                <button type="submit" class="btn btn-link btn-sm">
-                                                                  Eliminar acceso
-                                                                </button>
-                                                              </form>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class="playlist">
-                                                            <td class="apps-icon">
-                                                                  <img class="img-nonresponsive" alt="Application image" src="img/app1.png" style="width: 64px; height: 64px;">
-                                                            </td>
-                                                            <td>
-                                                              <strong>Musixmatch</strong>
-                                                              <br>
-                                                              Musixmatch Lyrics App
-                                                            </td>
-                                                            <td class="apps-revoke">
-                                                              <form action="#" method="POST">
-                                                                <input name="sp_csrf" type="hidden" value="">
-                                                                <button type="submit" class="btn btn-link btn-sm">
-                                                                  Eliminar acceso
-                                                                </button>
-                                                              </form>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class="playlist">
-                                                            <td class="apps-icon">
-                                                                <img class="img-nonresponsive" alt="Application image" src="img/app1.png" style="width: 64px; height: 64px;">
-                                                            </td>
-                                                            <td>
-                                                              <strong>support.spotify.com login</strong>
-                                                              <br>
-                                                              Login with SSO from support.spotify.com
-                                                            </td>
-                                                            <td class="apps-revoke">
-                                                              <form action="#" method="POST">
-                                                                <input name="sp_csrf" type="hidden" value="">
-                                                                <button type="submit" class="btn btn-link btn-sm">
-                                                                  Eliminar acceso
-                                                                </button>
-                                                              </form>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class="playlist">
-                                                            <td class="apps-icon">
-                                                                <img class="img-nonresponsive" alt="Application image" src="img/psn_icon_new-lowres.png" style="width: 64px; height: 64px;">
-                                                            </td>
-                                                        <td>
-                                                            <strong>PlayStation®Network</strong>
-                                                            <br>
-                                                            PlayStation Network account link
-                                                        </td>
-                                                        <td class="apps-revoke">
-                                                            <form action="#" method="POST">
-                                                                <input name="sp_csrf" type="hidden" value="">
-                                                                <button type="submit" class="btn btn-link btn-sm">
-                                                                    Eliminar acceso
-                                                            </button>
-                                                            </form>
-                                                        </td>
-                                                      </tr>
-                                                    </tbody>
-                                                </table>
+                                                <?php
+                                                  if(!isset($_SESSION['codigo_usuario'])){
+                                                      echo 'No has iniciado session, <a href="iniciar_seccion.html">Inicia session</a> para ver las apps que tienen autorizacion a tu cuenta<br><br>';
+                                                  }
+                                                  else{
+                                                      $codigo_usuario = $_SESSION['codigo_usuario'];
+                                                      $conexion->establecerConexion();
+                                                      $app1 = "Discord";
+                                                      $app2 = "Musixmatch";
+                                                      $app3 = "Nintendo Switch";
+                                                      $app4 = "Xbox live";
+                                                      $app5 = "PlayStation Network";
+
+                                                      $resultado_recibos = $conexion->ejecutarInstruccion(" SELECT  CODIGO_VINCULO_APLICACIONES,
+                                                                                                                    NOMBRE_APLICACION_VINCULO
+                                                                                                            FROM TBL_VINCULO_APLICACIONES
+                                                                                                            WHERE CODIGO_USUARIO = '$codigo_usuario'");
+                                                      oci_execute($resultado_recibos);
+                                                      while ($fila = $conexion->obtenerFila($resultado_recibos)) {
+                                                          echo'<table class="table table-striped table-revoke-apps">';
+                                                              echo'<tbody>';
+                                                                  if (($fila["NOMBRE_APLICACION_VINCULO"]) == $app1) {
+                                                                    echo'<tr class="playlist">';
+                                                                        echo'<td class="apps-icon">';
+                                                                            echo'<img class="img-nonresponsive" alt="Application image" src="img/app1.png" style="width: 64px; height: 64px;">';
+                                                                        echo'</td>';
+                                                                        echo'<td>';
+                                                                          echo'<strong>Discord</strong>';
+                                                                          echo'<br>
+                                                                          See and play what other people are listening to on Discord. Spotify premium members can even listen along with their friends!';
+                                                                        echo'</td>';
+                                                                        echo'<td class="apps-revoke">';
+                                                                          echo'<form action="ajax_procesar_php/accones_app1.php" method="POST">';
+                                                                            echo'<input name="app1" type="hidden" value="'.$fila["CODIGO_VINCULO_APLICACIONES"].'">';
+                                                                            echo'<button type="submit" class="btn btn-link btn-sm">
+                                                                              Eliminar acceso';
+                                                                            echo'</button>';
+                                                                          echo'</form>';
+                                                                        echo'</td>';
+                                                                    echo'</tr>';
+                                                                  }
+                                                                  if ($fila["NOMBRE_APLICACION_VINCULO"] == $app2) {
+                                                                    echo'<tr class="playlist">';
+                                                                        echo'<td class="apps-icon">';
+                                                                              echo'<img class="img-nonresponsive" alt="Application image" src="img/app1.png" style="width: 64px; height: 64px;">';
+                                                                        echo'</td>';
+                                                                        echo'<td>';
+                                                                          echo'<strong>Musixmatch</strong>';
+                                                                          echo'<br>
+                                                                          Musixmatch Lyrics App, when you listen music you can sing too.';
+                                                                        echo'</td>';
+                                                                        echo'<td class="apps-revoke">';
+                                                                          echo'<form action="ajax_procesar_php/accones_app1.php" method="POST">';
+                                                                            echo'<input name="app2" type="hidden" value="'.$fila["CODIGO_VINCULO_APLICACIONES"].'">';
+                                                                            echo'<button type="submit" class="btn btn-link btn-sm">
+                                                                              Eliminar acceso';
+                                                                            echo'</button>';
+                                                                          echo'</form>';
+                                                                        echo'</td>';
+                                                                    echo'</tr>';
+                                                                  }
+                                                                  if ($fila["NOMBRE_APLICACION_VINCULO"] == $app3) {
+                                                                    echo'<tr class="playlist">';
+                                                                        echo'<td class="apps-icon">';
+                                                                              echo'<img class="img-nonresponsive" alt="Application image" src="img/app1.png" style="width: 64px; height: 64px;">';
+                                                                        echo'</td>';
+                                                                        echo'<td>';
+                                                                          echo'<strong>Nintendo Switch</strong>';
+                                                                          echo'<br>
+                                                                          Play with friends everywhere and listen music with then';
+                                                                        echo'</td>';
+                                                                        echo'<td class="apps-revoke">';
+                                                                          echo'<form action="ajax_procesar_php/accones_app1.php" method="POST">';
+                                                                            echo'<input name="app3" type="hidden" value="'.$fila["CODIGO_VINCULO_APLICACIONES"].'">';
+                                                                            echo'<button type="submit" class="btn btn-link btn-sm">
+                                                                              Eliminar acceso';
+                                                                            echo'</button>';
+                                                                          echo'</form>';
+                                                                        echo'</td>';
+                                                                    echo'</tr>';
+                                                                  }
+                                                                  if ($fila["NOMBRE_APLICACION_VINCULO"] == $app4) {
+                                                                    echo'<tr class="playlist">';
+                                                                        echo'<td class="apps-icon">';
+                                                                            echo'<img class="img-nonresponsive" alt="Application image" src="img/app1.png" style="width: 64px; height: 64px;">';
+                                                                        echo'</td>';
+                                                                        echo'<td>';
+                                                                          echo'<strong>Xbox live</strong>';
+                                                                          echo'<br>
+                                                                          Login with xbox live from xbox.spotify.com and listen music all time.';
+                                                                        echo'</td>';
+                                                                        echo'<td class="apps-revoke">';
+                                                                          echo'<form action="ajax_procesar_php/accones_app1.php" method="POST">';
+                                                                            echo'<input name="app4" type="hidden" value="'.$fila["CODIGO_VINCULO_APLICACIONES"].'">';
+                                                                            echo'<button type="submit" class="btn btn-link btn-sm">
+                                                                              Eliminar acceso';
+                                                                            echo'</button>';
+                                                                          echo'</form>';
+                                                                        echo'</td>';
+                                                                    echo'</tr>';
+                                                                  }
+                                                                  if ($fila["NOMBRE_APLICACION_VINCULO"] == $app5) {
+                                                                    echo'<tr class="playlist">';
+                                                                            echo'<td class="apps-icon">';
+                                                                                echo'<img class="img-nonresponsive" alt="Application image" src="img/psn_icon_new-lowres.png" style="width: 64px; height: 64px;">';
+                                                                            echo'</td>';
+                                                                        echo'<td>';
+                                                                            echo'<strong>PlayStation®Network</strong>';
+                                                                            echo'<br>
+                                                                            PlayStation Network account link, youcan listen music in your console.';
+                                                                        echo'</td>';
+                                                                        echo'<td class="apps-revoke">';
+                                                                            echo'<form action="ajax_procesar_php/accones_app1.php" method="POST">';
+                                                                                echo'<input name="app5" type="hidden" value="'.$fila["CODIGO_VINCULO_APLICACIONES"].'">';
+                                                                                echo'<button type="submit" class="btn btn-link btn-sm">
+                                                                                    Eliminar acceso';
+                                                                            echo'</button>';
+                                                                            echo'</form>';
+                                                                        echo'</td>';
+                                                                    echo'</tr>';
+                                                                  }
+                                                              echo'</tbody>';
+                                                          echo'</table>';
+                                                      }    
+                                                  }
+                                                ?>
                                             </div>
                                         </section>
                                     </div>
@@ -722,5 +796,25 @@
         <script src="extra/adsct" type="text/javascript"></script>
         <script src="extra/adsct(1)" type="text/javascript"></script>
 
+
+        <?php
+            if (isset($_GET["id"]) && !empty($_GET["id"])) {
+              if ($_GET["id"]=="correcto") {
+                echo '<div onclick="quitar()" id="negro"></div>';
+                echo '<div id="dialogo">';
+                  echo '<p>Eliminada exitosamente...</p>';
+                echo '</div>';
+              }
+            }
+        ?>
+
   </body>
 </html>
+<?php
+  if(!isset($_SESSION['codigo_usuario'])){
+                                                                         
+  }
+  else{
+    $conexion->cerrarConexion();
+  } 
+?>
