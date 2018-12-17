@@ -2,6 +2,9 @@ var miaudio,reproducir,barra,progreso,inicio,Iniciorespaldo,buscar,biblioteca,
 EscuchadosRecientemente,top50,divinicio,divbuscar,divbiblioteca,divEscuchadosRecientemente,
 divtop50,divsubprincipal,divVolumen,divControlarVolumen;
 
+
+var btnPlaylistBiblioteca,btnFavoritasBiblioteca,btnAlbumesBiblioteca,btnArtistasBiblioteca,btnSeleccionadosInicio,btnExitosInicio;
+
 bucle2=setInterval(termino,30);
 
 function comenzar(){
@@ -47,10 +50,31 @@ function comenzar(){
 	top50.addEventListener("click",top501,false);
 	Iniciorespaldo.addEventListener("click",inicio1,false);
 
+	/*botones de biblioteca interiores*/
+	btnPlaylistBiblioteca=document.getElementById("btnPlaylistBiblioteca");
+	btnFavoritasBiblioteca=document.getElementById("btnFavoritasBiblioteca");
+	btnAlbumesBiblioteca=document.getElementById("btnAlbumesBiblioteca");
+	btnArtistasBiblioteca=document.getElementById("btnArtistasBiblioteca");
+	/*eventos de botones de biblioteca*/
+	btnPlaylistBiblioteca.addEventListener("click",btnPlaylistBiblioteca1,false);
+    btnFavoritasBiblioteca.addEventListener("click",btnFavoritasBiblioteca1,false);
+    btnAlbumesBiblioteca.addEventListener("click",btnAlbumesBiblioteca1,false);
+    btnArtistasBiblioteca.addEventListener("click",btnArtistasBiblioteca1,false);
+
+
+    /*botones de inicio interiores*/
+    btnSeleccionadosInicio=document.getElementById("btnSeleccionadosInicio");
+	btnExitosInicio=document.getElementById("btnExitosInicio");
+
+	/*eventos botones de inicio*/
+	btnSeleccionadosInicio.addEventListener("click",btnSeleccionadosInicio1,false);
+	btnExitosInicio.addEventListener("click",btnExitosInicio1,false);
 
 	miaudio.volume=0.5;
 
 }
+
+
 
 function play(){
 
@@ -163,7 +187,7 @@ function biblioteca1(){
 		divEscuchadosRecientemente.style.display = 'none';
 		divbiblioteca.style.display = 'block';
 		divbuscar.style.display = 'none';
-		divsubprincipal.style.background='linear-gradient(#1A2B57, #090E1D)';
+		divsubprincipal.style.background='linear-gradient(#034243, #090E1D)';
 		divsubprincipal.style.backgroundRepeat='no-repeat';
 	divsubprincipal.style.backgroundAttachment = "fixed";
 
@@ -197,6 +221,71 @@ function top501(){
 
 
 
+}
+
+
+function btnPlaylistBiblioteca1(){
+btnPlaylistBiblioteca.style.opacity="1";
+btnFavoritasBiblioteca.style.opacity="0.5";
+btnAlbumesBiblioteca.style.opacity="0.5";
+btnArtistasBiblioteca.style.opacity="0.5";
+document.getElementById("DivPlaylistBiblioteca").style.display = "block";
+document.getElementById("DivCancionesFavoritas").style.display = "none";
+document.getElementById("DivAlbumesBibloteca").style.display = "none";
+document.getElementById("DivArtistasBiblioteca").style.display = "none";
+
+
+}
+function btnFavoritasBiblioteca1(){
+btnPlaylistBiblioteca.style.opacity="0.5";
+btnFavoritasBiblioteca.style.opacity="1";
+btnAlbumesBiblioteca.style.opacity="0.5";
+btnArtistasBiblioteca.style.opacity="0.5";
+document.getElementById("DivPlaylistBiblioteca").style.display = "none";
+document.getElementById("DivCancionesFavoritas").style.display = "block";
+document.getElementById("DivAlbumesBibloteca").style.display = "none";
+document.getElementById("DivArtistasBiblioteca").style.display = "none";
+
+
+}
+function btnAlbumesBiblioteca1(){
+btnPlaylistBiblioteca.style.opacity="0.5";
+btnFavoritasBiblioteca.style.opacity="0.5";
+btnAlbumesBiblioteca.style.opacity="1";
+btnArtistasBiblioteca.style.opacity="0.5";
+document.getElementById("DivPlaylistBiblioteca").style.display = "none";
+document.getElementById("DivCancionesFavoritas").style.display = "none";
+document.getElementById("DivAlbumesBibloteca").style.display = "block";
+document.getElementById("DivArtistasBiblioteca").style.display = "none";
+
+
+}
+function btnArtistasBiblioteca1(){
+btnPlaylistBiblioteca.style.opacity="0.5";
+btnFavoritasBiblioteca.style.opacity="0.5";
+btnAlbumesBiblioteca.style.opacity="0.5";
+btnArtistasBiblioteca.style.opacity="1";
+document.getElementById("DivPlaylistBiblioteca").style.display = "none";
+document.getElementById("DivCancionesFavoritas").style.display = "none";
+document.getElementById("DivAlbumesBibloteca").style.display = "none";
+document.getElementById("DivArtistasBiblioteca").style.display = "block";
+
+
+}
+
+
+function btnSeleccionadosInicio1(){
+btnSeleccionadosInicio.style.opacity="1";
+btnExitosInicio.style.opacity="0.5";
+document.getElementById("divSeleccionadosInicio").style.display = "block";
+document.getElementById("divExitosInicio").style.display = "none";	
+}
+
+function btnExitosInicio1(){
+btnSeleccionadosInicio.style.opacity="0.5";
+btnExitosInicio.style.opacity="1";
+document.getElementById("divSeleccionadosInicio").style.display = "none";
+document.getElementById("divExitosInicio").style.display = "block";	
 }
 
 
