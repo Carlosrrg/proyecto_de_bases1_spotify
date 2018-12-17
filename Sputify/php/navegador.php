@@ -125,7 +125,7 @@
 														for ($i=0; $i <10 ; $i++) { 
 														 ?>
 								
-										<figure id=""  class="efectosAlbumes" style="background-image: url(../img/nightcore.jpg); background-size: cover;">
+										<figure id=""  class="efectosAlbumes" style="background-image: url(../img/nightcore.jpg); background-size: cover; ">
 									
 																													
 												<img src="../img/darplayimagen.jpg" id="ArtistaImagen">

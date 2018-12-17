@@ -47,17 +47,13 @@ function inputBuscador(){
 
 
 
-					echo "<div id='divArtistasBusqueda'> 
+					echo "<div id='divArtistasBusqueda' style='width: 100%; clear: both;'> 
 					<h2 style='text-align: center; padding-top: 50px; font-size: 50px;'>Artistas</h2>";
 
-					 $CancionesFavoritass=$conexion->ejecutarInstruccion(" SELECT * FROM (SELECT DISTINCT A.NOMBRE_GRUPO_O_ARTISTA, A.IMAGEN
+					 $CancionesFavoritass=$conexion->ejecutarInstruccion(" SELECT * FROM (SELECT  A.NOMBRE_GRUPO_O_ARTISTA, A.IMAGEN
 																						FROM TBL_GRUPOS_O_ARTISTAS A
-																						INNER JOIN TBL_CANCIONES B
-																						ON(A.CODIGO_GRUPOS_O_ARTISTAS=B.CODIGO_GRUPOS_O_ARTISTAS)
-																						INNER JOIN TBL_CANCIONES_FAVORITAS C
-																						ON(C.CODIGO_CANCION=B.CODIGO_CANCION)
-																					WHERE A.NOMBRE_GRUPO_O_ARTISTA like '%$busqueda%') 
-																					WHERE ROWNUM <= 5 ");
+																						WHERE A.NOMBRE_GRUPO_O_ARTISTA like '%$busqueda%') 
+																						WHERE ROWNUM <= 10	 ");
 									oci_execute($CancionesFavoritass);
 
 
@@ -86,9 +82,54 @@ function inputBuscador(){
 
 
 
-			echo "<div id='divAlbumesBusqueda'> 
+			echo "<div id='divAlbumesBusqueda' style='width: 100%; clear: both;'> 
 			<h2 style='text-align: center; padding-top: 50px; font-size: 50px;'>Albumes</h2>";
 
+								 $CancionesFavoritass=$conexion->ejecutarInstruccion(" SELECT * FROM (SELECT  A.NOMBRE_ALBUM_MUSICAL, A.IMAGEN
+																						FROM TBL_ALBUMES_MUSICALES A
+																						
+																						WHERE A.NOMBRE_ALBUM_MUSICAL like '%$busqueda%') 
+																					WHERE ROWNUM <= 5 ");
+									oci_execute($CancionesFavoritass);
+
+									while ($fila = $conexion->obtenerFila($CancionesFavoritass)) {
+										
+									echo"	<figure id=''  class='efectosAlbumes' style='background-image: url($fila[IMAGEN]); background-size: cover;'>
+											<img src='../img/darplayimagen.jpg' id='ArtistaImagen'>
+
+											<figcaption style='color: white; padding-top: -10px; text-align: center; bottom: 0;'>$fila[NOMBRE_ALBUM_MUSICAL]</figcaption>
+											
+										</figure>	
+
+
+									";}
+
+			echo "</div>";
+
+
+
+			echo "<div id='divPlaylistBusqueda' style='width: 100%; clear: both;'> 
+			<h2 style='text-align: center; padding-top: 50px; font-size: 50px;'>Playlist</h2>";
+
+
+				 $CancionesFavoritass=$conexion->ejecutarInstruccion(" SELECT * FROM (SELECT  A.NOMBRE_PLAYLIST, A.CODIGO_PLAYLIST
+																						FROM TBL_PLAYLIST A
+																						
+																						WHERE A.NOMBRE_PLAYLIST like '%$busqueda%') 
+																					WHERE ROWNUM <= 5 ");
+									oci_execute($CancionesFavoritass);
+
+									while ($fila = $conexion->obtenerFila($CancionesFavoritass)) {
+										
+									echo"	<figure id=''  class='efectosAlbumes' style='background-image: url(../img/playlist.jpg); background-size: cover;'>
+											<img src='../img/darplayimagen.jpg' id='ArtistaImagen'>
+
+											<figcaption style='color: white; padding-top: -10px; text-align: center; bottom: 0;'>$fila[NOMBRE_PLAYLIST]</figcaption>
+											
+										</figure>	
+
+
+									";}
 
 
 
