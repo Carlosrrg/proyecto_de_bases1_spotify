@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+	
+
 	$('#inputBuscador').on('keyup',function(){
 		var inputBuscador=$('#inputBuscador').val()
 		
@@ -25,3 +27,4 @@ $(document).ready(function(){
 	})
 
 })
+

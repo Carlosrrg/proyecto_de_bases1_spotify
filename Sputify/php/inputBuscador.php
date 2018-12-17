@@ -14,7 +14,7 @@ function inputBuscador(){
 
            	echo "<div id='divResultadosPrincipalesBusqueda'> 
            	";
-           							 $CancionesFavoritas=$conexion->ejecutarInstruccion(" SELECT * FROM (SELECT B.CODIGO_CANCION, B.NOMBRE_CANCION , C.NOMBRE_GRUPO_O_ARTISTA  , D.NOMBRE_ALBUM_MUSICAL, B.DURACION_CANCION, C.IMAGEN
+           							 $CancionesFavoritas=$conexion->ejecutarInstruccion(" SELECT * FROM (SELECT B.CODIGO_CANCION, B.NOMBRE_CANCION , C.NOMBRE_GRUPO_O_ARTISTA  , D.NOMBRE_ALBUM_MUSICAL, B.DURACION_CANCION, C.IMAGEN ,B.DIRECCION
 																					FROM TBL_CANCIONES B
 																					iNNER JOIN TBL_GRUPOS_O_ARTISTAS C
 																					ON(b.codigo_grupos_o_artistas=c.codigo_grupos_o_artistas)
@@ -31,7 +31,7 @@ function inputBuscador(){
 									 
 							echo "<div id=''  class='efectosCanciones' >
 									
-									 <button type='button'  id='' class='play'> <img src='../img/play_arrow.png' id='imgPlayArrow'></button>
+									 <button type='button'  id=' $fila[DIRECCION]'  onClick='reprodusir(this.id); play();' class='play'> <img src='../img/play_arrow.png' id='imgPlayArrow'></button>
 									 <h2 style='display: inline-block; '>$fila[NOMBRE_CANCION]</h2>
 									 <a href=''  style'display: inline-block;'> $fila[NOMBRE_GRUPO_O_ARTISTA]</a>
 									 <a href='' style='display: inline-block; '>$fila[NOMBRE_ALBUM_MUSICAL]</a>

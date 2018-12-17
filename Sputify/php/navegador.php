@@ -22,6 +22,7 @@
 	<script type="text/javascript" src="../js/jquery.min.js"></script>
 	<script type="text/javascript" src="../js/navegador.js"></script>
 	<script type="text/javascript" src="../js/buscar.js"></script>
+	
 </head>
 <body>
 	<aside>
@@ -63,103 +64,7 @@
 
 							<div id="divContenidoBuscador">
 								
-								<figure id="imagenBusqueda">
-
-																		
-									<img src="../img/darplayimagen.jpg" id="reproductorImagen">
-
-								</figure>
-
-							
-									<?php 
-										for ($i=0; $i <5 ; $i++) { 
-									 ?>
 								
-										<div id=""  class="efectosCanciones" >
-									
-											<button type="button"  id="" class="play"> <img src="../img/play_arrow.png" id="imgPlayArrow"></button>
-											<h2 style="display: inline-block; vertical-align: text-bottom;">Nombre de la cancion</h2>
-											<a href="" style=" position: relative; left: -154px; ">Nombre del artista</a>
-											<a href="" style=" position: relative; left: -154px;">nombre del album</a>
-											<h3 style="float: right;">4:33</h3>
-
-
-										</div>	
-									<?php 
-										}
-								 ?>
-								
-								 
-
-										<h2 style="text-align: center; padding-top: 50px; font-size: 50px;">Artistas</h2>
-										
-														<?php 
-														for ($i=0; $i <10 ; $i++) { 
-														 ?>
-								
-										<figure id=""  class="efectosArtistas" style="background-image: url(../img/nightcore.jpg); background-size: cover;">
-									
-																													
-												<img src="../img/darplayimagen.jpg" id="ArtistaImagen">
-
-											<figcaption style="color: white; padding-top: -10px; text-align: center; bottom: 0;">Nombre del artista</figcaption>
-											
-										</figure>	
-
-														<?php 
-
-																					}
-														 ?> 
-
-
-
-
-
-
-
-
-										<h2 style="text-align: center; margin-top: 550px; font-size: 50px;">Albumes</h2>		
-												 
-
-											<?php 
-														for ($i=0; $i <10 ; $i++) { 
-														 ?>
-								
-										<figure id=""  class="efectosAlbumes" style="background-image: url(../img/nightcore.jpg); background-size: cover; ">
-									
-																													
-												<img src="../img/darplayimagen.jpg" id="ArtistaImagen">
-
-											<figcaption style="color: white; padding-top: -10px; text-align: center; bottom: 0;">Nombre del ALbum</figcaption>
-											
-										</figure>	
-
-														<?php 
-
-																					}
-														 ?> 
-
-										<h2 style="text-align: center; margin-top: 550px; font-size: 50px;">Playlist</h2>		
-												 
-
-											<?php 
-														for ($i=0; $i <10 ; $i++) { 
-														 ?>
-								
-										<figure id=""  class="efectosAlbumes" style="background-image: url(../img/nightcore.jpg); background-size: cover;">
-									
-																													
-												<img src="../img/darplayimagen.jpg" id="ArtistaImagen">
-
-											<figcaption style="color: white; padding-top: -10px; text-align: center; bottom: 0;">Nombre de la playlist</figcaption>
-											
-										</figure>	
-
-														<?php 
-
-																					}
-														 ?> 
-
 									
 
 
@@ -181,7 +86,7 @@
 
 								<?php 
 									$CancionesFavoritas=$conexion->ejecutarInstruccion("SELECT * FROM(
-															SELECT  A.NOMBRE_CANCION , A.CODIGO_CANCION, B.NOMBRE_GRUPO_O_ARTISTA,c.codigo_album_musical, C.NOMBRE_ALBUM_MUSICAL, A.DURACION_CANCION
+															SELECT  A.NOMBRE_CANCION , A.CODIGO_CANCION, B.NOMBRE_GRUPO_O_ARTISTA,c.codigo_album_musical, C.NOMBRE_ALBUM_MUSICAL, A.DURACION_CANCION, A.DIRECCION
 															FROM TBL_CANCIONES A
 															INNER JOIN TBL_ALBUMES_MUSICALES C
 															ON(C.codigo_album_musical=A.codigo_album_musical)
@@ -196,7 +101,7 @@
 
 
 																
-							<button type="button"  id="" class="play"> <img src="../img/play_arrow.png" id="imgPlayArrow"></button>
+							<button type="button"  class="play" id='<?php  echo $fila["DIRECCION"]?>'  onClick='reprodusir(this.id); play();'> <img src="../img/play_arrow.png" id="imgPlayArrow"></button>
 							<h2 style="display: inline-block; "><?php  echo $fila["NOMBRE_CANCION"]?></h2>
 							<a href="" style="  "><?php  echo $fila["NOMBRE_GRUPO_O_ARTISTA"]?></a>
 							<a href="" style=" "><?php  echo $fila["NOMBRE_ALBUM_MUSICAL"]?></a>
@@ -215,7 +120,7 @@
 
 								<?php 
 									$CancionesFavoritas=$conexion->ejecutarInstruccion("SELECT * FROM(
-															SELECT  A.NOMBRE_CANCION , A.CODIGO_CANCION, B.NOMBRE_GRUPO_O_ARTISTA,c.codigo_album_musical, C.NOMBRE_ALBUM_MUSICAL, A.DURACION_CANCION, A.CANTIDAD_REPRODUCIDO
+															SELECT  A.NOMBRE_CANCION , A.CODIGO_CANCION, B.NOMBRE_GRUPO_O_ARTISTA,c.codigo_album_musical, C.NOMBRE_ALBUM_MUSICAL, A.DURACION_CANCION, A.CANTIDAD_REPRODUCIDO, A.DIRECCION
 															FROM TBL_CANCIONES A
 															INNER JOIN TBL_ALBUMES_MUSICALES C
 															ON(C.codigo_album_musical=A.codigo_album_musical)
@@ -230,7 +135,7 @@
 
 
 																
-							<button type="button"  id="" class="play"> <img src="../img/play_arrow.png" id="imgPlayArrow"></button>
+							<button type="button"   class="play" id='<?php  echo $fila["DIRECCION"]?>'  onClick='reprodusir(this.id); play();'> <img src="../img/play_arrow.png" id="imgPlayArrow"></button>
 							<h2 style="display: inline-block; "><?php  echo $fila["NOMBRE_CANCION"]?></h2>
 							<a href="" style="  "><?php  echo $fila["NOMBRE_GRUPO_O_ARTISTA"]?></a>
 							<a href="" style=" "><?php  echo $fila["NOMBRE_ALBUM_MUSICAL"]?></a>
@@ -286,7 +191,7 @@
 							<div id="DivCancionesFavoritas" style="display: none;">
 								
 									<?php 
-									$CancionesFavoritas=$conexion->ejecutarInstruccion("SELECT A.CODIGO_CANCION, B.NOMBRE_CANCION , C.NOMBRE_GRUPO_O_ARTISTA  , D.NOMBRE_ALBUM_MUSICAL, B.DURACION_CANCION
+									$CancionesFavoritas=$conexion->ejecutarInstruccion("SELECT A.CODIGO_CANCION, B.NOMBRE_CANCION , C.NOMBRE_GRUPO_O_ARTISTA  , D.NOMBRE_ALBUM_MUSICAL, B.DURACION_CANCION, B.DIRECCION
 																					FROM tbl_canciones_favoritas A
 																					INNER JOIN TBL_CANCIONES B
 																					ON (A.CODIGO_CANCION=B.CODIGO_CANCION)
@@ -302,7 +207,7 @@
 
 
 																
-							<button type="button"  id="" class="play"> <img src="../img/play_arrow.png" id="imgPlayArrow"></button>
+							<button type="button" class="play" id='<?php  echo $fila["DIRECCION"]?>'  onClick='reprodusir(this.id); play();' > <img src="../img/play_arrow.png" id="imgPlayArrow"></button>
 							<h2 style="display: inline-block; "><?php  echo $fila["NOMBRE_CANCION"]?></h2>
 							<a href="" style="  "><?php  echo $fila["NOMBRE_GRUPO_O_ARTISTA"]?></a>
 							<a href="" style=" "><?php  echo $fila["NOMBRE_ALBUM_MUSICAL"]?></a>
@@ -397,7 +302,7 @@
 						 			<H1 style="text-align: center;">Top 50 del mes</H1>
 							<?php 
 									$ArtistasFavoritas=$conexion->ejecutarInstruccion("
-																						SELECT A.CODIGO_CANCION, B.NOMBRE_CANCION , C.NOMBRE_ALBUM_MUSICAL, D.NOMBRE_GRUPO_O_ARTISTA, C.IMAGEN
+																						SELECT A.CODIGO_CANCION, B.NOMBRE_CANCION , C.NOMBRE_ALBUM_MUSICAL, D.NOMBRE_GRUPO_O_ARTISTA, C.IMAGEN,B.DIRECCION
 																						FROM TBL_HISTORIAL_REPRODUCCION_50 A
 																						INNER JOIN TBL_CANCIONES B
 																						ON(A.CODIGO_CANCION=B.CODIGO_CANCION)
@@ -409,7 +314,7 @@
 									while ($fila = $conexion->obtenerFila($ArtistasFavoritas)) {
 									 ?>
 
-							<figure id=""  class="efectosAlbumes" style="background-image: url(<?php  echo $fila["C.IMAGEN"]?>); background-size: cover; width: 18%; height: 28%;">
+							<figure   id='<?php  echo $fila["DIRECCION"]?>'  onClick='reprodusir(this.id); play();' class="efectosAlbumes" style="background-image: url(<?php  echo $fila["C.IMAGEN"]?>); background-size: cover; width: 18%; height: 28%;">
 									
 																													
 												<img src="../img/darplayimagen.jpg" id="ArtistaImagen">
@@ -466,6 +371,17 @@
 	
 
 </body>
+<script type="text/javascript">
+	
+
+	function reprodusir(dirrecion){
+		miaudio1=document.getElementById("musica");
+			miaudio1.src=dirrecion;
+
+
+		}	
+
+</script>
 </html>
 <?php 
 

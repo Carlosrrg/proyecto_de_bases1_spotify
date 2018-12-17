@@ -72,7 +72,12 @@ function comenzar(){
 
 	miaudio.volume=0.5;
 
+	
+
+
 }
+
+
 
 
 
