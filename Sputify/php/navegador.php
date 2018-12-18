@@ -1,12 +1,12 @@
 <?php
-        session_start();
-        if(!isset($_SESSION['codigo_usuario'])){
-		header("Location: ../index.html");
-        }
-        else{
+        //session_start();
+       // if(!isset($_SESSION['codigo_usuario'])){
+		//header("Location: ../index.html");
+        //}
+        //else{
         	 include_once("../class/conexion_copy.php");
-        	 $codigo_usuario = $_SESSION['codigo_usuario'];
-                        	//$codigo_usuario=1;                         
+        	// $codigo_usuario = $_SESSION['codigo_usuario'];
+                        	$codigo_usuario=1;                         
               $conexion = new Conexion();
               $conexion->establecerConexion();
 
@@ -174,7 +174,7 @@
 									oci_execute($BibliotecaPlaylist);
 									while ($fila = $conexion->obtenerFila($BibliotecaPlaylist)) {
 									 ?>
-									<figure id="<?php  echo $fila["NOMBRE_PLAYLIST"]?>"  class="efectosAlbumes" style="background-image: url(../img/nightcore.jpg); background-size: cover; ">
+									<figure id="<?php  echo $fila["NOMBRE_PLAYLIST"]?>"  class="efectosAlbumes" style="background-image: url(../img/playlist.jpg); background-size: cover; ">
 									
 																							
 										 <img src="../img/darplayimagen.jpg" id="ArtistaImagen">
@@ -227,7 +227,7 @@
 									
 										<?php 
 									$AlbumesFavoritas=$conexion->ejecutarInstruccion("
-																						SELECT C.NOMBRE_ALBUM_MUSICAL, C.CODIGO_ALBUM_MUSICAL
+																						SELECT C.NOMBRE_ALBUM_MUSICAL, C.CODIGO_ALBUM_MUSICAL, C.IMAGEN
 																						FROM TBL_CANCIONES_FAVORITAS A
 																						INNER JOIN TBL_CANCIONES B
 																						ON(A.CODIGO_CANCION=B.CODIGO_CANCION)
@@ -240,7 +240,7 @@
 									while ($fila = $conexion->obtenerFila($AlbumesFavoritas)) {
 									 ?>
 
-										<figure id=""  class="efectosAlbumes" style="background-image: url(../img/nightcore.jpg); background-size: cover;">
+										<figure id=""  class="efectosAlbumes" style="background-image: url(<?php  echo $fila["IMAGEN"]?>); background-size: cover;">
 									
 																													
 												<img src="../img/darplayimagen.jpg" id="ArtistaImagen">
@@ -302,7 +302,7 @@
 						 			<H1 style="text-align: center;">Top 50 del mes</H1>
 							<?php 
 									$ArtistasFavoritas=$conexion->ejecutarInstruccion("
-																						SELECT A.CODIGO_CANCION, B.NOMBRE_CANCION , C.NOMBRE_ALBUM_MUSICAL, D.NOMBRE_GRUPO_O_ARTISTA, C.IMAGEN,B.DIRECCION
+																						SELECT A.CODIGO_CANCION, B.NOMBRE_CANCION , C.NOMBRE_ALBUM_MUSICAL, D.NOMBRE_GRUPO_O_ARTISTA, C.IMAGEN,B.DIRECCION, B.DURACION_CANCION
 																						FROM TBL_HISTORIAL_REPRODUCCION_50 A
 																						INNER JOIN TBL_CANCIONES B
 																						ON(A.CODIGO_CANCION=B.CODIGO_CANCION)
@@ -312,16 +312,21 @@
 																						ON(C.CODIGO_GRUPOS_O_ARTISTAS=D.CODIGO_GRUPOS_O_ARTISTAS) ");
 									oci_execute($ArtistasFavoritas);
 									while ($fila = $conexion->obtenerFila($ArtistasFavoritas)) {
+										
 									 ?>
 
-							<figure   id='<?php  echo $fila["DIRECCION"]?>'  onClick='reprodusir(this.id); play();' class="efectosAlbumes" style="background-image: url(<?php  echo $fila["C.IMAGEN"]?>); background-size: cover; width: 18%; height: 28%;">
-									
-																													
-												<img src="../img/darplayimagen.jpg" id="ArtistaImagen">
+							<div id=""  class="efectosCanciones" >
 
-							<figcaption style="color: white; padding-top: -10px; text-align: center; bottom: 0;"><?php  echo $fila["NOMBRE_CANCION"]?></figcaption>
-											
-							</figure>	
+
+																
+							<button type="button"  class="play" id='<?php  echo $fila["DIRECCION"]?>'  onClick='reprodusir(this.id); play();'> <img src="../img/play_arrow.png" id="imgPlayArrow"></button>
+							<h2 style="display: inline-block; "><?php  echo $fila["NOMBRE_CANCION"]?></h2>
+							<a href="" style="  "><?php  echo $fila["NOMBRE_GRUPO_O_ARTISTA"]?></a>
+							<a href="" style=" "><?php  echo $fila["NOMBRE_ALBUM_MUSICAL"]?></a>
+							<h3 style="float: right;"><?php  echo $fila["DURACION_CANCION"]?></h3>
+
+
+									</div>		
 
 								<?php 
 										}
@@ -386,5 +391,5 @@
 <?php 
 
 
-}
+//}
  ?>
