@@ -46,6 +46,7 @@
         function quitar(){
           document.getElementById("negro").style.display="none";
           document.getElementById("dialogo").style.display="none";
+          window.location="editar_perfil.php";
         }
       </script>
 

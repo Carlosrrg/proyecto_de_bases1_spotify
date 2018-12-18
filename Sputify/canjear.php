@@ -46,6 +46,7 @@
         function quitar(){
           document.getElementById("negro").style.display="none";
           document.getElementById("dialogo").style.display="none";
+          window.location="canjear.php";
         }
       </script>
 
@@ -258,28 +259,20 @@
                                         $conexion->establecerConexion();
 
                                         
-                                        echo'<form name="redeem_code" method="post" action="ajax_procesar_php/acciones_tarjeta_regalo.php" novalidate="novalidate" autocomplete="off" data-payment-form="">';
+                                        echo'<form method="post" action="ajax_procesar_php/acciones_tarjeta_regalo.php" autocomplete="off">';
                                             echo'<h2>Canjea tu código</h2>';
                                             echo'<p>Ingresa el PIN que aparece al dorso de tu tarjeta de regalo o el código premium que figura en el recibo de la tienda.</p>';
                                             echo'<div class="form-group">';
                                                 echo'<label for="redeem_code_token" class="required">Ingresa tu código premium</label>';
-                                                echo'<input type="text" id="redeem_code_token" name="redeem_code[token]" required="required" class="form-control" maxlength="20">';
+                                                echo'<input type="text" id="redeem_code_token" name="txt-codigo" required="required" class="form-control" maxlength="12" placeholder="Tarjeta de 12 digitos">';
                                             echo'</div>';
-                                            echo'<input type="hidden" id="redeem_code_origin-url" name="redeem_code[origin-url]" value="">';
-                                            echo'<input type="hidden" id="redeem_code_offer-key" name="redeem_code[offer-key]"><input type="hidden" id="redeem_code_offer-uuid" name="redeem_code[offer-uuid]">';
-                                            echo'<input type="hidden" id="redeem_code_context" name="redeem_code[context]" value="redeem">';
-                                            echo'<input type="hidden" id="redeem_code_country" name="redeem_code[country]" value="HN">';
-                                            echo'<input type="hidden" id="redeem_code_region-locked" name="redeem_code[region-locked]">';
-                                            echo'<input type="hidden" id="redeem_code_offer-provider-name" name="redeem_code[offer-provider-name]">';
-                                            echo'<input type="hidden" id="redeem_code_return-url" name="redeem_code[return-url]" value="">';
                                             echo'<div>';
                                               echo'<div class="submit-button">';
-                                                echo'<button type="submit" id="redeem_code" name="redeem_code" class="btn btn-green">
+                                                echo'<button type="submit" name="btn-canjear" class="btn btn-green">
                                                     Ingresar código';
                                                 echo'</button>';
                                               echo'</div>';
                                             echo'</div>';
-                                            echo'<input type="hidden" id="redeem_code__token" name="redeem_code[_token]" value="">';
                                         echo'</form>';
                                     }
                                   ?>
@@ -288,9 +281,14 @@
                               </div>
                             </div>
                         </div>
-                        <div class="col-sm-6 col-sm-offset-3 text-center redeem-use-different-method">
-                            <a href="#">¿Deseas utilizar otra opción de pago?</a>
-                        </div>
+                        <?php
+                          if(!isset($_SESSION['codigo_usuario'])){}
+                          else{
+                              echo'<div class="col-sm-6 col-sm-offset-3 text-center redeem-use-different-method">
+                                  <a href="#">¿Deseas utilizar otra opción de pago?</a>
+                              </div>';
+                          }
+                        ?>
                     </div>
                 </div>
             </div>
@@ -319,7 +317,13 @@
               if ($_GET["id"]=="correcto") {
                 echo '<div onclick="quitar()" id="negro"></div>';
                 echo '<div id="dialogo">';
-                  echo '<p>Eliminada exitosamente...</p>';
+                  echo '<p>Codigo ingresado exitosamente...</p>';
+                echo '</div>';
+              }
+              elseif($_GET["id"]=="incorrecto"){
+                echo '<div onclick="quitar()" id="negro"></div>';
+                echo '<div id="dialogo">';
+                  echo '<p>Codigo de targeta de regalo incorrecto, por favor ingrese uno valido</p>';
                 echo '</div>';
               }
             }

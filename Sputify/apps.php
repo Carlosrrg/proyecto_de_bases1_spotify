@@ -47,6 +47,7 @@
         function quitar(){
           document.getElementById("negro").style.display="none";
           document.getElementById("dialogo").style.display="none";
+          window.location="apps.php";
         }
       </script>
 

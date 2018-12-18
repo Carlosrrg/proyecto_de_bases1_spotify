@@ -469,6 +469,7 @@
                                               $codigo_usuario = $_SESSION['codigo_usuario'];
                                               $conexion->establecerConexion();
                                               $cont = 1;
+                                              $cont1 = 1;
                                               $verificar = 0;
                                               $verificar2 = 0;
 
@@ -544,7 +545,7 @@
                                                         $verificar2 = 1;
                                                         echo'<tr>';
                                                             echo'<th>';
-                                                                  echo $cont++;
+                                                                  echo $cont1++;
                                                             echo'</th>';
                                                             echo'<th>'.$fila["NOMBRE_LUGAR"].'</th>';
                                                             echo'<th>'.$fila["FECHA_CAJEA"].'</th>';
