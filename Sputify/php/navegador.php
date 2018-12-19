@@ -38,7 +38,7 @@
 
 			<h2 ><br>Escuchados recientemente</h2>
 
-			<button type="button" id="BtnEscuchadosRecientemente"><h3> EL nombre sale por consulta </br>Artista</h3></button>
+			
 
 			<button type="button" id="Btntop50"><h3> EL top 50 mundial </br>Playlist</h3></button>
 
@@ -56,10 +56,10 @@
 
 							<div id="listaBuscar">
 								<button type="button" id="btnDivListaBuscarPrincipales">Resultados principales</button>
-								<button type="button" id="btnDivListaBuscarArtistas">Artistas</button>
-								<button type="button" id="btnDivListaBuscarCanciones">Canciones</button>
-								<button type="button" id="btnDivListaBuscarPlaylist">Playlist</button>
-								<button type="button" id="btnDivListaBuscarAlbumes">Albumes</button>
+							<!--	<button type="button" id="btnDivListaBuscarArtistas">Artistas</button>  -->
+							<!--	<button type="button" id="btnDivListaBuscarCanciones">Canciones</button>  -->
+							<!--	<button type="button" id="btnDivListaBuscarPlaylist">Playlist</button>  -->
+							<!--	<button type="button" id="btnDivListaBuscarAlbumes">Albumes</button>  -->
 							</div>
 
 							<div id="divContenidoBuscador">
@@ -80,7 +80,7 @@
 							<div id="listaInicio" >
 								<button type="button" id="btnSeleccionadosInicio" style="opacity: 1">Seleccionados</button> 
 								<button type="button" id="btnExitosInicio">Lista de exitos</button>
-								<button type="button" id="">Generos</button>
+							<!--	<button type="button" id="">Generos</button> -->
 							</div>
 							<div id="divSeleccionadosInicio" style="display: block ">
 
