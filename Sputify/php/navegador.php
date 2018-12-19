@@ -44,7 +44,19 @@
 
 			<button type="button" id="Btntop50"><h3> EL top 50 mundial </br>Playlist</h3></button>
 
-			<a href="../vista_general_cuenta.php" style=" color:#121E3D; ">Perfil</a>
+		
+
+					<a class="boton-personalizado" style="text-decoration:none;
+									margin-bottom: 0px;
+									font-weight:600;
+									font-size:20px;
+									color:#ffffff;
+									padding-top:11px;
+									padding-bottom:20px;
+									padding-left:40px;
+									padding-right:40px;
+									background-color:#0E172F;" href="../vista_general_cuenta.php">Perfil</a>
+
 
 					
 		</nav>
