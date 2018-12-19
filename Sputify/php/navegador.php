@@ -1,12 +1,12 @@
 <?php
-        //session_start();
-       // if(!isset($_SESSION['codigo_usuario'])){
-		//header("Location: ../index.html");
-        //}
-        //else{
+        session_start();
+       if(!isset($_SESSION['codigo_usuario'])){
+		header("Location: ../index.html");
+        }
+        else{
         	 include_once("../class/conexion_copy.php");
-        	// $codigo_usuario = $_SESSION['codigo_usuario'];
-                        	$codigo_usuario=1;                         
+        	$codigo_usuario = $_SESSION['codigo_usuario'];
+                        	//$codigo_usuario=1;                         
               $conexion = new Conexion();
               $conexion->establecerConexion();
 
@@ -391,5 +391,5 @@
 <?php 
 
 
-//}
+}
  ?>
