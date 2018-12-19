@@ -46,7 +46,7 @@ function comenzar(){
 	inicio.addEventListener("click",inicio1,false);
 	buscar.addEventListener("click",buscar1,false);
 	biblioteca.addEventListener("click",biblioteca1,false);
-	EscuchadosRecientemente.addEventListener("click",EscuchadosRecientemente1,false);
+//	EscuchadosRecientemente.addEventListener("click",EscuchadosRecientemente1,false);
 	top50.addEventListener("click",top501,false);
 	Iniciorespaldo.addEventListener("click",inicio1,false);
 

@@ -227,7 +227,7 @@
 									
 										<?php 
 									$AlbumesFavoritas=$conexion->ejecutarInstruccion("
-																						SELECT C.NOMBRE_ALBUM_MUSICAL, C.CODIGO_ALBUM_MUSICAL, C.IMAGEN
+																						SELECT C.NOMBRE_ALBUM_MUSICAL, C.CODIGO_ALBUM_MUSICAL, C.IMAGEN, B.DIRECCION
 																						FROM TBL_CANCIONES_FAVORITAS A
 																						INNER JOIN TBL_CANCIONES B
 																						ON(A.CODIGO_CANCION=B.CODIGO_CANCION)
@@ -240,7 +240,7 @@
 									while ($fila = $conexion->obtenerFila($AlbumesFavoritas)) {
 									 ?>
 
-										<figure id=""  class="efectosAlbumes" style="background-image: url(<?php  echo $fila["IMAGEN"]?>); background-size: cover;">
+										<figure id='<?php  echo $fila["DIRECCION"]?>' onClick='reprodusir(this.id); play();' class="efectosAlbumes" style="background-image: url(<?php  echo $fila["IMAGEN"]?>); background-size: cover;">
 									
 																													
 												<img src="../img/darplayimagen.jpg" id="ArtistaImagen">
