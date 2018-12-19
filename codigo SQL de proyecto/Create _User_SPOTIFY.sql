@@ -18,7 +18,7 @@ GRANT create materialized view TO DB_UNAH;
 
 
 
-para proyecto SQL
+--CREAR USUARIO DE PROYECTO
 
 CREATE USER DB_SPOTIFY
   IDENTIFIED BY "oracle"
