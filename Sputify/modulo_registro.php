@@ -40,8 +40,7 @@
       
       <script async="" src="./Registrarse - Spotify_files/modules-b6915e22a86f9be95a2dd509d111fd10.js.download"></script>
       <style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style>
-      
-      <script src="extra/tracking.download.35529df8ad912548456f.js.download"></script>
+
   </head>
 
 
@@ -162,8 +161,7 @@
                                                           </div>
                                                           <div class="controls controls-month">
                                                               <select id="slc-mes" name="slc-mes" required="required" data-msg-required="Por favor introduce tu mes de nacimiento.">
-                                                                  <option value="" selected="selected">mes</option>
-                                                                  <option value="1">enero</option>
+                                                                  <option value="1" selected="selected">enero</option>
                                                                   <option value="2">febrero</option>
                                                                   <option value="3">marzo</option>
                                                                   <option value="4">abril</option>
@@ -236,5 +234,6 @@
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/controlador_login.js"></script>
+
   </body>
 </html>
